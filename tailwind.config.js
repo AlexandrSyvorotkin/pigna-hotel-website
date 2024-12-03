@@ -35,5 +35,12 @@ export default {
     },
   },
   plugins: [],
-  
+  variants: {},
+  corePlugins: {
+    // ... other core plugins
+  },
+  // Add this to your base styles
+  variants: {
+    extend: {},
+  },
 }

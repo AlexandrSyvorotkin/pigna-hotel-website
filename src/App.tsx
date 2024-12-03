@@ -11,6 +11,7 @@ import {Cuisine} from './components/cuisine/cuisine'
 import { InteriorDesign } from './components/interior-design/interior-design'
 import { useState } from 'react'
 import { Menu } from './ui/menu/menu'
+import { SmoothScroll } from './components/smooth-scroll/smooth-scroll'
 
 
 
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <div className=" w-full h-screen">
+      {/* <SmoothScroll/> */}
       <Header openMenu={() => setIsMenuOpen(!isMenuOpen)} isMenuOpen={isMenuOpen}/>
       <Presentation/>
       <Banner className='h-[450px]'>

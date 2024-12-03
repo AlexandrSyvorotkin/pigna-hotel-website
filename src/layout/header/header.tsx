@@ -24,10 +24,10 @@ const Header = ({openMenu, isMenuOpen}: {openMenu: () => void, isMenuOpen: boole
   return (
     <header className={`font-helvetica fixed top-0 w-full h-20 px-[84px] py-5 flex justify-between items-center transition-all duration-300 z-50 ${
       isMenuOpen 
-        ? 'bg-loading-color text-white border-b border-white'
+        ? 'bg-loading-color text-main-white border-b border-main-white'
         : isScrolled 
-          ? 'bg-white text-black border-b border-[#1A1515]' 
-          : 'bg-transparent text-white border-b border-white'
+          ? 'bg-main-white text-black border-b border-[#1A1515]' 
+          : 'bg-transparent text-main-white border-b border-main-white'
     }`}>
       <HeaderControls openMenu={openMenu}/>
       <Logo/>
