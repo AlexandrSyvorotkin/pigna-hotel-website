@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+:root  {
+  --bg-white-main: #EDF1EE;
+  --bg-loading-color: #3B443F;
+  --bg-button:#3A5044;
+  --black-main: #04180D;
+}
+
+body {
+  background-color: var(--bg-white-main);
+}
+
+
