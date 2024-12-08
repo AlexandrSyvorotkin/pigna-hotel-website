@@ -60,7 +60,7 @@ const Menu = ({isMenuOpen, setIsMenuOpen}: {isMenuOpen: boolean, setIsMenuOpen: 
 
 
   return (
-      <div className={`fixed top-20 left-0 w-full h-[calc(100vh-80px)] flex transform transition-transform duration-300 ease-in-out bg-loading-color z-100 ${
+      <div className={`z-50 fixed top-20 left-0 w-full h-[calc(100vh-80px)] flex transform transition-transform duration-300 ease-in-out bg-loading-color ${
           isMenuOpen ? 'translate-y-0' : '-translate-y-[calc(100%+80px)]'
       }`}>
         <Image src={menu_img} alt='menu' className='w-2/5 h-full'/>
