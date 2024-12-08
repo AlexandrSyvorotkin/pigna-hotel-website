@@ -20,7 +20,7 @@ const resoursesEls = [
 
 const Resourses = () => {
   return (
-    <div className="mt-60 w-full pb-52 flex justify-center">
+    <div className="mt-60 w-full pb-52 flex justify-center" id="lands-and-natural-resources">
       <div className='w-[1750px]'>
         <div className="flex flex-col gap-4 justify-start items-center text-black-main">
           <span className="text-5xl font-helvetica text-left w-full">Lands and Natural Resources</span>

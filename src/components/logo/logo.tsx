@@ -1,4 +1,4 @@
-import star from '../../assets/star/star.svg'
+import star from "../../assets/star/star.svg";
 
 const Logo = () => {
   return (
@@ -9,12 +9,12 @@ const Logo = () => {
         ))}
       </div>
       <div className="flex items-center gap-2">
-      <span>GRAND</span>
-      <span>PIGNA</span>
-      <span>HOTEL</span>
+        <span>GRAND</span>
+        <span>PIGNA</span>
+        <span>HOTEL</span>
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export { Logo }
+export { Logo };

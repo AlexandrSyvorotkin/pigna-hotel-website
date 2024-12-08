@@ -40,7 +40,7 @@ const WellnessSpa = () => {
   const [activeTab, setActiveTab] = useState(0)
 
   return (
-    <div className="pt-40 w-full bg-loading-color pb-44">
+    <div className="pt-40 w-full bg-loading-color pb-44" id="wellness-spa">
       <div className="flex justify-center items-center w-full">
         <div className="flex flex-col gap-4 justify-center items-center text-main-white w-1/2">
           <span className="font-patrizia text-5xl text-center">Wellness & Spa</span>

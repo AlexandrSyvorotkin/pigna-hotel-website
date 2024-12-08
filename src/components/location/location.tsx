@@ -36,7 +36,7 @@ const airportsImgs = [
 
 const Location = () => {
     return (
-        <div className="mt-60 w-full">
+        <div className="mt-60 w-full" id="location">
           <div className="w-full flex justify-center items-center flex-col gap-5 mb-14">
             <span className="text-black-main text-5xl font-patrizia font-normal uppercase">Location</span>
             <p className="text-lg text-center w-1/2">The hotel is situated in a secluded area that offers excellent transportation links, including a helipad. Nearby cities such as Genoa, Nice, and Monaco are easily accessible.</p>

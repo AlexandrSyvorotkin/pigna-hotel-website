@@ -33,7 +33,7 @@ const slidesEls = [
 
 const Region = () => {
     return (
-        <section className="bg-main-white w-full h-1/2 mt-44">
+        <section className="bg-main-white w-full h-1/2 mt-44" id="essence-of-pigna">
             <div className="flex justify-center items-center">
                 <span className="text-black-main font-patrizia font-normal text-5xl text-center uppercase">ESSENCE OF PIGNA</span>
             </div>

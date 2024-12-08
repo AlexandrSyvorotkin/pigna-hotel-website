@@ -13,7 +13,7 @@ const images = [img1, img2, img3, img4, img5, img6, img7]
 
 const InteriorDesign = () => {
   return (
-    <div className='mt-60 w-full flex justify-center flex-col items-center pb-60'>
+    <div className='mt-60 w-full flex justify-center flex-col items-center pb-60' id="architecture">
       <div className='w-[1750px] flex justify-center flex-col gap-4'>
         <h2 className='text-black-main text-5xl font-patrizia font-normal text-center'>Interior Design and Architecture</h2>
         <div className='w-full flex justify-center items-center'>

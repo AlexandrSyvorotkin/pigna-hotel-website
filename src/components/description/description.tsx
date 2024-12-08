@@ -33,7 +33,7 @@ const descriptionEls = [
 const Description = () => {
   return (
     <Container width={1300}>
-      <div className="w-full h-full py-44">
+      <div className="w-full h-full py-44" id="features">
         <div className="flex justify-center items-center w-full">
           <div className="flex flex-col gap-5 justify-center items-center font-helvetica text-black-main w-7/8">
             <span className=' font-normal text-5xl text-center uppercase'>UNIQUE FEATURES OF THE HOTEL PROJECT</span>

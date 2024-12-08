@@ -4,53 +4,63 @@ import { Image } from '../img/image'
 const items = [
   {
     title: 'Essence of Pigna',
-    href: '/'
+    id: 'essence-of-pigna'
   },
   {
     title: 'Region',
-    href: '/'
+    id: '/'
   },
   {
     title: 'Location',
-    href: '/'
+    id: 'location'
   },
   {
     title: 'Lands and Natural Resources',
-    href: '/'
+    id: 'lands-and-natural-resources'
   },
   {
     title: 'Wellness & Spa',
-    href: '/'
+    id: 'wellness-spa'
   },
   {
     title: 'Cuisine',
-    href: '/'
+    id: 'cuisine'
   },
   {
     title: 'Building & Territory',
-    href: '/'
+    id: 'building-territory'
   },
   {
     title: 'Interior Design and Architecture',
-    href: '/'
+    id: 'architecture'
   },
   {
     title: 'Project Timeline',
-    href: '/'
+    id: 'project-timeline'
   },
   {
     title: 'Investment opportunities',
-    href: '/'
+    id: '/'
   },
   {
     title: 'Contact details',
-    href: '/'
+    id: '/'
   }
 ]
 
 const Menu = ({isMenuOpen, setIsMenuOpen}: {isMenuOpen: boolean, setIsMenuOpen: (isMenuOpen: boolean) => void}) => {
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false)
+  };
+
+
   return (
-      <div className={`fixed top-20 left-0 w-full h-[calc(100vh-80px)] flex transform transition-transform duration-300 ease-in-out bg-loading-color ${
+      <div className={`fixed top-20 left-0 w-full h-[calc(100vh-80px)] flex transform transition-transform duration-300 ease-in-out bg-loading-color z-100 ${
           isMenuOpen ? 'translate-y-0' : '-translate-y-[calc(100%+80px)]'
       }`}>
         <Image src={menu_img} alt='menu' className='w-2/5 h-full'/>
@@ -60,7 +70,7 @@ const Menu = ({isMenuOpen, setIsMenuOpen}: {isMenuOpen: boolean, setIsMenuOpen: 
           </div>
           <ul className='flex flex-col justify-start items-start gap-8'>
             {items.map((item, index) => (
-              <li key={index} className='text-main-white text-4xl font-patrizia'>{item.title}</li>
+              <li key={index} className='text-main-white text-4xl font-patrizia cursor-pointer' onClick={() => scrollToSection(item.id)}>{item.title}</li>
             ))}
           </ul>
         </div>

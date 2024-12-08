@@ -40,7 +40,7 @@ const imgArr = [
 
 const Cuisine = () => {
   return (
-    <div className='w-full mt-44 flex justify-center items-center'>
+    <div className='w-full mt-44 flex justify-center items-center' id="cuisine">
       <div className='w-[1750px]'>
         <div className='flex flex-col gap-6 justify-center items-center'>
           <h3 className='text-black-main text-[48px] font-patrizia font-normal text-center'>Cuisine</h3>
@@ -62,7 +62,7 @@ const Cuisine = () => {
             <p className='text-black-main text-[18px] font-helvetica font-normal'>Under the guidance of our chef, every dish is a perfect balance of wholesome ingredients, health benefits, and culinary artistry</p>
           </div>
         </div>
-        <div className='mt-64 w-[1750px] flex justify-between'>
+        <div className='mt-64 w-[1750px] flex justify-between' id="building-territory">
           <div className='flex flex-col gap-6 w-1/5'>
             <h2 className='text-black-main text-[48px] font-patrizia font-normal'>Building & Territory</h2>
             <p className='text-black-main text-[18px] font-helvetica font-normal'>Grand Hotel Pigna is being transformed into a luxury 
