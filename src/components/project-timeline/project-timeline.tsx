@@ -1,5 +1,5 @@
 import { Scrollbar, A11y } from "swiper/modules";
-import React, { useState } from "react";
+import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Image } from "../../ui/img/image";
@@ -107,7 +107,6 @@ const ProjectTimeline = () => {
             modules={[Scrollbar, A11y]}
             spaceBetween={24}
             slidesPerView={2}
-            onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
             // navigation
             // pagination={{ clickable: true }}
             // scrollbar={{ draggable: true }}
