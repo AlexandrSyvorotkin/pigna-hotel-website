@@ -1,20 +1,76 @@
 import { Scrollbar, A11y } from "swiper/modules";
-import React from "react";
+import React, { useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Image } from "../../ui/img/image";
 
 import img1 from "../../assets/project-timeline/img1.png";
 import img2 from "../../assets/project-timeline/img2.png";
+import img3 from "../../assets/project-timeline/img3.png";
+import img4 from "../../assets/project-timeline/img4.png";
+import img5 from "../../assets/project-timeline/img5.png";
+import img6 from "../../assets/project-timeline/img6.png";
+import img7 from "../../assets/project-timeline/img7.png";
+import img8 from "../../assets/project-timeline/img8.png";
+import img9 from "../../assets/project-timeline/img9.png";
+import img10 from "../../assets/project-timeline/img10.png";
+import img11 from "../../assets/project-timeline/img11.png";
 
 const slidesEls = [
   {
     img: img1,
     text: "A legend tells that a farmer who passed by the Lake Pigo with his donkey suffering from eczema, cured his animal due to the beneficial effect of the waters, which made thesewaters famous in the region for centuries.",
+    date: 1200
   },
   {
     img: img2,
     text: "A historic peace was signed between the two factions on Pigna's Lago Pigo Bridge, next to Pigna's sulphur thermal springs, which became the dividing line between the territories of Provenza and the Republic of Genoa. Nowadays, the Grand Hotel Pigna is situated right next to the historic bridge.",
+    date: 1365
+  },
+  {
+    img: img3,
+    text: "A legend tells that a farmer who passed by the Lake Pigo with his donkey suffering from eczema, cured his animal due to the beneficial effect of the waters, which made thesewaters famous in the region for centuries.",
+    date: 1839
+  },
+  {
+    img: img4,
+    text: "A historic peace was signed between the two factions on Pigna's Lago Pigo Bridge, next to Pigna's sulphur thermal springs, which became the dividing line between the territories of Provenza and the Republic of Genoa. Nowadays, the Grand Hotel Pigna is situated right next to the historic bridge.",
+    date: 1884
+  },
+  {
+    img: img5,
+    text: "A legend tells that a farmer who passed by the Lake Pigo with his donkey suffering from eczema, cured his animal due to the beneficial effect of the waters, which made thesewaters famous in the region for centuries.",
+    date: 1903
+  },
+  {
+    img: img6,
+    text: "A historic peace was signed between the two factions on Pigna's Lago Pigo Bridge, next to Pigna's sulphur thermal springs, which became the dividing line between the territories of Provenza and the Republic of Genoa. Nowadays, the Grand Hotel Pigna is situated right next to the historic bridge.",
+    date: 1920
+  },
+  {
+    img: img7,
+    text: "A legend tells that a farmer who passed by the Lake Pigo with his donkey suffering from eczema, cured his animal due to the beneficial effect of the waters, which made thesewaters famous in the region for centuries.",
+    date: 1954
+  },
+  {
+    img: img8,
+    text: "A historic peace was signed between the two factions on Pigna's Lago Pigo Bridge, next to Pigna's sulphur thermal springs, which became the dividing line between the territories of Provenza and the Republic of Genoa. Nowadays, the Grand Hotel Pigna is situated right next to the historic bridge.",
+    date: 2000
+  },
+  {
+    img: img9,
+    text: "A legend tells that a farmer who passed by the Lake Pigo with his donkey suffering from eczema, cured his animal due to the beneficial effect of the waters, which made thesewaters famous in the region for centuries.",
+    date: 2020
+  },
+  {
+    img: img10,
+    text: "A historic peace was signed between the two factions on Pigna's Lago Pigo Bridge, next to Pigna's sulphur thermal springs, which became the dividing line between the territories of Provenza and the Republic of Genoa. Nowadays, the Grand Hotel Pigna is situated right next to the historic bridge.",
+    date: 2022
+  },
+  {
+    img: img11,
+    text: "A legend tells that a farmer who passed by the Lake Pigo with his donkey suffering from eczema, cured his animal due to the beneficial effect of the waters, which made thesewaters famous in the region for centuries.",
+    date: 2024
   },
 ];
 
@@ -28,7 +84,12 @@ const textItems = [
   "An architectural replanning project for the restaurant building is in the works.",
 ];
 
+const dates = slidesEls.map(slide => slide.date)
+
 const ProjectTimeline = () => {
+
+
+  const [currentSlide, setCurrentSlide] = useState(0); 
   return (
     <div className="w-full pt-44 bg-loading-color pb-48" id="project-timeline">
       <div className="w-full flex justify-center items-center flex-col gap-4 text-main-white">
@@ -46,11 +107,11 @@ const ProjectTimeline = () => {
             modules={[Scrollbar, A11y]}
             spaceBetween={24}
             slidesPerView={2}
+            onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
             // navigation
             // pagination={{ clickable: true }}
             // scrollbar={{ draggable: true }}
             onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
           >
             {slidesEls.map((slide, index) => (
               <SwiperSlide key={index}>
@@ -65,8 +126,11 @@ const ProjectTimeline = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </div>  
       </div>
+
+      
+
       <div className="mt-36 w-full flex justify-center">
         <div className="w-[1750px]">
           <div className="flex flex-col gap-4">

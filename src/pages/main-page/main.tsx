@@ -9,11 +9,14 @@ import { Region } from "../../components/region/region";
 import { Resourses } from "../../components/resourses/resourses";
 import { WellnessSpa } from "../../components/wellness-spa/wellness-spa";
 import { Location } from "../../components/location/location";
+import { MainButton } from "../../ui/button/main-button";
 
 const MainPage = () => {
   return (
     <>
-      <Presentation />
+      <Presentation text="Every detail is crafted for a remarkable stay" button={<MainButton>
+            <span>INVEST THE PROJECT</span>
+          </MainButton>}/>
       <Banner className="h-[450px]">
         <div className="flex flex-col gap-4 w-1/2 ">
           <p className="text-[24px] font-helvetica font-normal text-xl text-center uppercase text-main-white">

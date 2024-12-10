@@ -28,6 +28,7 @@ export default {
             transform: 'translateY(0)'
           },
         }
+        
       },
       animation: {
         fadeIn: 'fadeIn 0.5s ease-out forwards'

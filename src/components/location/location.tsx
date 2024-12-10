@@ -1,8 +1,8 @@
-import { Banner } from "../banner/banner"
 import img1 from '../../assets/airports/img1.png'
 import img2 from '../../assets/airports/img2.png'
 import img3 from '../../assets/airports/img3.png'
 import { Image } from '../../ui/img/image'
+import map from '../../assets/bg/bg-map.png'
 
 const airportEls = [
   {
@@ -41,9 +41,7 @@ const Location = () => {
             <span className="text-black-main text-5xl font-patrizia font-normal uppercase">Location</span>
             <p className="text-lg text-center w-1/2">The hotel is situated in a secluded area that offers excellent transportation links, including a helipad. Nearby cities such as Genoa, Nice, and Monaco are easily accessible.</p>
           </div>
-          <Banner className='h-[460px]'>
-            <span>карта в разработке</span>
-          </Banner>
+          <Image src={map} alt="map" className="w-full h-[460px]"/>
           <div className="mt-20 w-full flex justify-center items-center flex-col gap-10">
             <span className="text-black-main text-2xl font-helvetica font-normal uppercase">the nearby airports</span>
             <div className="flex gap-10 w-1/2">
