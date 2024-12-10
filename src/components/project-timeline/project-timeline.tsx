@@ -84,12 +84,12 @@ const textItems = [
   "An architectural replanning project for the restaurant building is in the works.",
 ];
 
-const dates = slidesEls.map(slide => slide.date)
+// const dates = slidesEls.map(slide => slide.date)
 
 const ProjectTimeline = () => {
 
 
-  const [currentSlide, setCurrentSlide] = useState(0); 
+  // const [currentSlide, setCurrentSlide] = useState(0); 
   return (
     <div className="w-full pt-44 bg-loading-color pb-48" id="project-timeline">
       <div className="w-full flex justify-center items-center flex-col gap-4 text-main-white">
