@@ -10,11 +10,15 @@ import { Resourses } from "../../components/resourses/resourses";
 import { WellnessSpa } from "../../components/wellness-spa/wellness-spa";
 import { Location } from "../../components/location/location";
 import { MainButton } from "../../ui/button/main-button";
+import { useNavigate } from "react-router-dom";
 
 const MainPage = () => {
+
+
+  const navigate = useNavigate()
   return (
     <>
-      <Presentation text="Every detail is crafted for a remarkable stay" button={<MainButton>
+      <Presentation text="Every detail is crafted for a remarkable stay" button={<MainButton onClick={() => navigate("/docs")}>
             <span>INVEST THE PROJECT</span>
           </MainButton>}/>
       <Banner className="h-[450px]">
