@@ -9,9 +9,14 @@ const Footer = () => {
     }
   };
 
-  const router = useLocation();
+  const location = useLocation();
   const navigate = useNavigate();
-  const isPrivacyPage = router.pathname === "/privacy";
+  const isPrivacyPage = location.pathname === "/privacy";
+
+   const validRoutes = ["/main", "/docs", '/privacy'];
+   const isValidRoute = validRoutes.includes(location.pathname);
+ 
+   if (!isValidRoute) return null;
 
   return (
     <footer

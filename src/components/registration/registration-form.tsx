@@ -15,7 +15,7 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div className="w-full h-full mt-10 pl-20">
+    <div className="w-full h-full pt-10 pl-20">
       <span
         className="text-base font-helvetica text-main-white opacity-70 cursor-pointer"
         onClick={() => navigate("/main")}

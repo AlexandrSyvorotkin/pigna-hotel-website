@@ -3,7 +3,7 @@ import bg from '../../assets/bg/bg-registration.png'
 import { RegistrationForm } from '../../components/registration/registration-form.tsx';
 
 const Registration = () => {
-  return <div className="bg-loading-color w-full h-screen flex justify-between items-center mt-[80px]">
+  return <div className="bg-loading-color w-full h-[calc(100vh-80px)] flex justify-between items-center mt-[80px]">
     <div className="w-5/12 h-full">
       <RegistrationForm />
     </div>

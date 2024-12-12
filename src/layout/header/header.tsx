@@ -20,9 +20,9 @@ const Header = ({openMenu, isMenuOpen}: {openMenu: () => void, isMenuOpen: boole
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const router = useLocation();
-  const isPrivacyPage = router.pathname === "/privacy" || router.pathname === "/*" || router.pathname === "/registration";
-  const isDocsPage = router.pathname === "/docs";
+  const location = useLocation();
+  const isPrivacyPage = location.pathname === "/privacy" || location.pathname === "/*" || location.pathname === "/registration";
+  const isDocsPage = location.pathname === "/docs";
 
   const headerClasses = {
     default: 'bg-transparent text-main-white border-b border-main-white',
@@ -39,6 +39,10 @@ const Header = ({openMenu, isMenuOpen}: {openMenu: () => void, isMenuOpen: boole
       : isScrolled 
         ? headerClasses.scrolled 
         : headerClasses.default;
+
+  if (location.pathname === "/") {
+    return null;
+  }
 
   return (
     <header className={`font-helvetica fixed top-0 w-full h-20 px-[84px] py-5 flex justify-between items-center transition-all duration-300 z-40 ${currentClass}`}>
