@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import {HeaderControls} from "../../components/header-controls/header-controls"
 import { Logo } from "../../components/logo/logo"
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const Header = ({openMenu, isMenuOpen}: {openMenu: () => void, isMenuOpen: boolean}) => {
@@ -30,6 +30,8 @@ const Header = ({openMenu, isMenuOpen}: {openMenu: () => void, isMenuOpen: boole
     loading: 'bg-loading-color text-main-white border-b border-main-white',
   };
 
+  const navigate = useNavigate();
+
   const currentClass = isMenuOpen || isPrivacyPage 
     ? headerClasses.loading 
     : isDocsPage // добавлено условие для страницы документов
@@ -48,7 +50,7 @@ const Header = ({openMenu, isMenuOpen}: {openMenu: () => void, isMenuOpen: boole
     <header className={`font-helvetica fixed top-0 w-full h-20 px-[84px] py-5 flex justify-between items-center transition-all duration-300 z-40 ${currentClass}`}>
       <HeaderControls openMenu={openMenu}/>
       <Logo/>
-      <span>INVEST THE PROJECT</span>
+      <span onClick={() => navigate("/registration")}>INVEST THE PROJECT</span>
     </header>
   )
 }
