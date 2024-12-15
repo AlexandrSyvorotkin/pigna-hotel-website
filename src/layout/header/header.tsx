@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import {HeaderControls} from "../../components/header-controls/header-controls"
 import { Logo } from "../../components/logo/logo"
 import { useLocation, useNavigate } from 'react-router-dom';
+import {Image} from "../../ui/img/image"
+import icon_menu from '../../assets/icon-menu/IconMenu.svg'
 
 
 const Header = ({openMenu, isMenuOpen}: {openMenu: () => void, isMenuOpen: boolean}) => {
@@ -47,10 +49,13 @@ const Header = ({openMenu, isMenuOpen}: {openMenu: () => void, isMenuOpen: boole
   }
 
   return (
-    <header className={`font-helvetica fixed top-0 w-full h-20 px-[84px] py-5 flex justify-between items-center transition-all duration-300 z-40 ${currentClass}`}>
+    <header className={`font-helvetica fixed top-0 w-full h-20 lg:px-[84px] sm:px-[18px] mg:[42px] py-5 flex justify-between items-center transition-all duration-300 z-40 ${currentClass}`}>
       <HeaderControls openMenu={openMenu}/>
       <Logo/>
-      <span onClick={() => navigate("/registration")}>INVEST THE PROJECT</span>
+      <span className="text-base sm:hidden lg:block" onClick={() => navigate("/registration")}>INVEST THE PROJECT</span>
+      <div className="sm:block lg:hidden">
+        <Image src={icon_menu} alt="logo" />
+      </div>
     </header>
   )
 }

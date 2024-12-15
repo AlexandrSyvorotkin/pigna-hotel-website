@@ -13,29 +13,32 @@ import { MainButton } from "../../ui/button/main-button";
 import { useNavigate } from "react-router-dom";
 
 const MainPage = () => {
-
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <>
-      <Presentation text="Every detail is crafted for a remarkable stay" button={<MainButton onClick={() => navigate("/docs")}>
+      <Presentation
+        text="Every detail is crafted for a remarkable stay"
+        button={
+          <MainButton onClick={() => navigate("/docs")}>
             <span>INVEST THE PROJECT</span>
-          </MainButton>}/>
+          </MainButton>
+        }
+      />
       <Banner className="h-[450px]">
-        <div className="flex flex-col gap-4 w-1/2 ">
-          <p className="text-[24px] font-helvetica font-normal text-xl text-center uppercase text-main-white">
+        <div className="flex flex-col gap-4 xl:w-1/2 sm:w-full sm:px-[18px]">
+          <p className="lg:text-2xl sm:text-base font-helvetica font-normal text-center uppercase text-main-white">
             Grand Hotel Pigna is designed as a world-class medical spa, the only
             thermal wellness retreat in the region, and the largest spa on the
             Ligurian Riviera
           </p>
-          <p className="text-[18px] font-helvetica font-normal text-lg text-center opacity-80 text-main-white">
+          <p className="lg:text-lg sm:text-xs font-helvetica font-normal text-center opacity-80 text-main-white">
             Immerse yourself in thermal springs, lush valleys, and the
             mountainous landscapes of Liguria while staying in a luxury 5-star
             resort with a unique holistic medical spa concept that combines
             traditional medicine, modern therapies, and the latest medical
             developments.
           </p>
-          <p className="text-[18px] font-helvetica font-normal text-lg text-center opacity-80 text-main-white">
+          <p className="lg:text-lg sm:text-xs font-helvetica font-normal text-center opacity-80 text-main-white">
             The project consists of the renovation of the thermal hotel
             building, the extension of the territory, spa and restaurant areas
             and the transformation of the hotel into a luxurious 5-star wellness
@@ -44,9 +47,9 @@ const MainPage = () => {
           </p>
         </div>
       </Banner>
-      <Description />
+      <Description /> 
       <Banner className="h-[400px]">
-        <p className="text-main-white text-4xl font-patrizia font-normal text-center w-3/4">
+        <p className="text-main-white lg:text-4xl sm:text-xl font-patrizia text-center w-3/4 uppercase lg:leading-10">
           The hotel was highlighted as a project of regional significance. The
           renovation of the hotel gave local residents and municipal authorities
           a hope for relaunch and rebirth for Pigna and for the whole Nervia
