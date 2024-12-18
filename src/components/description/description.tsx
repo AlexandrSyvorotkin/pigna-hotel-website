@@ -1,4 +1,4 @@
-import { Container } from "../container/container"
+// import { Container } from "../container/container"
 import img1 from '../../assets/hotel/img/img1.png'
 import img2 from '../../assets/hotel/img/img2.png'
 import { Image } from '../../ui/img/image'

@@ -18,13 +18,13 @@ const RegistrationForm = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const [data, setData] = useState(null);
+  // const [data, setData] = useState(null);
 
   useEffect(() => {
     fetch("https://dev.termedipigna.com/content/").then(res => res.json()).then(data => console.log(data))
   }, [])
 
-  const { register, handleSubmit, formState: { errors } } = useForm<RegistrationData>({
+  const { register, handleSubmit } = useForm<RegistrationData>({
     defaultValues: {
       name: '',
       email: '',
@@ -37,7 +37,7 @@ const RegistrationForm = () => {
 
   const onSubmit = async (data: RegistrationData) => {
     console.log(data)
-    const response = await fetch("https://dev.termedipigna.com/auth/register", {
+    await fetch("https://dev.termedipigna.com/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -114,7 +114,7 @@ const RegistrationForm = () => {
               className="mt-4 bg-transparent border-b border-gray-300 focus:outline-none"
             />
           </label>
-          <MainButton type="submit" className="w-full bg-main-white uppercase text-main-black text-helvetica text-base" onClick={() => handleSubmit(onSubmit)}>Send a request</MainButton>
+          <MainButton className="w-full bg-main-white uppercase text-main-black text-helvetica text-base" onClick={() => handleSubmit(onSubmit)}>Send a request</MainButton>
         </form>
         <div className="w-full h-full mt-10 flex gap-1 justify-center">
             <span className="text-main-white font-base opacity-70 font-helvetica">Do you already have a password?</span>

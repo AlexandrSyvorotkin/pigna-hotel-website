@@ -1,5 +1,5 @@
-import { Suspense } from 'react'
-import img1 from '../../assets/land-resourses/img1.png'
+// import { Suspense } from 'react'
+// import img1 from '../../assets/land-resourses/img1.png'
 import img2 from '../../assets/land-resourses/img2.png'
 import img3 from '../../assets/waterfall/test.gif'
 import { Image } from '../../ui/img/image'
