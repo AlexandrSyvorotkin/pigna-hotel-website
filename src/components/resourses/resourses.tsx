@@ -1,5 +1,7 @@
+import { Suspense } from 'react'
 import img1 from '../../assets/land-resourses/img1.png'
 import img2 from '../../assets/land-resourses/img2.png'
+import img3 from '../../assets/waterfall/test.gif'
 import { Image } from '../../ui/img/image'
 
 
@@ -27,7 +29,8 @@ const Resourses = () => {
         </div>
         <div className="flex sm:flex-col lg:flex-row gap-6 lg:mt-16 sm:mt-4 justify-start">
           <div className="lg:w-4/6 sm:w-full flex flex-col gap-4">
-            <Image src={img1} alt="resourses" className="w-full h-[568px]" />
+            <Image src={img3} alt="resourses" className="w-full h-[568px]"/>
+            
             <p className="w-full lg:text-lg sm:text-xs font-helvetica">The village of Pigna, a historic gateway to Gaul since Roman times, is renowned for its thermal waters. Discovered in the mediaeval period, the unique sulphurous baths feature mineral-rich water from the ancient Madonna Assunta spring, with temperatures between 28 and 32°C. There are 3 types of natural water available for all the hotel’s needs:</p>
             {resoursesEls.map((item, index) => (
               <>

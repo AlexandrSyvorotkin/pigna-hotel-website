@@ -2,7 +2,7 @@ import img1 from '../../assets/airports/img1.png'
 import img2 from '../../assets/airports/img2.png'
 import img3 from '../../assets/airports/img3.png'
 import { Image } from '../../ui/img/image'
-import map from '../../assets/bg/bg-map.png'
+import map from '../../assets/map.png'
 
 const airportEls = [
   {

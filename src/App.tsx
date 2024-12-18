@@ -13,7 +13,7 @@ import { Docs } from './pages/docs/docs'
 
 function App() {
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(true)
 
   return (
     <div className=" w-full h-full flex flex-col">
@@ -26,8 +26,8 @@ function App() {
         <Route path="/registration" element={<Registration />} />
         <Route path="/docs" element={<Docs />} />
         </Routes>
-      <Footer/>
-      <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
+      {/* <Footer/> */}
+      {/* <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/> */}
     </div>
   )
 }

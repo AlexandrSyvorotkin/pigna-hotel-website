@@ -35,12 +35,12 @@ const listItems = [
 
 
 const PrivacyList = () => {
-  return <div className="w-full h-auto bg-main-white flex justify-center items-center mt-[80px]">
-    <div className="w-[1750px] mt-[150px] flex flex-col gap-4 mb-[150px]">
-      <h2 className="text-4xl font-patrizia text-center uppercase">Privacy Policy</h2>
+  return <div className="w-full h-auto bg-main-white flex justify-center items-center mt-[80px] px-[18px]">
+    <div className="w-[1750px] lg:mt-[150px] sm:mt-[100px] flex flex-col gap-4 mb-[150px]">
+      <h2 className="lg:text-4xl sm:text-2xl font-patrizia text-center uppercase">Privacy Policy</h2>
       <ul className="flex flex-col gap-1 mt-10">
         {listItems.map((item, index) => (
-          <li key={index} className="text-base font-helvetica">{item}</li>
+          <li key={index} className="lg:text-base sm:text-sm font-helvetica">{item}</li>
         ))}
       </ul>
     </div>

@@ -51,7 +51,7 @@ const Header = ({openMenu, isMenuOpen}: {openMenu: () => void, isMenuOpen: boole
   return (
     <header className={`font-helvetica fixed top-0 w-full h-20 lg:px-[84px] sm:px-[18px] mg:[42px] py-5 flex justify-between items-center transition-all duration-300 z-40 ${currentClass}`}>
       <HeaderControls openMenu={openMenu}/>
-      <Logo/>
+      <Logo size="sm" color="white"/>
       <span className="text-base sm:hidden lg:block" onClick={() => navigate("/registration")}>INVEST THE PROJECT</span>
       <div className="sm:block lg:hidden">
         <Image src={icon_menu} alt="logo" />
