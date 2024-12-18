@@ -13,7 +13,7 @@ import { Docs } from './pages/docs/docs'
 
 function App() {
 
-  const [isMenuOpen, setIsMenuOpen] = useState(true)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
     <div className=" w-full h-full flex flex-col">
