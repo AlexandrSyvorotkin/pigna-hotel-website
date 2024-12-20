@@ -56,13 +56,13 @@ const MainPage = () => {
           Valley.
         </p>
       </Banner>
-      <Region />
-      <Location />
+      {/* <Region /> */}
+      {/* <Location /> */}
       <Resourses />
       <WellnessSpa />
       <Cuisine />
       <InteriorDesign />
-      <ProjectTimeline />
+      {/* <ProjectTimeline /> */}
       <InvestOpportunities />
     </>
   );

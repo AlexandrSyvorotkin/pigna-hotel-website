@@ -53,7 +53,7 @@ const Header = ({openMenu, isMenuOpen}: {openMenu: () => void, isMenuOpen: boole
       <HeaderControls openMenu={openMenu}/>
       <Logo size="sm" color="white"/>
       <span className="text-base sm:hidden lg:block" onClick={() => navigate("/registration")}>INVEST THE PROJECT</span>
-      <div className="sm:block lg:hidden">
+      <div className="sm:block lg:hidden" onClick={openMenu}>
         <Image src={icon_menu} alt="logo" />
       </div>
     </header>
