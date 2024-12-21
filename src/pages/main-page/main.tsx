@@ -5,7 +5,7 @@ import { InteriorDesign } from "../../components/interior-design/interior-design
 import InvestOpportunities from "../../components/invest-opportunities/invest-opportunities";
 import { Presentation } from "../../components/presentation/presentation";
 import { ProjectTimeline } from "../../components/project-timeline/project-timeline";
-import { EssenceOfPigna, Region } from "../../components/essence-of-pigna/essence-of-pigna";
+import { EssenceOfPigna } from "../../components/essence-of-pigna/essence-of-pigna";
 import { Resourses } from "../../components/resourses/resourses";
 import { WellnessSpa } from "../../components/wellness-spa/wellness-spa";
 import { Location } from "../../components/location/location";

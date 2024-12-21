@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { MainButton } from "../../ui/button/main-button";
-import { Dispatch, SetStateAction, useState } from "react";
+import { useState } from "react";
 import { Modal } from "../../ui/modal/modal";
 import { LoginForm } from "../login/login";
 

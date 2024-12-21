@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import starWhite from "../../assets/star/StarW.svg";
-import starBlack from "../../assets/star/star.svg"
+
 
 interface LogoProps {
   color?: "white" | "black";
@@ -9,7 +8,7 @@ interface LogoProps {
   content: React.ReactNode;
 }
 
-const Logo = ({ color, size, img, content }: LogoProps) => {
+const Logo = ({ size, img, content }: LogoProps) => {
   const navigate = useNavigate();
 
 
@@ -25,20 +24,6 @@ const Logo = ({ color, size, img, content }: LogoProps) => {
         ))}
       </div>
       <div className={`flex items-center gap-2 ${mt}`}>
-        {/* {size === "sm" && (
-          <>
-            <span className="md:text-xl sm:text-sm ">GRAND</span>
-            <span className="md:text-3xl sm:text-lg">PIGNA</span>
-            <span className="md:text-xl sm:text-sm">HOTEL</span>
-          </>
-        )}
-        {size === "lg" && (
-          <>
-            <span className="md:text-5xl sm:text-2xl font-patrizia">GRAND</span>
-            <span className="md:text-8xl sm:text-4xl font-patrizia">PIGNA</span>
-            <span className="md:text-5xl sm:text-2xl font-patrizia">HOTEL</span>
-          </>
-        )} */}
         {content}
       </div>
     </div>
