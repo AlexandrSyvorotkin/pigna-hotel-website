@@ -4,12 +4,22 @@ import starBlack from "../../assets/star/star.svg";
 import starWhite from "../../assets/star/starW.svg";
 
 const Footer = () => {
-  const scrollToSection = (sectionId: string) => {
+  
+  const scrollToSection = (sectionId: string, offset: number = 0) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition + offset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
     }
+
   };
+
+
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -82,19 +92,19 @@ const Footer = () => {
               }`}
             >
               <span
-                onClick={() => scrollToSection("features")}
+                onClick={() => scrollToSection("features", -30)}
                 className="cursor-pointer"
               >
                 FEATURES
               </span>
               <span
-                onClick={() => scrollToSection("essence-of-pigna")}
+                onClick={() => scrollToSection("essence-of-pigna", -120)}
                 className="cursor-pointer"
               >
                 ESSENCE OF PIGNA
               </span>
               <span
-                onClick={() => scrollToSection("location")}
+                onClick={() => scrollToSection("location", -120)}
                 className="cursor-pointer"
               >
                 LOCATION

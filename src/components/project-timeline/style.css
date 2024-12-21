@@ -1,0 +1,50 @@
+
+.slide-mark {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+  position: absolute;
+  top: calc(100% + 40px);
+  left: 0;
+}
+
+.slide-mark__date {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFF;
+  opacity: 0.8;
+}
+
+.slide-mark__line-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-mark__dashed {
+  width: 1px;
+  height: 20px;
+  border-left: 1px dashed #FFF;
+}
+
+.slide-mark__line {
+  width: 1px;
+  height: 6px;
+  background-color: #FFF;
+}
+
+.swiper-slider-element {
+  height: 600px;
+}
+
+@media (max-width: 600px) {
+  .swiper-slider-element {
+    height: 400px;
+  }
+}
+
+
+

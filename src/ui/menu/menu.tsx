@@ -42,12 +42,18 @@ const items = [
 
 const Menu = ({isMenuOpen, setIsMenuOpen}: {isMenuOpen: boolean, setIsMenuOpen: (isMenuOpen: boolean) => void}) => {
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId: string, offset: number = 0) => {
     const element = document.getElementById(sectionId);
     if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition + offset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
     }
-    setIsMenuOpen(false)
+    setIsMenuOpen(false);
   };
 
 

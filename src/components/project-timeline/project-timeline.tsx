@@ -1,4 +1,5 @@
 import { Scrollbar, A11y } from "swiper/modules";
+import './style.css'
 import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -84,10 +85,9 @@ const textItems = [
   "An architectural replanning project for the restaurant building is in the works.",
 ];
 
-// const dates = slidesEls.map(slide => slide.date)
+
 
 const ProjectTimeline = () => {
-  // const [currentSlide, setCurrentSlide] = useState(0);
   return (
     <div className="w-full lg:pt-44 sm:pt-20 bg-loading-color pb-48 px-[18px]" id="project-timeline">
       <div className="w-full flex justify-center items-center flex-col gap-4 text-main-white">
@@ -99,10 +99,16 @@ const ProjectTimeline = () => {
         </span>
       </div>
       <div className="w-full flex justify-center items-center">
-        <div className="w-full mt-10 px-2">
+        <div className="w-full mt-10 px-2 overflow-hidden">
           <Swiper
             // install Swiper modules
             modules={[Scrollbar, A11y]}
+            // injectStyles={['overflow-x: hidden !important', 'overflow-y: visible !important']}
+            style={{
+              overflow: 'visible',
+              // overflowX: 'hidden',
+              // overflowY: 'visible',
+            }}
             spaceBetween={24}
             breakpoints={{
               360: {
@@ -122,7 +128,7 @@ const ProjectTimeline = () => {
             onSlideChange={() => console.log("slide change")}
           >
             {slidesEls.map((slide, index) => (
-              <SwiperSlide key={index} className="w-5/12">
+              <SwiperSlide key={index} className="w-5/12 relative swiper-slider-element">
                 <Image
                   src={slide.img}
                   alt={slide.text}
@@ -131,9 +137,19 @@ const ProjectTimeline = () => {
                 <div className="text-main-white font-helvetica font-normal md:text-lg sm:text-xs text-left leading-5 mt-3">
                   {slide.text}
                 </div>
+                <div className='slide-mark'>
+                  <div className='slide-mark__date'>{slide.date}</div>
+                  <div className='slide-mark__line-container'>
+                    <div className='slide-mark__dashed'></div>
+                    <div className='slide-mark__line'></div>
+                  </div>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
+
+
+          <div className="w-full h-[1px] mt-20 mb-8" style={{background: "linear-gradient(to right, #FFF 0%, #FFF 70%, rgba(255, 255, 255, 0) 100%)"}}></div>
         </div>
       </div>
 
