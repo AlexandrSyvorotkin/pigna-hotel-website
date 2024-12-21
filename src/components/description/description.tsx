@@ -45,7 +45,7 @@ const Description = () => {
           <Image src={img2} alt="Essence of Pigna" className="w-1/2 sm:h-[220px] lg:h-full" />
           <Image src={img1} alt="Essence of Pigna" className="w-1/2 sm:h-[220px] lg:h-full" />
         </div>
-        {/* <div className="mt-20 flex w-full 2lg:justify-between 2lg:flex-nowrap sm:flex-wrap sm:justify-center sm:gap-2 2lg:gap-0">
+        <div className="mt-20 flex w-full 2lg:justify-between 2lg:flex-nowrap sm:flex-wrap sm:justify-center sm:gap-2 2lg:gap-0">
           {descriptionEls.map((el, index) => (
             <div key={index} className="flex items-center">
               <div className="flex flex-col gap-2 justify-center items-center">
@@ -53,11 +53,11 @@ const Description = () => {
                 <span className="font-normal xl:text-lg sm:text-xs">{el.description}</span>
               </div>
               {index !== descriptionEls.length - 1 && (
-                <div className="h-full w-[1px] bg-gray-300 ml-16"></div>
+                <div className="h-full w-[1px] bg-gray-300 ml-16 sm:hidden lg:block"></div>
               )}
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
     </div>
   )

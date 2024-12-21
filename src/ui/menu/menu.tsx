@@ -64,7 +64,7 @@ const Menu = ({isMenuOpen, setIsMenuOpen}: {isMenuOpen: boolean, setIsMenuOpen: 
           const offsetPosition = elementPosition + offset;
 
           window.scrollTo({
-              top: offsetPosition,
+            top: offsetPosition,
               behavior: 'smooth'
           });
       }
