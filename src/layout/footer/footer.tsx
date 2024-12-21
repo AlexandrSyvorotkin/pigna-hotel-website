@@ -1,7 +1,7 @@
 import { Logo } from "../../components/logo/logo";
 import { useLocation, useNavigate } from "react-router-dom";
 import starBlack from "../../assets/star/star.svg";
-import starWhite from "../../assets/star/starW.svg";
+import starWhite from "../../assets/star/StarW.svg";
 
 const Footer = () => {
   
