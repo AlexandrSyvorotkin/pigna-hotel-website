@@ -19,7 +19,7 @@ const MainPage = () => {
       <Presentation
         text="Every detail is crafted for a remarkable stay"
         button={
-          <MainButton onClick={() => navigate("/docs")}>
+          <MainButton onClick={() => navigate("/registration")}>
             <span>INVEST THE PROJECT</span>
           </MainButton>
         }

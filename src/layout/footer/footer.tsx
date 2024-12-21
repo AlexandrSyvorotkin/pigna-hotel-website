@@ -1,5 +1,7 @@
 import { Logo } from "../../components/logo/logo";
 import { useLocation, useNavigate } from "react-router-dom";
+import starBlack from "../../assets/star/star.svg";
+import starWhite from "../../assets/star/starW.svg";
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -13,10 +15,13 @@ const Footer = () => {
   const navigate = useNavigate();
   const isPrivacyPage = location.pathname === "/privacy";
 
-   const validRoutes = ["/main", "/docs", '/privacy'];
-   const isValidRoute = validRoutes.includes(location.pathname);
- 
-   if (!isValidRoute) return null;
+  const validRoutes = ["/main", "/docs", "/privacy"];
+  const isValidRoute = validRoutes.includes(location.pathname);
+
+  if (!isValidRoute) return null;
+
+  const textColor = isPrivacyPage ? "text-main-white" : "text-black-main";
+
 
   return (
     <footer
@@ -25,7 +30,24 @@ const Footer = () => {
       }`}
     >
       <div className="w-[1750px] flex flex-col gap-12">
-        <Logo size="lg" color="black" />
+        <Logo
+          size="lg"
+          color={isPrivacyPage ? "white" : "black"}
+          img={isPrivacyPage ? starWhite : starBlack}
+          content={
+            <>
+              <span className={`${textColor} md:text-5xl sm:text-2xl font-patrizia`}>
+                GRAND
+              </span>
+              <span className={`${textColor} md:text-8xl sm:text-4xl font-patrizia`}>
+                PIGNA
+              </span>
+              <span className={`${textColor} md:text-5xl sm:text-2xl font-patrizia`}>
+                HOTEL
+              </span>
+            </>
+          }
+        />
         <div className="w-full h-[1px] bg-black-main"></div>
         <div className="w-full flex 2lg:flex-row sm:flex-col-reverse justify-between items-center">
           <div className="flex 2xl:gap-20 xl:gap-6 2lg:items-end sm:items-center 2lg:flex-row sm:flex-col-reverse sm:mt-6 2lg:mt-0">
@@ -34,7 +56,12 @@ const Footer = () => {
                 isPrivacyPage ? "text-main-white" : "text-black-main"
               }`}
             >
-              <span onClick={() => navigate("/privacy")} className="cursor-pointer">Privacy Policy</span>
+              <span
+                onClick={() => navigate("/privacy")}
+                className="cursor-pointer"
+              >
+                Privacy Policy
+              </span>
               <p className="opacity-60 uppercase">
                 ©Otto Pigna S.R.L., Inc. 2024 All rights reserved.
               </p>

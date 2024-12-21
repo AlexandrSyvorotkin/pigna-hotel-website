@@ -40,10 +40,7 @@ const LoginForm = ({
   };
 
   return (
-    <div className="w-full h-full pt-10">
-      <h2 className="text-5xl font-patrizia text-main-white uppercase font-normal leading-[65px]">
-        Вход
-      </h2>
+    <div className="w-full h-full pt-5">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="w-full h-full mt-10 flex flex-col gap-9"
@@ -52,7 +49,7 @@ const LoginForm = ({
           <input
             {...register("email")}
             placeholder="Email"
-            className="mt-4 bg-transparent border-b border-gray-300 focus:outline-none text-main-white"
+            className="mt-4 bg-transparent border-b border-gray-300 pb-[20px] focus:outline-none text-main-white"
           />
         </label>
         <label className="flex flex-col">
@@ -60,11 +57,11 @@ const LoginForm = ({
             {...register("password")}
             type="password"
             placeholder="Пароль"
-            className="mt-4 bg-transparent border-b border-gray-300 focus:outline-none text-main-white"
+            className="mt-4 bg-transparent border-b border-gray-300 pb-[20px] focus:outline-none text-main-white"
           />
         </label>
         <MainButton className="w-full bg-main-white uppercase text-main-black text-helvetica text-base">
-          Войти
+          Enter
         </MainButton>
       </form>
       <div className="w-full h-full mt-10 flex gap-1 justify-center">

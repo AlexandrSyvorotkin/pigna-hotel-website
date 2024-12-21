@@ -63,7 +63,7 @@ const RegistrationForm = () => {
       </span>
       <div className="2lg:mt-20 sm:mt-10 xl:ml-24 lg:ml-2 md:w-96 sm:w-full">
         <h2 className="text-5xl font-patrizia text-main-white uppercase font-normal leading-[65px]">
-          sing up
+          {isLogin ? "Sing in" : "Sing up"}
         </h2>
         <span className="mt-10 text-base font-patrizia text-main-white opacity-70">
           To view the the investment plan
@@ -81,14 +81,14 @@ const RegistrationForm = () => {
                   <input
                     {...register("name")}
                     placeholder="Name"
-                    className="mt-4 bg-transparent border-b border-gray-300 focus:outline-none text-main-white"
+                    className="mt-4 bg-transparent border-b border-gray-300 pb-[20px] focus:outline-none text-main-white"
                   />
                 </label>
                 <label className="flex flex-col sm:flex-col md:flex-row sm:gap-9 md:gap-0">
                   <input
                     {...register("country")}
                     placeholder="Country"
-                    className="mt-4 bg-transparent border-b border-gray-300 focus:outline-none text-main-white"
+                    className="mt-4 bg-transparent border-b border-gray-300 pb-[20px] focus:outline-none text-main-white"
                   />
                 </label>
               </div>
@@ -97,14 +97,14 @@ const RegistrationForm = () => {
                   <input
                     {...register("phone")}
                     placeholder="Phone"
-                    className="mt-4 bg-transparent border-b border-gray-300 focus:outline-none text-main-white"
+                    className="mt-4 bg-transparent border-b border-gray-300 pb-[20px] focus:outline-none text-main-white"
                   />
                 </label>
                 <label className="flex flex-col">
                   <input
                     {...register("email")}
                     placeholder="Email"
-                    className="mt-4 bg-transparent border-b border-gray-300 focus:outline-none text-main-white"
+                    className="mt-4 bg-transparent border-b border-gray-300 pb-[20px] focus:outline-none text-main-white"
                   />
                 </label>
               </div>
@@ -112,7 +112,7 @@ const RegistrationForm = () => {
                 <input
                   {...register("company_role")}
                   placeholder="Company"
-                  className="mt-4 bg-transparent border-b border-gray-300 focus:outline-none text-main-white"
+                  className="mt-4 bg-transparent border-b border-gray-300 pb-[20px] focus:outline-none text-main-white"
                 />
               </label>
 
@@ -121,7 +121,7 @@ const RegistrationForm = () => {
                   {...register("password")}
                   type="password"
                   placeholder="Password"
-                  className="mt-4 bg-transparent border-b border-gray-300 focus:outline-none text-main-white"
+                  className="mt-4 bg-transparent border-b border-gray-300 pb-[20px] focus:outline-none text-main-white"
                 />
               </label>
               <MainButton
