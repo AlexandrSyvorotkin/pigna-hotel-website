@@ -1,34 +1,42 @@
+import { useNavigate } from 'react-router-dom';
 import menu_img from '../../assets/bg/bg-menu.png'
 import { Image } from '../img/image'
 
 const items = [
   {
     title: 'Unique features',
-    id: 'essence-of-pigna'
+    id: 'features',
+    offset: -130
   },
   {
     title: 'Essence of Pigna',
-    id: '/'
+    id: 'essence-of-pigna',
+    offset: -120
   },
   {
     title: 'Location',
-    id: 'location'
+    id: 'location',
+    offset: -120
   },
   {
     title: 'Wellness & Spa',
-    id: 'wellness-spa'
+    id: 'wellness-spa',
+    offset: 0
   },
   {
     title: 'Cuisine',
-    id: 'cuisine'
+    id: 'cuisine',
+    offset: -120
   },
   {
     title: 'Building & Territory',
-    id: 'building-territory'
+    id: 'building-territory',
+    offset: -120
   },
   {
     title: 'Interior Design and Architecture',
-    id: 'architecture'
+    id: 'architecture',
+    offset: -120
   },
   {
     title: 'Project Timeline',
@@ -42,18 +50,26 @@ const items = [
 
 const Menu = ({isMenuOpen, setIsMenuOpen}: {isMenuOpen: boolean, setIsMenuOpen: (isMenuOpen: boolean) => void}) => {
 
-  const scrollToSection = (sectionId: string, offset: number = 0) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-        const offsetPosition = elementPosition + offset;
 
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-    }
-    setIsMenuOpen(false);
+  const navigate = useNavigate();
+  const scrollToSection = (sectionId: string, offset: number = 0) => {
+    // Переход на главную страницу
+    navigate('/main'); // Добавлено: переход на главную страницу
+
+    // Используем setTimeout, чтобы дождаться завершения перехода перед скроллом
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+          const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = elementPosition + offset;
+
+          window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+          });
+      }
+      setIsMenuOpen(false);
+    }, 100); // Задержка в 100 мс перед скроллом
   };
 
 
@@ -68,7 +84,7 @@ const Menu = ({isMenuOpen, setIsMenuOpen}: {isMenuOpen: boolean, setIsMenuOpen: 
           </div>
           <ul className='flex flex-col justify-start items-start 2lg:gap-8 sm:gap-4'>
             {items.map((item, index) => (
-              <li key={index} className='text-main-white 2lg:text-4xl sm:text-base font-patrizia cursor-pointer uppercase' onClick={() => scrollToSection(item.id)}>{item.title}</li>
+              <li key={index} className='text-main-white 2lg:text-4xl sm:text-base font-patrizia cursor-pointer uppercase' onClick={() => scrollToSection(item.id, item.offset)}>{item.title}</li>
             ))}
           </ul>
         </div>

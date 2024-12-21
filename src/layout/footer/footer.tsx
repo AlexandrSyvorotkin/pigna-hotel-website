@@ -122,13 +122,13 @@ const Footer = () => {
                 WELLNESS & SPA
               </span>
               <span
-                onClick={() => scrollToSection("cuisine")}
+                onClick={() => scrollToSection("cuisine", -120)}
                 className="cursor-pointer"
               >
                 CUISINE
               </span>
               <span
-                onClick={() => scrollToSection("building-territory")}
+                onClick={() => scrollToSection("building-territory", -120)}
                 className="cursor-pointer"
               >
                 BUILDING & TERRITORY
@@ -140,7 +140,7 @@ const Footer = () => {
               }`}
             >
               <span
-                onClick={() => scrollToSection("architecture")}
+                onClick={() => scrollToSection("architecture", -120)}
                 className="cursor-pointer"
               >
                 ARCHITECTURE
@@ -152,7 +152,7 @@ const Footer = () => {
                 PROJECT TIMELINE
               </span>
               <span
-                onClick={() => scrollToSection("invest-in-the-project")}
+                onClick={() => navigate("/registration")}
                 className="cursor-pointer"
               >
                 INVEST IN THE PROJECT
