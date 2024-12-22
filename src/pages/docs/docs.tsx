@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import { Presentation } from "../../components/presentation/presentation";
-import { MainButton } from "../../ui/button/main-button";
+// import { MainButton } from "../../ui/button/main-button";
 
-const textVariants = [
-  "park",
-  "playground",
-  "padel court",
-  "club house",
-  "helipad",
-  "bike rental",
-  "tennis court",
-];
+// const textVariants = [
+//   "park",
+//   "playground",
+//   "padel court",
+//   "club house",
+//   "helipad",
+//   "bike rental",
+//   "tennis court",
+// ];
 
-const address = "https://termedipigna.com";
+// const address = "https://termedipigna.com";
 
 interface IClosedContent {
   bg_image_url: string;
