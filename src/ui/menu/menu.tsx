@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import menu_img from '../../assets/bg/bg-menu.png'
 import { Image } from '../img/image'
+import close_icon from '../../assets/icon-close/icon-close.png'
 
 const items = [
   {
@@ -34,7 +35,7 @@ const items = [
     offset: -120
   },
   {
-    title: 'Interior Design and Architecture',
+    title: 'Architecture',
     id: 'architecture',
     offset: -120
   },
@@ -43,20 +44,24 @@ const items = [
     id: 'project-timeline'
   },
   {
-    title: 'Investment opportunities',
-    id: '/'
+    title: 'Invest the project',
+    id: 'invest'
   },
 ]
 
 const Menu = ({isMenuOpen, setIsMenuOpen}: {isMenuOpen: boolean, setIsMenuOpen: (isMenuOpen: boolean) => void}) => {
 
+  
 
   const navigate = useNavigate();
   const scrollToSection = (sectionId: string, offset: number = 0) => {
-    // Переход на главную страницу
-    navigate('/main'); // Добавлено: переход на главную страницу
 
-    // Используем setTimeout, чтобы дождаться завершения перехода перед скроллом
+    if (sectionId === 'invest') {
+      navigate('/registration');
+      setIsMenuOpen(false);
+      return
+    }
+    navigate('/main');
     setTimeout(() => {
       const element = document.getElementById(sectionId);
       if (element) {
@@ -69,7 +74,7 @@ const Menu = ({isMenuOpen, setIsMenuOpen}: {isMenuOpen: boolean, setIsMenuOpen: 
           });
       }
       setIsMenuOpen(false);
-    }, 100); // Задержка в 100 мс перед скроллом
+    }, 100);
   };
 
 
@@ -80,7 +85,9 @@ const Menu = ({isMenuOpen, setIsMenuOpen}: {isMenuOpen: boolean, setIsMenuOpen: 
         <Image src={menu_img} alt='menu' className='2lg:w-2/5 sm:w-full 2lg:h-full sm:h-1/5 md:h-2/5'/>
         <div className='w-3/5 flex xl:pl-60 lg:pl-20 sm:pl-10 items-center relative'>
           <div className='2lg:flex justify-end items-end absolute top-10 right-20 sm:hidden'>
-            <button className='text-main-white text-4xl font-patrizia' onClick={() => setIsMenuOpen(false)}>X</button>
+            <div className='cursor-pointer' onClick={() => setIsMenuOpen(false)}>
+              <Image src={close_icon} alt='close' className='text-main-white text-4xl font-patrizia'/>
+            </div>
           </div>
           <ul className='flex flex-col justify-start items-start 2lg:gap-8 sm:gap-4'>
             {items.map((item, index) => (

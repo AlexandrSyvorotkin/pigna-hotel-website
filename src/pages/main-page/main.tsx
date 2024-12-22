@@ -31,7 +31,7 @@ const MainPage = () => {
             thermal wellness retreat in the region, and the largest spa on the
             Ligurian Riviera
           </p>
-          <p className="lg:text-lg sm:text-xs font-helvetica font-normal text-center opacity-80 text-main-white">
+          <p className="lg:text-lg sm:text-xs font-helvetica font-normal text-center opacity-80 text-main-white mt-2">
             Immerse yourself in thermal springs, lush valleys, and the
             mountainous landscapes of Liguria while staying in a luxury 5-star
             resort with a unique holistic medical spa concept that combines

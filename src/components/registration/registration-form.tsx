@@ -65,7 +65,7 @@ const RegistrationForm = () => {
         <h2 className="text-5xl font-patrizia text-main-white uppercase font-normal leading-[65px]">
           {isLogin ? "Sing in" : "Sing up"}
         </h2>
-        <span className="mt-10 text-base font-patrizia text-main-white opacity-70">
+        <span className="mt-10 text-base font-helvetica text-main-white opacity-70">
           To view the the investment plan
         </span>
         {isLogin ? (
@@ -80,7 +80,7 @@ const RegistrationForm = () => {
                 <label className="flex flex-col">
                   <input
                     {...register("name")}
-                    placeholder="Name"
+                    placeholder="Name*"
                     className="mt-4 bg-transparent border-b border-gray-300 pb-[20px] focus:outline-none text-main-white"
                   />
                 </label>
@@ -103,7 +103,7 @@ const RegistrationForm = () => {
                 <label className="flex flex-col">
                   <input
                     {...register("email")}
-                    placeholder="Email"
+                    placeholder="Email*"
                     className="mt-4 bg-transparent border-b border-gray-300 pb-[20px] focus:outline-none text-main-white"
                   />
                 </label>
@@ -126,7 +126,7 @@ const RegistrationForm = () => {
               </label>
               <MainButton
                 className="w-full bg-main-white uppercase text-main-black text-helvetica text-base"
-                onClick={() => handleSubmit(onSubmit)}
+                onClick={() => setIsModalOpen(true)}
               >
                 Send a request
               </MainButton>

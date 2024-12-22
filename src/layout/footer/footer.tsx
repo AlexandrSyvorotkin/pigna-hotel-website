@@ -19,8 +19,6 @@ const Footer = () => {
 
   };
 
-
-
   const location = useLocation();
   const navigate = useNavigate();
   const isPrivacyPage = location.pathname === "/privacy";
@@ -87,7 +85,7 @@ const Footer = () => {
           </div>
           <div className="flex 2xl:gap-20 xl:gap-6 2lg:flex-row sm:flex-col sm:gap-6 2lg:gap-0">
             <div
-              className={`flex flex-col gap-4 sm:items-center 2lg:items-start ${
+              className={`flex flex-col gap-4 sm:items-center 2lg:items-start justify-end ${
                 isPrivacyPage ? "text-main-white" : "text-black-main"
               }`}
             >
@@ -103,25 +101,31 @@ const Footer = () => {
               >
                 ESSENCE OF PIGNA
               </span>
+            </div>
+            <div
+              className={`flex flex-col gap-4 sm:items-center 2lg:items-start justify-end ${
+                isPrivacyPage ? "text-main-white" : "text-black-main"
+              }`}
+            > 
               <span
                 onClick={() => scrollToSection("location", -120)}
                 className="cursor-pointer"
               >
                 LOCATION
               </span>
-            </div>
-            <div
-              className={`flex flex-col gap-4 sm:items-center 2lg:items-start ${
-                isPrivacyPage ? "text-main-white" : "text-black-main"
-              }`}
-            >
               <span
                 onClick={() => scrollToSection("wellness-spa")}
                 className="cursor-pointer"
               >
                 WELLNESS & SPA
               </span>
-              <span
+            </div>
+            <div
+              className={`flex flex-col gap-4 sm:items-center 2lg:items-start justify-end ${
+                isPrivacyPage ? "text-main-white" : "text-black-main"
+              }`}
+            >
+            <span
                 onClick={() => scrollToSection("cuisine", -120)}
                 className="cursor-pointer"
               >

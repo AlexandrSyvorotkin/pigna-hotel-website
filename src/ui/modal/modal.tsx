@@ -13,7 +13,7 @@ const Modal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) =>
           <Image src={close} alt="close" className="w-5 h-5" />
         </button>
         <div className="flex justify-center mt-16 pb-16 w-full h-full">
-          <div className="flex flex-col items-center justify-center w-3/4 gap-6">
+          <div className="flex flex-col items-center justify-center w-[70%] gap-6">
           <span className='text-main-black font-helvetica lg:text-2xl sm:text-base text-center uppercase'>Thank you, we have received your request for access to the investment plan.</span>
           <span className='text-main-black lg:text-lg sm:text-xs font-helvetica text-center'>The project manager will contact you as soon as possible to confirm access.</span>
           </div>
