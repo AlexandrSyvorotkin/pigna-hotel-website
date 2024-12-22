@@ -1,6 +1,5 @@
 import { Scrollbar, A11y } from "swiper/modules";
 import './style.css'
-import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Image } from "../../ui/img/image";
