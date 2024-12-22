@@ -70,9 +70,9 @@ const Cuisine = () => {
     >
       <div className="w-[1750px]">
         
-        <div className='flex flex-col gap-6 justify-center items-center'>
-          <h3 className='text-black-main lg:text-5xl sm:text-2xl font-patrizia font-normal text-center'>Cuisine</h3>
-          <p className='text-black-main lg:text-lg sm:text-xs font-helvetica font-normal text-center lg:w-1/2 sm:w-full'>By embracing a "Zero Kilometre" supply chain, the hotel’s restaurants proudly showcase the finest and freshest local ingredients. Local produce — easily digestible white pigna beans, olive oil and all olive products — form a plant-based dietary cuisine with a nutritional programme tailored to the needs of each client.</p>
+        <div className='flex flex-col gap-0 justify-center items-center'>
+          <h3 className='text-black-main lg:text-5xl sm:text-2xl font-patrizia font-normal text-center uppercase'>Cuisine</h3>
+          <p className='text-black-main lg:text-lg sm:text-xs font-helvetica font-normal text-center lg:w-[55%] sm:w-full'>By embracing a "Zero Kilometre" supply chain, the hotel’s restaurants proudly showcase the finest and freshest local ingredients. Local produce — easily digestible white pigna beans, olive oil and all olive products — form a plant-based dietary cuisine with a nutritional programme tailored to the needs of each client.</p>
         </div>
 
 

@@ -25,8 +25,8 @@ const MainPage = () => {
         }
       />
       <Banner className="h-[450px]">
-        <div className="flex flex-col gap-4 xl:w-1/2 sm:w-full sm:px-[18px]">
-          <p className="lg:text-2xl sm:text-base font-helvetica font-normal text-center uppercase text-main-white">
+        <div className="flex flex-col gap-4 xl:w-3/5 sm:w-full sm:px-[18px]">
+          <p className="lg:text-xl sm:text-base font-helvetica font-normal text-center uppercase text-main-white">
             Grand Hotel Pigna is designed as a world-class medical spa, the only
             thermal wellness retreat in the region, and the largest spa on the
             Ligurian Riviera
@@ -49,9 +49,9 @@ const MainPage = () => {
       </Banner>
       <Description /> 
       <Banner className="h-[400px]">
-        <p className="text-main-white lg:text-4xl sm:text-xl font-patrizia text-center w-3/4 uppercase lg:leading-10">
-          The hotel was highlighted as a project of regional significance. The
-          renovation of the hotel gave local residents and municipal authorities
+        <p className="text-main-white lg:text-4xl sm:text-xl font-patrizia text-center w-[100%] uppercase lg:leading-[60px]">
+          The hotel was highlighted as a project of regional significance. <br />
+          The renovation of the hotel gave local residents and municipal authorities <br />
           a hope for relaunch and rebirth for Pigna and for the whole Nervia
           Valley.
         </p>

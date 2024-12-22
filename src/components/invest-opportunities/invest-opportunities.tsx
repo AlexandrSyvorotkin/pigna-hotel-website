@@ -14,17 +14,13 @@ const InvestOpportunities = () => {
             backgroundPosition: 'center',
           }}
         >
-          <div className="flex flex-col items-center gap-4 text-main-white max-w-[800px] text-center px-4">
-            <span className="text-main-white lg:text-4xl sm:text-2xl font-patrizia font-normal">
+        {/* TODO: check responsiveness */}
+          <div className="flex flex-col items-center gap-4 text-main-white max-w-[930px] text-center">
+            <span className="text-main-white lg:text-4xl sm:text-2xl font-patrizia font-normal uppercase">
               Investment opportunities
             </span>
-            <p className="text-main-white lg:text-lg sm:text-xs font-helvetica font-normal">
-              The project's unique location, in the heart of the Italian Riviera,
-              in close proximity to the French Riviera and Monaco, on a site
-              with a thermal and mineral water concession, hospital licence and
-              zero kilometre supply chain, makes this a destination within a
-              destination. Various financial and ownership options to participate
-              in this project are possible.
+            <p className="text-main-white lg:text-lg sm:text-xs font-helvetica font-normal w-full">
+            The project’s unique location, in the heart of the Italian Riviera, in close proximity to the French Riviera and Monaco, on a site with a thermal and mineral water concession, hospital licence and zero kilometre supply chain, makes this a destination within a destination. Various financial and ownership options to participate in this project are possible.
             </p>
             <MainButton className="lg:text-base sm:text-xs">
               INVEST IN PROJECT

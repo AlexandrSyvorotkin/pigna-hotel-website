@@ -126,7 +126,7 @@ const RegistrationForm = () => {
               </label>
               <MainButton
                 className="w-full bg-main-white uppercase text-main-black text-helvetica text-base"
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => handleSubmit(onSubmit)}
               >
                 Send a request
               </MainButton>

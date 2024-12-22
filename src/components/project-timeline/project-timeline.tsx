@@ -94,7 +94,7 @@ const ProjectTimeline = () => {
         <h2 className="lg:text-4xl sm:text-2xl font-patrizia font-normal uppercase">
           Project Timeline
         </h2>
-        <span className="lg:text-xl sm:text-xs font-helvetica font-normal">
+        <span className="lg:text-xl sm:text-xs font-helvetica font-normal opacity-80">
           From mediaeval past to a premium wellness destination of the future.
         </span>
       </div>
@@ -118,7 +118,7 @@ const ProjectTimeline = () => {
                 slidesPerView: 2, // 2 слайда на экранах меньше 768px
               },
               1024: {
-                slidesPerView: 2.5, // 2.5 слайда на экранах меньше 1024px
+                slidesPerView: 2.3, // 2.5 слайда на экранах меньше 1024px
               },
             }}
             // navigation
@@ -132,7 +132,7 @@ const ProjectTimeline = () => {
                 <Image
                   src={slide.img}
                   alt={slide.text}
-                  className="w-full md:h-[465px] sm:h-[300px]"
+                  className="w-full md:h-[465px] sm:h-[300px] lg:w-[800px] lg:h-[328px]"
                 />
                 <div className="text-main-white font-helvetica font-normal md:text-lg sm:text-xs text-left leading-5 mt-3">
                   {slide.text}
@@ -149,25 +149,25 @@ const ProjectTimeline = () => {
           </Swiper>
 
 
-          <div className="w-full h-[1px] mt-20 mb-8" style={{background: "linear-gradient(to right, #FFF 0%, #FFF 70%, rgba(255, 255, 255, 0) 100%)"}}></div>
+          <div className="w-full h-[1px] mt-1 mb-8" style={{background: "linear-gradient(to right, #FFF 0%, #FFF 70%, rgba(255, 255, 255, 0) 100%)"}}></div>
         </div>
       </div>
 
       <div className="lg:mt-36 sm:mt-10 w-full flex justify-center">
         <div className="w-[1750px]">
           <div className="flex flex-col gap-4 w-full">
-            <span className="text-main-white font-helvetica font-normal text-2xl text-center">
+            <span className="text-main-white font-helvetica font-normal text-2xl text-center uppercase">
               Project status. Documents and permits obtained
             </span>
             <div className="w-full flex justify-center items-center">
-              <p className="text-main-white font-helvetica font-normal text-lg text-center mt-3 opacity-80 lg:w-1/2 sm:w-full">
+              <p className="text-main-white font-helvetica font-normal text-lg text-center mt-3 opacity-80 lg:w-[42%] sm:w-full">
                 The approval documentation, research and planning work have been
                 completed. The project is at the stage of raising investment for
                 the implementation of the renovation plans:
               </p>
             </div>
           </div>
-          <div className="lg:mt-36 sm:mt-10 justify-center flex flex-wrap lg:gap-5 sm:gap-1 sm:flex-col lg:flex-row">
+          <div className="lg:mt-20 sm:mt-10 justify-center flex flex-wrap lg:gap-5 sm:gap-1 sm:flex-col lg:flex-row">
             {textItems.map((text, index) => (
               <React.Fragment key={index}>
                 <div className="max-w-[800px] min-w-[250px] sm:w-full lg:h-[80px] sm:h-auto">

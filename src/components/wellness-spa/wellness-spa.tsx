@@ -74,7 +74,7 @@ const WellnessSpa = () => {
     <div className="2lg:pt-40 sm:pt-14 w-full bg-loading-color 2lg:pb-44 pb-24" id="wellness-spa">
       <div className="flex justify-center items-center px-[18px]">
         <div className="flex flex-col gap-4 justify-center items-center text-main-white 2lg:w-1/2 sm:w-full">
-          <span className="font-patrizia lg:text-5xl sm:2xl text-center">Wellness & Spa</span>
+          <span className="font-patrizia lg:text-5xl sm:2xl text-center uppercase">Wellness & Spa</span>
           <p className="lg:text-lg sm:text-xs font-helvetica text-center">Grand Hotel Pigna is conceived as a thermal wellness retreat where every guest can enjoy a full range of spa treatments that restore inner harmony and revitalise. The retreat’s wellness & health concept is based on 4 pillars:</p>
         </div>
       </div>
@@ -96,8 +96,8 @@ const WellnessSpa = () => {
                   }`}
                 onClick={() => setActiveTab(index)}
               >
-                <span className='2xl:text-xl font-bold'>{tab.title}</span>
-                <p className='2xl:text-base'>{tab.description}</p>
+                <span className='2xl:text-xl uppercase font-helvetica'>{tab.title}</span>
+                <p className='2xl:text-base font-helvetica'>{tab.description}</p>
               </div>
             ))}
           </div>
@@ -142,13 +142,13 @@ const WellnessSpa = () => {
           </div>
 
           <div className='w-full mt-24 sm:mt-10'>
-            <div className='flex 2lg:gap-16 sm:flex-col 2lg:flex-row sm:gap-4 lg:justify-center items-center w-3/4 text-main-white'>
-              <span className='font-patrizia lg:text-4xl sm:text-lg sm:text-left w-full'>Key objectives of the wellness programmes:</span>
-              <p className='font-helvetica lg:text-lg sm:text-xs'>The hotel holds hospital status, granting us complete freedom to implement a wide range of medical services in developing our spa facilities to the highest standards.</p>
+            <div className='flex 2lg:gap-16 sm:flex-col 2lg:flex-row sm:gap-4 lg:justify-center items-center w-3/5 text-main-white'>
+              <span className='font-patrizia lg:text-4xl sm:text-lg sm:text-left w-full uppercase'>Key objectives of the wellness programmes:</span>
+              <p className='font-helvetica lg:text-lg sm:text-xs opacity-80'>The hotel holds hospital status, granting us complete freedom to implement a wide range of medical services in developing our spa facilities to the highest standards.</p>
             </div>
             <div className='flex justify-between items-center w-full mt-10 text-main-white flex-wrap sm:gap-1 lg:gap-0'>
               {keyObjectives.map((objective, index) => (
-                <span key={index} className='font-helvetica lg:text-xl sm:text-base'>{objective}</span>
+                <span key={index} className='font-helvetica lg:text-xl sm:text-base uppercase'>{objective}</span>
               ))}
             </div>
           </div>

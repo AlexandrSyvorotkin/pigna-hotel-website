@@ -67,9 +67,9 @@ const Header = ({
       <HeaderControls openMenu={openMenu} />
       <Logo size="sm" color="white" img={isScrolled ? starBlack : starWhite} content={
         <>
-        <span className=" md:text-xl sm:text-sm ">GRAND</span>
-        <span className="md:text-3xl sm:text-lg">PIGNA</span>
-        <span className="md:text-xl sm:text-sm">HOTEL</span>
+        <span className="md:text-xl sm:text-sm font-patrizia">GRAND</span>
+        <span className="md:text-3xl sm:text-lg font-patrizia">PIGNA</span>
+        <span className="md:text-xl sm:text-sm font-patrizia">HOTEL</span>
         </>
       }/>
       <span

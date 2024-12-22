@@ -19,7 +19,7 @@ const InteriorDesign = () => {
     >
       <div className="max-w-[1750px]">
         <div className="flex justify-center flex-col gap-4">
-        <span className="text-black-main lg:text-5xl sm:text-2xl font-patrizia font-normal text-center">
+        <span className="text-black-main lg:text-5xl sm:text-2xl font-patrizia font-normal text-center uppercase">
           Interior Design and Architecture
         </span>
         <div className="w-full flex justify-center items-center">
@@ -34,11 +34,11 @@ const InteriorDesign = () => {
           <Image src={bg} alt="img" className="w-full h-full" />
         </div>
         </div>
-        <div className="w-full mt-14 flex flex-col gap-6 justify-center items-center">
-        <p className='text-black-main lg:text-2xl sm:text-base font-helvetica font-normal text-center uppercase lg:w-1/2 sm:w-full'>Designed by the renowned architect Alex Kravetz, the renovation project stands as a testament to innovative vision and artistry, set to redefine luxury and elegance within the hospitality landscape.</p>
-        <p className='mt-4 text-black-main lg:text-lg sm:text-xs font-helvetica font-normal text-center lg:w-1/2 sm:w-full'>This transformation is further distinguished by accolades that include The Imperial Hotel Vienna, Intercontinental Porto, Radisson Hotel Antwerpen, Sheraton Oman, Hilton Muscat etc.</p>
+        <div className="w-full mt-36 flex flex-col justify-center items-center">
+        <p className='text-black-main lg:text-2xl sm:text-base font-helvetica font-normal text-center uppercase lg:w-[65%] sm:w-full'>Designed by the renowned architect Alex Kravetz, the renovation project stands as a testament to innovative vision and artistry, set to redefine luxury and elegance within the hospitality landscape.</p>
+        <p className='mt-4 text-black-main lg:text-lg sm:text-xs font-helvetica font-normal text-center lg:w-[45%] sm:w-full'>This transformation is further distinguished by accolades that include The Imperial Hotel Vienna, Intercontinental Porto, Radisson Hotel Antwerpen, Sheraton Oman, Hilton Muscat etc.</p>
       </div>
-      <div className='mt-20 flex justify-between gap-10 flex-wrap'>
+      <div className='mt-[72px] flex justify-between gap-10 flex-wrap'>
         {images.map((img, index) => (
           <img src={img} alt='img' key={index} className='object-contain'/>
         ))}
