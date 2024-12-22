@@ -19,6 +19,7 @@ const RegistrationForm = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const { register, handleSubmit } = useForm<RegistrationData>({
     defaultValues: {
@@ -32,7 +33,7 @@ const RegistrationForm = () => {
   });
 
   const onSubmit = async (data: RegistrationData) => {
-    console.log(data);
+    // console.log(data);
     try {
       const response = await fetch(
         "https://dev.termedipigna.com/auth/register",
@@ -42,14 +43,23 @@ const RegistrationForm = () => {
           body: JSON.stringify(data),
         }
       );
+      
       if (!response.ok) {
-        throw new Error(`Ошибка: ${response.status}`);
+        const errorData = await response.json();
+        setErrorMessage(errorData.message || 'Registration failed');
+        return;
       }
-
-      const result = await response.json();
-      console.log(result);
+      if (response.ok) {
+        const result = await response.json();
+        console.log(result);
+        setIsModalOpen(true);
+        setTimeout(() => {
+          navigate("/main");
+        }, 3000);
+    }
     } catch (error) {
       console.error("Ошибка при регистрации:", error);
+      setErrorMessage('Network error occurred');
     }
   };
 
@@ -124,9 +134,10 @@ const RegistrationForm = () => {
                   className="mt-4 bg-transparent border-b border-gray-300 pb-[20px] focus:outline-none text-main-white"
                 />
               </label>
+              <span className="text-red-500">{errorMessage}</span>
               <MainButton
                 className="w-full bg-main-white uppercase text-main-black text-helvetica text-base"
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => handleSubmit(onSubmit)}
               >
                 Send a request
               </MainButton>

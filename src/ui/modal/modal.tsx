@@ -4,7 +4,13 @@ import close from '../../assets/IconClose.svg'
 
 const Modal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
 
+
+
   if (!isOpen) return null;
+
+  setTimeout(() => {
+    onClose();
+  }, 3000);
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 px-[18px]">

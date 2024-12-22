@@ -1,7 +1,8 @@
 import { MainButton } from "../../ui/button/main-button";
 import { useForm } from "react-hook-form";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = ({
   setIsLogin,
@@ -15,6 +16,10 @@ const LoginForm = ({
     },
   });
 
+  const navigate = useNavigate();
+
+  const [errorMessage, setErrorMessage] = useState("");
+
   const onSubmit = async (data: { email: string; password: string }) => {
     try {
       const response = await fetch("https://dev.termedipigna.com/auth/login", {
@@ -23,19 +28,22 @@ const LoginForm = ({
         body: JSON.stringify(data),
       });
 
-      // Проверка на успешный ответ
       if (!response.ok) {
-        throw new Error(`Ошибка: ${response.status}`);
+        const errorData = await response.json();
+        setErrorMessage(errorData.message || 'Registration failed');
+        return;
       }
 
       const result = await response.json();
       console.log(result);
 
       if (result.refresh_token) {
-        Cookies.set("cookie", result.refresh_token, { expires: 7 });
+        Cookies.set("cookie", result.refresh_token, { expires: 1 });
+        navigate("/docs");
       }
     } catch (error) {
-      console.error("Ошибка при входе:", error);
+      console.error("Ошибка при регистрации:", error);
+      setErrorMessage('Network error occurred');
     }
   };
 
@@ -60,6 +68,7 @@ const LoginForm = ({
             className="mt-4 bg-transparent border-b border-gray-300 pb-[20px] focus:outline-none text-main-white"
           />
         </label>
+        <div className="text-red-500">{errorMessage}</div>
         <MainButton className="w-full bg-main-white uppercase text-main-black text-helvetica text-base">
           Enter
         </MainButton>

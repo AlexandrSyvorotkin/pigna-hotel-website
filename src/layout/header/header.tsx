@@ -7,6 +7,8 @@ import icon_menu from "../../assets/icon-menu/IconMenu.svg";
 import icon_menu_black from "../../assets/icon-menu/IconMenuBlack.svg";
 import starBlack from "../../assets/star/star.svg";
 import starWhite from "../../assets/star/StarWB.svg";
+import Cookies from "js-cookie";
+
 
 const Header = ({
   openMenu,
@@ -56,6 +58,21 @@ const Header = ({
       ? headerClasses.scrolled
       : headerClasses.default;
 
+  
+  
+  const cookie = Cookies.get("cookie");
+
+
+  const btnText = cookie && cookie?.length > 0 ? 'enter the docs' : 'invest the project';
+
+  const navigateHandler = () => {
+    if (cookie && cookie?.length > 0) {
+      navigate("/docs");
+    } else {
+     navigate("/registration"); 
+    }
+  }
+
   if (location.pathname === "/") {
     return null;
   }
@@ -73,10 +90,10 @@ const Header = ({
         </>
       }/>
       <span
-        className="text-base sm:hidden lg:block cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
-        onClick={() => navigate("/registration")}
+        className="text-base sm:hidden lg:block cursor-pointer transition duration-300 ease-in-out hover:opacity-70 uppercase"
+        onClick={navigateHandler}
     >
-        INVEST THE PROJECT
+        {btnText}
       </span>
       <div className="sm:block lg:hidden" onClick={openMenu}>
         <Image src={isScrolled ? icon_menu_black : icon_menu} alt="logo" />
