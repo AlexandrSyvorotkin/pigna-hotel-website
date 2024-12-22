@@ -17,13 +17,14 @@ const MainPage = () => {
   return (
     <>
       <Presentation
-        text="Every detail is crafted for a remarkable stay"
         button={
           <MainButton onClick={() => navigate("/registration")}>
             <span className="hover:opacity-70">INVEST THE PROJECT</span>
           </MainButton>
         }
-      />
+      >
+        <span className='font-normal lg:text-6xl sm:text-3xl text-main-white text-center font-patrizia uppercase opacity-80 lg:w-[800px] lg:leading-[87px]'>Every detail is crafted for a remarkable stay</span>
+      </Presentation>
       <Banner className="h-[450px]">
         <div className="flex flex-col gap-4 xl:w-3/5 sm:w-full sm:px-[18px]">
           <p className="lg:text-xl sm:text-base font-helvetica font-normal text-center uppercase text-main-white">

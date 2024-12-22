@@ -1,7 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Presentation } from "../../components/presentation/presentation";
 import { MainButton } from "../../ui/button/main-button";
-import Cookies from "js-cookie";
 
 const textVariants = [
   "park",
@@ -13,76 +12,77 @@ const textVariants = [
   "tennis court",
 ];
 
+const address = "https://termedipigna.com";
+
+interface IClosedContent {
+  bg_image_url: string;
+  button_text: string;
+  document_url: string;
+  id: number;
+  text: string;
+  title: string;
+}
+
 const Docs = () => {
-  
+  const [closedContent, setClosedContent] = useState<IClosedContent[]>([]);
+
   useEffect(() => {
-    const token = Cookies.get("cookie");
-    console.log(token);
-
-
-    if (token) {
-      fetch("https://dev.termedipigna.com/content/", {
-        method: "GET",
-        headers: {
-          "Accept": "application/json",
-        },
-        credentials: "include",
+    fetch("https://termedipigna.com/content/", {})
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Ошибка: ${res.status}`);
+        }
+        return res.json();
       })
-        .then((res) => {
-          if (!res.ok) {
-            throw new Error(`Ошибка: ${res.status}`);
-          }
-          return res.json();
-        })
-        .then((data) => console.log(data))
-        .catch((error) => console.error("Ошибка при получении данных:", error));
-    } else {
-      console.error("Токен не найден в куки.");
-    }
+      .then((data) => setClosedContent(data));
   }, []);
+
+  console.log(closedContent);
 
   return (
     <div className="w-full h-full">
-      <Presentation text="Grand Hotel Pigna Renovation Project. Project Details and Financial Overview" />
+      <Presentation>
+        <span className="font-normal lg:text-5xl sm:text-2xl text-main-white text-center font-patrizia uppercase opacity-80 lg:w-[1200px] lg:leading-[87px]">Grand Hotel Pigna Renovation Project.
+        Project Details and Financial Overview</span>
+      </Presentation>
 
-      <div className="w-full bg-main-color flex justify-center items-center mt-48 mb-48">
-        <div className="w-1/2 h-full flex flex-col gap-4 justify-center items-center">
-          <span className="text-black-main text-4xl font-helvetica font-normal text-center w-full uppercase">
-            Welcome to the financial details and documentation hub of the Grand
-            Hotel Pigna renovation project.
-          </span>
-          <p className="text-black-main text-xl font-helvetica font-normal text-center w-full">
-            This webpage provides a comprehensive insight into the feasibility
-            study, financial projections, architectural projects and supporting
-            documents that underpin our vision for the revitalisation of the
-            hotel. Our aim is to enhance the guest experience through state of
-            the art improvements and create a unique world-class wellness resort
-            while ensuring a robust financial return for the investors.
-          </p>
-        </div>
+      {/* <div className="w-full flex flex-col">
+
+
+        {closedContent.slice(0, 2).map((item) => {
+
+          const isImg = item.bg_image_url.endsWith('.png')
+
+          // const bgImg = isImg ? `bg-[url("${address}${item.bg_image_url}")] bg-cover bg-center` : 'bg-main-white'
+
+          const bgImgStyle = isImg ? { backgroundImage: `url("${address}${item.bg_image_url}")` } : { backgroundColor: '#EDF1EE' };
+
+          // console.log(bgImg)
+
+          const textColor = isImg ? 'text-main-white' : 'text-black-main'
+
+          return (
+            <div className={`w-full h-[700px] flex justify-center items-center`} key={item.id} style={bgImgStyle}>
+              <div className="flex flex-col gap-6 justify-center items-center w-full">
+                <h2 className={`${textColor} text-4xl font-patrizia font-normal text-center w-full uppercase`}>
+                  {item.title}
+                </h2>
+                <p className={`${textColor} text-xl font-helvetica font-normal text-center w-1/2`}>
+                  {item.text}
+                </p>
+                {item.button_text === null ? null : (
+                  <a href={`${address}${item.document_url}`} download target="_blank">
+                    <MainButton className="text-main-white uppercase">
+                      {item.button_text}
+                    </MainButton>
+                  </a>
+                )}
+              </div>
+            </div>
+          );
+        })}
       </div>
-
-      <div className='w-full bg-[url("./assets/bg/bg-project.png")] bg-cover bg-center h-[700px] flex justify-center items-center'>
-        <div className="flex flex-col gap-6 justify-center items-center w-full">
-          <h2 className="text-main-white text-4xl font-patrizia font-normal text-center w-full uppercase">
-            Architectural project
-          </h2>
-          <p className="text-main-white text-xl font-helvetica font-normal text-center w-1/2">
-            The resort comprises three distinct buildings: the main hotel and
-            thermal spa building , the historic Terme building featuring a
-            restaurant, and a historic mill. The renovation of the main hotel
-            building is designed by the award-winning architect Alex Kravetz,
-            whose vision aims to elevate the property to the luxury 5-star
-            standard. The architectural project encompasses enhancements to
-            accommodation options, expansion of hotel facilities, dining and
-            wellness areas, crafted to provide an exceptional guest experience.
-          </p>
-          <MainButton className="text-main-white uppercase">
-            Download the architectural project
-          </MainButton>
-        </div>
-      </div>
-
+      
       <div className="w-full bg-main-color flex justify-center items-center mt-48 mb-48">
         <div className="w-1/2 h-full flex flex-col gap-8 justify-center items-center">
           <h2 className="text-black-main text-4xl font-patrizia font-normal text-center w-full uppercase">
@@ -107,37 +107,44 @@ const Docs = () => {
           </p>
         </div>
       </div>
+      
 
-      <div className='w-full bg-[url("./assets/bg/study.png")] bg-cover bg-center h-[700px] flex justify-center items-center'>
-        <div className="flex flex-col gap-6 justify-center items-center w-full">
-          <h2 className="text-main-white text-4xl font-patrizia font-normal text-center w-full uppercase">
-            Feasibility study
-          </h2>
-          <p className="text-main-white text-xl font-helvetica font-normal text-center w-1/2">
-            The feasibility study includes a detailed description of the
-            location, market analysis, description of the hotel concept, project
-            advantages, resources for project implementation.
-          </p>
-          <MainButton className="text-main-white uppercase">
-            Download the architectural project
-          </MainButton>
-        </div>
-      </div>
+      <div className="w-full flex flex-col">
+        {closedContent.slice(2).map((item) => {
 
-      <div className="w-full bg-white-main h-[700px] flex justify-center items-center">
-        <div className="flex flex-col gap-6 justify-center items-center">
-          <h2 className="text-black-main text-4xl font-patrizia font-normal text-center w-full uppercase">
-            Financial plan
-          </h2>
-          <p className="text-black-main text-xl font-helvetica font-normal text-center w-1/2">
-            The financial plan provides a breakdown of costs and revenues, and
-            the payback period of the project.
-          </p>
-          <MainButton className="text-main-white uppercase">
-            Download the feasibility study
-          </MainButton>
-        </div>
-      </div>
+          const isImg = item.bg_image_url.endsWith('.png')
+
+          // const bgImg = isImg ? `bg-[url("${address}${item.bg_image_url}")] bg-cover bg-center` : 'bg-main-white'
+
+          const bgImgStyle = isImg ? { backgroundImage: `url("${address}${item.bg_image_url}")` } : { backgroundColor: '#EDF1EE' };
+
+          // console.log(bgImg)
+
+          const textColor = isImg ? 'text-main-white' : 'text-black-main'
+
+          return (
+            <div className={`w-full h-[700px] flex justify-center items-center`} key={item.id} style={bgImgStyle}>
+              <div className="flex flex-col gap-6 justify-center items-center w-full">
+                <h2 className={`${textColor} text-4xl font-patrizia font-normal text-center w-full uppercase`}>
+                  {item.title}
+                </h2>
+                <p className={`${textColor} text-xl font-helvetica font-normal text-center w-1/2`}>
+                  {item.text}
+                </p>
+                {item.button_text === null ? null : (
+                  <a href={`${address}${item.document_url}`} download target="_blank">
+                  <MainButton className="text-main-white uppercase">
+                    {item.button_text}
+                  </MainButton>
+                </a>
+                )}
+              </div>
+            </div>
+          );
+        })}
+      </div> */}
+    
+
     </div>
   );
 };
