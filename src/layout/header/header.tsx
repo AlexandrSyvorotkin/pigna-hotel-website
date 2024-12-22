@@ -73,9 +73,9 @@ const Header = ({
         </>
       }/>
       <span
-        className="text-base sm:hidden lg:block"
+        className="text-base sm:hidden lg:block cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
         onClick={() => navigate("/registration")}
-      >
+    >
         INVEST THE PROJECT
       </span>
       <div className="sm:block lg:hidden" onClick={openMenu}>

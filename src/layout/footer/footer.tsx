@@ -66,7 +66,7 @@ const Footer = () => {
             >
               <span
                 onClick={() => navigate("/privacy")}
-                className="cursor-pointer"
+                className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
               >
                 Privacy Policy
               </span>
@@ -91,13 +91,13 @@ const Footer = () => {
             >
               <span
                 onClick={() => scrollToSection("features", -30)}
-                className="cursor-pointer"
+                className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
               >
                 FEATURES
               </span>
               <span
                 onClick={() => scrollToSection("essence-of-pigna", -120)}
-                className="cursor-pointer"
+                className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
               >
                 ESSENCE OF PIGNA
               </span>
@@ -109,13 +109,13 @@ const Footer = () => {
             > 
               <span
                 onClick={() => scrollToSection("location", -120)}
-                className="cursor-pointer"
+                className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
               >
                 LOCATION
               </span>
               <span
                 onClick={() => scrollToSection("wellness-spa")}
-                className="cursor-pointer"
+                className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
               >
                 WELLNESS & SPA
               </span>
@@ -127,13 +127,13 @@ const Footer = () => {
             >
             <span
                 onClick={() => scrollToSection("cuisine", -120)}
-                className="cursor-pointer"
+                className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
               >
                 CUISINE
               </span>
               <span
                 onClick={() => scrollToSection("building-territory", -120)}
-                className="cursor-pointer"
+                className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
               >
                 BUILDING & TERRITORY
               </span>
@@ -145,19 +145,19 @@ const Footer = () => {
             >
               <span
                 onClick={() => scrollToSection("architecture", -120)}
-                className="cursor-pointer"
+                className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
               >
                 ARCHITECTURE
               </span>
               <span
                 onClick={() => scrollToSection("project-timeline")}
-                className="cursor-pointer"
+                className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
               >
                 PROJECT TIMELINE
               </span>
               <span
                 onClick={() => navigate("/registration")}
-                className="cursor-pointer"
+                className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
               >
                 INVEST IN THE PROJECT
               </span>

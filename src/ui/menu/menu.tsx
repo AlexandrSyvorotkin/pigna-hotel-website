@@ -91,7 +91,7 @@ const Menu = ({isMenuOpen, setIsMenuOpen}: {isMenuOpen: boolean, setIsMenuOpen: 
           </div>
           <ul className='flex flex-col justify-start items-start 2lg:gap-8 sm:gap-4'>
             {items.map((item, index) => (
-              <li key={index} className='text-main-white 2lg:text-4xl sm:text-base font-patrizia cursor-pointer uppercase' onClick={() => scrollToSection(item.id, item.offset)}>{item.title}</li>
+              <li key={index} className='text-main-white 2lg:text-4xl sm:text-base font-patrizia cursor-pointer uppercase transition duration-300 ease-in-out hover:opacity-70' onClick={() => scrollToSection(item.id, item.offset)}>{item.title}</li>
             ))}
           </ul>
         </div>

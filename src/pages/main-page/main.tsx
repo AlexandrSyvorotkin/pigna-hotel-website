@@ -20,7 +20,7 @@ const MainPage = () => {
         text="Every detail is crafted for a remarkable stay"
         button={
           <MainButton onClick={() => navigate("/registration")}>
-            <span>INVEST THE PROJECT</span>
+            <span className="hover:opacity-70">INVEST THE PROJECT</span>
           </MainButton>
         }
       />
