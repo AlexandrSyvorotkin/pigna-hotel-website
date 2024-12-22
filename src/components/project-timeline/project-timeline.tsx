@@ -167,19 +167,65 @@ const ProjectTimeline = () => {
               </p>
             </div>
           </div>
-          <div className="lg:mt-20 sm:mt-10 justify-center flex flex-wrap lg:gap-5 sm:gap-1 sm:flex-col lg:flex-row">
-            {textItems.map((text, index) => (
-              <React.Fragment key={index}>
-                <div className="max-w-[800px] min-w-[250px] sm:w-full lg:h-[80px] sm:h-auto">
+          <div className="lg:mt-20 sm:mt-10 justify-center flex flex-wrap lg:gap-6 sm:gap-1 sm:flex-col lg:flex-row">
+            {/* {textItems.map((text, index) => (
+                <div key={index} className="min-w-[250px] max-w-[800px] sm:w-full lg:h-[80px] sm:h-auto flex gap-[26px]">
                   <p className="text-main-white font-helvetica font-normal lg:text-lg sm:text-xs w-full">
                     {text}
                   </p>
+                    {index < textItems.length - 1 && (
+                    <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
+                  )}
                 </div>
-                {index < textItems.length - 1 && (
+            ))} */}
+
+                <div className="sm:w-full h-[81px] flex gap-[26px] lg:w-[450px]">
+                  <p className="text-main-white font-helvetica lg:w-[400px] lg:text-lg sm:text-xs w-full leading-[25px]">
+                    {textItems[0]}
+                  </p>
+                    <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
+                </div>
+
+                <div className="sm:w-full h-[81px] flex gap-[26px] lg:w-[414px]">
+                  <p className="text-main-white font-helvetica lg:w-[354px] lg:text-lg sm:text-xs w-full leading-[25px]">
+                    {textItems[1]}
+                  </p>
+                    <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
+                </div>
+
+                <div className="sm:w-full h-[81px] flex gap-[26px] lg:w-[414px]">
+                  <p className="text-main-white font-helvetica lg:w-[354px] lg:text-lg sm:text-xs w-full leading-[25px]">
+                    {textItems[2]}
+                  </p>
+                    <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
+                </div>
+
+                <div className="sm:w-full h-[81px] flex lg:w-[354px]">
+                  <p className="text-main-white font-helvetica lg:text-lg sm:text-xs w-full leading-[25px]">
+                    {textItems[3]}
+                  </p>
+                </div>
+
+                <div className="sm:w-full h-[81px] flex lg:w-[610px] gap-[26px]">
+                  <p className="text-main-white font-helvetica lg:w-[550px] lg:text-lg sm:text-xs w-full leading-[25px]">
+                    {textItems[4]}
+                  </p>
                   <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
-                )}
-              </React.Fragment>
-            ))}
+                </div>
+
+                <div className="sm:w-full h-[81px] flex lg:w-[829px] gap-[26px]">
+                  <p className="text-main-white font-helvetica lg:w-[779px] lg:text-lg sm:text-xs w-full leading-[25px]">
+                    {textItems[5]}
+                  </p>
+                  <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
+                </div>
+
+                <div className="sm:w-full h-[81px] flex lg:w-[216px]">
+                  <p className="text-main-white font-helvetica  lg:text-lg sm:text-xs w-full leading-[25px]">
+                    {textItems[6]}
+                  </p>
+                </div>
+
           </div>
         </div>
       </div>
