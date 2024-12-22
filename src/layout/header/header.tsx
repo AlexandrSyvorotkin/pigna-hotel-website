@@ -6,7 +6,7 @@ import { Image } from "../../ui/img/image";
 import icon_menu from "../../assets/icon-menu/IconMenu.svg";
 import icon_menu_black from "../../assets/icon-menu/IconMenuBlack.svg";
 import starBlack from "../../assets/star/star.svg";
-import starWhite from "../../assets/star/StarW.svg";
+import starWhite from "../../assets/star/StarWB.svg";
 
 const Header = ({
   openMenu,
