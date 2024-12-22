@@ -117,7 +117,7 @@ const ProjectTimeline = () => {
                 slidesPerView: 2, // 2 слайда на экранах меньше 768px
               },
               1024: {
-                slidesPerView: 2.3, // 2.5 слайда на экранах меньше 1024px
+                slidesPerView: 2.1, // 2.5 слайда на экранах меньше 1024px
               },
             }}
             // navigation
@@ -131,7 +131,7 @@ const ProjectTimeline = () => {
                 <Image
                   src={slide.img}
                   alt={slide.text}
-                  className="w-full md:h-[465px] sm:h-[300px] lg:w-[800px] lg:h-[328px]"
+                  className="w-full md:h-[465px] sm:h-[300px] lg:h-[328px]"
                 />
                 <div className="text-main-white font-helvetica font-normal md:text-lg sm:text-xs text-left leading-5 mt-3">
                   {slide.text}
