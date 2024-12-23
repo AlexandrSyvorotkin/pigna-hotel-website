@@ -8,19 +8,24 @@ import mapRes3 from '../../assets/map-res.svg'
 
 import { Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useContext } from "react";
+import { useLocalization } from "../../context/useLocalization";
 
 const airportEls = [
   {
     title: "45 KM",
     description: "Monaco",
+    textIt: "Monaco"
   },
   {
     title: "60 KM",
     description: "Nice (France)",
+    textIt: "Nizza (Francia)"
   },
   {
     title: "110 KM",
     description: "Genoa",
+    textIt: "Genova"
   },
 ];
 
@@ -29,28 +34,36 @@ const airportsImgs = [
     img: img1,
     description:
       "Monaco, a prestigious city-state famous for its wealth and high net worth individuals who will be regular guests of the resort, is only 45 kilometres away.",
+    textIt: "Monaco, prestigiosa città-Stato famosa per la sua ricchezza e la presenza di individui ad alto patrimonio netto, che saranno ospiti abituali del resort, dista solo 45 chilometri."
   },
   {
     img: img2,
     description:
       "Nice, a playground for the rich, famous for its glitz and glamour, picturesque promenades and vibrant atmosphere, is 60 kilometres from the hotel.",
+      textIt: "Nizza, rinomata per il lusso, le affascinanti promenade e l’atmosfera vibrante, si trova a 60 chilometri dall’hotel."
   },
   {
     img: img3,
     description:
       "The hotel is approximately 20 kilometres from the coast (Italian Riviera) and 35 kilometres from Sanremo, known for its festivals, casino, yacht harbour and a charming old town.",
+      textIt: "L’hotel dista circa 20 chilometri dalla costa (Riviera Ligure) e dal terzo porto di Monaco, a Ventimiglia — Cala del Forte; 35 chilometri da Sanremo, famosa per i suoi festival, il casinò, il porto turistico e il suggestivo centro storico."
   },
 ];
 
 const Location = () => {
+
+const {locale} = useLocalization()
+
   return (
     <div className="lg:mt-60 sm:mt-20 w-full" id="location">
       <div className="w-full flex justify-center items-center flex-col gap-2 mb-14 px-[18px]">
         <span className="text-black-main lg:text-5xl sm:text-2xl font-patrizia font-normal uppercase">
-          Location
+          {locale === 'ENG' ? "Location" : "Posizione"}
         </span>
         <p className="lg:text-lg text-center lg:w-1/2 sm:text-xs sm:w-full">
-        The hotel is situated in a secluded area that offers excellent transportation links, including a helipad. Nearby cities such as Genoa, Nice, and Monaco are easily accessible.
+        {locale === 'ENG' 
+        ? "The hotel is situated in a secluded area that offers excellent transportation links, including a helipad. Nearby cities such as Genoa, Nice, and Monaco are easily accessible." 
+        : "L’hotel è situato in una zona appartata con ottimi collegamenti di trasporto, inclusa un’elisuperficie. Città vicine come Genova, Nizza e Monaco sono facilmente raggiungibili."}
         </p>
       </div>
       <Image src={map} alt="map" className="w-full h-[460px] sm:hidden md:block" />
@@ -58,17 +71,17 @@ const Location = () => {
       <img src={mapRes3} alt="map" className="w-full h-[228px] sm:block md:hidden object-cover" />
       <div className="mt-20 w-full flex justify-center items-center flex-col gap-10">
         <span className="text-black-main lg:text-2xl sm:text- font-helvetica font-normal uppercase">
-          the nearby airports:
+          {locale === 'ENG' ? "Airports" : "Aeroporti vicini:"}
         </span>
         <div className="flex md:gap-10 sm:gap-4 xl:w-1/2 md:w-3/4 sm:w-full justify-center items-center sm:px-[18px] md:px-0">
           {airportEls.map((el, index) => (
             <div key={index} className="flex items-center">
               <div className="flex flex-col gap-2 justify-center items-center md:w-[100px] sm:w-[80px]">
                 <span className="font-normal lg:text-xl sm:text-base text-center">
-                  {el.title}
+                  {locale === 'ENG' ? el.title : el.textIt}
                 </span>
                 <span className="font-normal text-lg sm:text-xs text-center">
-                  {el.description}
+                  {locale === 'ENG' ? el.description : el.textIt}
                 </span>
               </div>
               {index !== airportEls.length - 1 && (
@@ -79,7 +92,10 @@ const Location = () => {
         </div>
         <div className="xl:w-[53%] md:w-3/4 sm:w-11/12">
           <p className="lg:text-lg sm:text-xs text-center font-helvetica">
-          With convenient access to major motorways and railway stations in Ventimiglia and Sanremo, as well as to the third Monaco's port Cala del Forte, the hotel offers well-developed connectivity, making it easy for guests to arrive by car or train.
+          {locale === 'ENG' ?
+          "With convenient access to major motorways and railway stations in Ventimiglia and Sanremo, as well as to the third Monaco's port Cala del Forte, the hotel offers well-developed connectivity, making it easy for guests to arrive by car or train."  
+          : "Grazie al facile accesso alle principali autostrade e alle stazioni ferroviarie di Ventimiglia e Sanremo, oltre che al terzo porto di Monaco, Cala del Forte, l’hotel gode di un’eccellente connettività, rendendo agevole l’arrivo degli ospiti in auto o in treno."
+        }
           </p>
         </div>
 
@@ -92,7 +108,7 @@ const Location = () => {
               >
                 <Image src={el.img} alt={el.description} className="w-full" />
                 <p className="lg:text-lg sm:text-xs text-left font-helvetica">
-                  {el.description}
+                  {locale === 'ENG' ? el.description : el.textIt}
                 </p>
               </div>
             ))}
@@ -123,7 +139,7 @@ const Location = () => {
                   className="w-full md:h-[465px] sm:h-[300px]"
                 />
                 <div className="text-black-main font-helvetica font-normal text-xs text-left leading-5 mt-3">
-                  {slide.description}
+                  {locale === 'ENG' ? slide.description : slide.textIt}
                 </div>
               </SwiperSlide>
             ))}

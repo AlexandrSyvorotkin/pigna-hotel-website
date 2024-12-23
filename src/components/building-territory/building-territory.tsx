@@ -9,6 +9,7 @@ import img_3 from "../../assets/building-territory/img-3.png";
 import img_4 from "../../assets/building-territory/img-4.png";
 import img_5 from "../../assets/building-territory/img-5.png";
 import img_6 from "../../assets/building-territory/img-6.png";
+import { useLocalization } from "../../context/useLocalization";
 
 const imgArr = [
   {
@@ -38,6 +39,8 @@ const imgArr = [
 ];
 
 const BuildingTerritory = () => {
+  const { locale } = useLocalization();
+
   return (
     <div
       className="lg:mt-64 sm:mt-10 w-full flex sm:flex-col lg:flex-row justify-between"
@@ -45,69 +48,87 @@ const BuildingTerritory = () => {
     >
       <div className="flex flex-col gap-4 lg:w-[27%] sm:w-full">
         <h2 className="text-black-main sm:text-2xl lg:text-5xl font-patrizia font-normal sm:text-center lg:text-left uppercase">
-          Building & Territory
+          {locale === "ENG" ? "Building & Territory" : "Edificio & Territorio"}
         </h2>
         <p className="text-black-main lg:text-lg sm:text-xs font-helvetica font-norma sm:text-center lg:text-left sm:hidden md:block">
-          Grand Hotel Pigna is being transformed into a luxury <br/> 5-star wellness
-          retreat, embracing a new medical spa concept and abundant outdoor and
-          indoor sport facilities.
+          {locale === "ENG"
+            ? <p>Grand Hotel Pigna is being transformed into a luxury <br/> 5-star wellness retreat, embracing a new medical spa concept and abundant outdoor and indoor sport facilities.</p>
+            : "Il Grand Hotel Pigna si trasforma in un lussuoso rifugio benessere a 5 stelle, abbracciando un nuovo concetto di medical spa e abbondanti strutture sportive all’aperto e al coperto."}
         </p>
-        <p className="md:hidden sm:bloc text-xs text-center">Grand Hotel Pigna is being transformed into a luxury 
-        5-star wellness retreat, embracing a new medical spa concept and abundant outdoor and indoor sport facilities. As part of the renovation project, the hotel's building & facilities areas will be expanded. </p>
-        <p className="text-black-main text-lg sm:hidden lg:block font-helvetica font-normal">
-          As part of the renovation project, the hotel's building <br /> &
-          facilities areas will be expanded.{" "}
+        <p className="md:hidden sm:bloc text-xs text-center">
+          {locale === "ENG"
+            ? "Grand Hotel Pigna is being transformed into a luxury 5-star wellness retreat, embracing a new medical spa concept and abundant outdoor and indoor sport facilities. As part of the renovation project, the hotel's building & facilities areas will be expanded. "
+            : "Il Grand Hotel Pigna si sta trasformando in un lussuoso rifugio benessere a 5 stelle, abbracciando un nuovo concetto di spa medica e abbondanti strutture sportive all'aperto e al coperto. Come parte del progetto di ristrutturazione, le aree dell'edificio e delle strutture dell'hotel saranno ampliate."}
         </p>
+        {locale === "ENG" ? (
+          <p className="text-black-main text-lg sm:hidden lg:block font-helvetica font-normal">
+            As part of the renovation project, the hotel's building <br /> &
+            facilities areas will be expanded.
+          </p>
+        ) : (
+          <p className="text-black-main text-lg sm:hidden lg:block font-helvetica font-normal">
+            Come parte del progetto di ristrutturazione, l’edificio dell’hotel e
+            le relative strutture saranno ampliati.
+          </p>
+        )}
+
         <div className="flex flex-col md:gap-6 sm:gap-3">
           <div className="flex flex-col lg:mt-[36px] sm:mt-0">
-            <span className="lg:text-xl sm:text-base">MAIN HOTEL BUILDING</span>
+            <span className="lg:text-xl sm:text-base">{locale === 'ENG' ? 'MAIN HOTEL BUILDING' : 'EDIFICIO PRINCIPALE DELL’HOTEL'}</span>
             <p className="lg:text-lg sm:text-xs mt-3">
-            10 000 sqm — before the renovation
+              {locale === 'ENG' ? '10 000 sqm — before the renovation' : '10.000 mq — prima della ristrutturazione '}
             </p>
             <p className="lg:text-lg sm:text-xs">
-              13 000 sqm - after the renovation
+              {locale === 'ENG' ? '13 000 sqm - after the renovation' : '13.000 mq — dopo la ristrutturazione'}
             </p>
           </div>
 
           <div className="w-1/12 h-[1px] bg-black-main lg:mt-5 sm:mt-0 opacity-30"></div>
 
           <div className="flex flex-col sm:mt-0">
-            <span className="md:mt-5 lg:text-xl sm:text-base sm:mt-0">SPA areas</span>
+            <span className="md:mt-5 lg:text-xl sm:text-base sm:mt-0">
+              {locale === 'ENG' ? 'SPA AREAS' : 'AREE SPA'}
+            </span>
             <p className="lg:text-lg sm:text-xs mt-3 ">
-              2 200 sqm — before the renovation
+              {locale === 'ENG' ? '2 200 sqm — before the renovation' : '2.200 mq — prima della ristrutturazione '}
             </p>
             <p className="lg:text-lg sm:text-xs">
-              5 000 sqm — after the renovation
+              {locale === 'ENG' ? "5 000 sqm — after the renovation" : "5.000 mq — dopo la ristrutturazione"}
             </p>
           </div>
 
           <div className="w-1/12 h-[1px] bg-black-main md:mt-5 sm:mt-0 opacity-30"></div>
 
           <div className="flex flex-col sm:mt-0">
-            <span className="md:mt-5 sm:mt-0 lg:text-xl sm:text-base">2 NEW BUILDINGS</span>
+            <span className="md:mt-5 sm:mt-0 lg:text-xl sm:text-base">
+              {locale === 'ENG' ? '2 NEW BUILDINGS' : '2 NUOVI EDIFICI'}
+            </span>
             <p className="w-[70%] mt-3 sm:text-xs md:text-lg">
-              Are included in the resort territory as a part of the renovation
-              plan:
+              {locale === "ENG" ? "Are included in the resort territory as a part of the renovation plan:"
+              : "Inclusi nel territorio del resort come parte del piano di ristrutturazione:"
+            }
             </p>
             <p className="lg:text-lg sm:text-xs w-[74%] md:mt-6 sm:mt-2">
-              Terme Restaurant with 878 sqm (increased to 1300 sqm in the new
-              project) of the internal area and 3000 sqm of the territory;
+              {locale === 'ENG' ? "Terme Restaurant with 878 sqm (increased to 1300 sqm in the newproject) of the internal area and 3000 sqm of the territory;" : 
+              "Terme Restaurant con 878 mq (aumentati a 1.300 mq nel nuovo progetto) di area interna e 3.000 mq di territorio;"}
             </p>
             <p className="lg:text-lg sm:text-xs w-[75%] mt-2">
-              The Mill with 371 sqm of the internal area and 407 sqm of the
-              territory.
+              {locale === 'ENG' ? "The Mill with 371 sqm of the internal area and 407 sqm of theterritory." 
+              : "Il Mulino con 371 mq di area interna e 407 mq di territorio."} 
             </p>
           </div>
 
           <div className="w-1/12 h-[1px] bg-black-main lg:mt-5 sm:mt-0 opacity-30"></div>
 
           <div className="flex flex-col sm:mt-0 gap-3">
-            <span className="md:mt-5 sm:mt-0 lg:text-xl sm:text-base">SUITES</span>
+            <span className="md:mt-5 sm:mt-0 lg:text-xl sm:text-base">
+              {locale === 'ENG' ? "SUITES" : "SUITE"}
+            </span>
             <p className="lg:text-lg sm:text-xs w-[80%]">
-              15 suites with an area from 24 to 37 sqm before the renovation;
+              {locale === 'ENG' ? "15 suites with an area from 24 to 37 sqm before the renovation;" : "15 suite da 24 a 37 mq prima della ristrutturazione;"}
             </p>
             <p className="lg:text-lg sm:text-xs w-[80%]">
-              36 suites with an area from 24 to 280 sqm after the renovation.
+              {locale === 'ENG' ? "36 suites with an area from 24 to 280 sqm after the renovation." : "36 suite da 24 a 280 mq dopo la ristrutturazione."}
             </p>
           </div>
         </div>

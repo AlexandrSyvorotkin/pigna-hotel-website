@@ -11,29 +11,38 @@ import { SwiperSlide, Swiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import { BuildingTerritory } from "../building-territory/building-territory";
+import { useLocalization } from "../../context/useLocalization";
 
 
 
 const resSlider = [
   {
     img:img1,
-    text: "The hotel’s own kitchen and restaurant feature only the finest, nutrient-rich products, carefully sourced from local farmers who share our passion for quality. The region boasts over 250 welcoming farmhouses, each offering immersive tours."
+    text: "The hotel’s own kitchen and restaurant feature only the finest, nutrient-rich products, carefully sourced from local farmers who share our passion for quality. The region boasts over 250 welcoming farmhouses, each offering immersive tours.",
+    textIt: "La cucina e il ristorante dell’hotel utilizzano solo i migliori prodotti ricchi di nutrienti, accuratamente selezionati da contadini locali che condividono la nostra passione per la qualità. La regione vanta oltre 250 agriturismi accoglienti, ognuno dei quali offre visite coinvolgenti."
   },
   {
     img:img2,
-    text:""
+    text:"",
+    textIt: ""
   },
   {
     img:img3,
-    text:""
+    text:"",
+    textIt: ""
   },
   {
     img:img4,
-    text:"Under the guidance of our chef, every dish is a perfect balance of wholesome ingredients, health benefits, and culinary artistry"
+    text:"Under the guidance of our chef, every dish is a perfect balance of wholesome ingredients, health benefits, and culinary artistry",
+    textIt: "Sotto la guida del nostro chef, ogni piatto raggiunge il perfetto equilibrio tra ingredienti genuini, benefici per la salute e arte culinaria."
   },
 ]
 
 const Cuisine = () => {
+
+  const { locale } = useLocalization();
+
+
   return (
     <div
       className="w-full lg:mt-44 sm:mt-10 flex justify-center items-center px-[18px]"
@@ -42,11 +51,11 @@ const Cuisine = () => {
       <div className="w-[1750px]">
         
         <div className='flex flex-col gap-0 justify-center items-center'>
-          <h3 className='text-black-main lg:text-5xl sm:text-2xl font-patrizia font-normal text-center uppercase'>Cuisine</h3>
-          <p className='text-black-main lg:text-lg sm:text-xs font-helvetica font-normal text-center lg:w-[55%] sm:w-full'>By embracing a "Zero Kilometre" supply chain, the hotel’s restaurants proudly showcase the finest and freshest local ingredients. Local produce — easily digestible white pigna beans, olive oil and all olive products — form a plant-based dietary cuisine with a nutritional programme tailored to the needs of each client.</p>
+          <h3 className='text-black-main lg:text-5xl sm:text-2xl font-patrizia font-normal text-center uppercase'>{locale === 'ENG' ? 'Cuisine' : 'Cucina'}</h3>
+          <p className='text-black-main lg:text-lg sm:text-xs font-helvetica font-normal text-center lg:w-[55%] sm:w-full'>
+            {locale === 'ENG' ? "By embracing a 'Zero Kilometre' supply chain, the hotel’s restaurants proudly showcase the finest and freshest local ingredients. Local produce — easily digestible white pigna beans, olive oil and all olive products — form a plant-based dietary cuisine with a nutritional programme tailored to the needs of each client." 
+            : "Adottando la filosofia della filiera “Zero Chilometri”, i ristoranti dell’hotel valorizzano i migliori ingredienti locali, freschi e di stagione. Prodotti locali — i leggeri e digeribili fagioli bianchi di Pigna, l’olio d’oliva e tutti i prodotti a base di olive — formano una cucina a base vegetale con un programma nutrizionale adattato alle esigenze di ogni cliente."}</p>
         </div>
-
-
 
         <div className='mt-12 flex gap-6 justify-center w-full sm:hidden lg:flex'>
           <div className='flex flex-col gap-6 w-1/2'>
@@ -54,14 +63,23 @@ const Cuisine = () => {
               <Image src={img1} alt='img1' className='w-full h-[476px]' />
               <Image src={img2} alt='img1' className='w-full h-[476px]' />
             </div>
-            <p className='text-black-main text-[18px] font-helvetica font-normal'>The hotel’s own kitchen and restaurant feature only the finest, nutrient-rich products, carefully sourced from local farmers who share our passion for quality.The region boasts over 250 welcoming farmhouses, each offering immersive tours.</p>
+            <p className='text-black-main text-[18px] font-helvetica font-normal'>
+              {locale === "ENG" ?
+              "The hotel’s own kitchen and restaurant feature only the finest, nutrient-rich products, carefully sourced from local farmers who share our passion for quality.The region boasts over 250 welcoming farmhouses, each offering immersive tours." :
+              "La cucina e il ristorante dell’hotel utilizzano solo i migliori prodotti ricchi di nutrienti, accuratamente selezionati da contadini locali che condividono la nostra passione per la qualità. La regione vanta oltre 250 agriturismi accoglienti, ognuno dei quali offre visite coinvolgenti."  
+            }
+              </p>
           </div>
           <div className='flex gap-6 w-1/4'>
             <Image src={img3} alt='img3' className='w-full h-[476px]' />
           </div>
           <div className='flex gap-6 flex-col w-1/4'>
             <Image src={img4} alt='img4' className='w-full h-[476px]' />
-            <p className='text-black-main text-[18px] font-helvetica font-normal'>Under the guidance of our chef, every dish is a perfect balance of wholesome ingredients, health benefits, and culinary artistry</p>
+            <p className='text-black-main text-[18px] font-helvetica font-normal'>
+              {locale === "ENG" ?
+              "Under the guidance of our chef, every dish is a perfect balance of wholesome ingredients, health benefits, and culinary artistry" :
+              "Sotto la guida del nostro chef, ogni piatto raggiunge il perfetto equilibrio tra ingredienti genuini, benefici per la salute e arte culinaria."}
+            </p>
           </div>
         </div>
         {/* TODO: make it responsive */}
@@ -82,7 +100,7 @@ const Cuisine = () => {
               <SwiperSlide key={index} className='w-[240px]'>
                 <div className='flex flex-col gap-2'>
                   <Image src={slide.img} alt={slide.text} className='w-full h-[240px]' />
-                  <p className='text-black-main text-xs font-helvetica font-normal max-w-full'>{slide.text}</p>
+                  <p className='text-black-main text-xs font-helvetica font-normal max-w-full'>{locale === 'ENG' ? slide.text : slide.textIt}</p>
                 </div>
               </SwiperSlide>
             ))}
