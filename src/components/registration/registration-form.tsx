@@ -136,7 +136,7 @@ const RegistrationForm = () => {
               </label>
               <span className="text-red-500">{errorMessage}</span>
               <MainButton
-                className="w-full bg-main-white uppercase text-main-black text-helvetica text-base"
+                className="w-full bg-main-white uppercase text-main-black text-helvetica text-base py-[21px] px-[100px] "
                 onClick={() => handleSubmit(onSubmit)}
               >
                 Send a request

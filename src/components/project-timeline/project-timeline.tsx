@@ -88,17 +88,17 @@ const textItems = [
 
 const ProjectTimeline = () => {
   return (
-    <div className="w-full lg:pt-44 sm:pt-20 bg-loading-color pb-48 px-[18px]" id="project-timeline">
+    <div className="w-full lg:pt-44 sm:pt-20 bg-loading-color lg:pb-48 sm:pb-20 px-[18px]" id="project-timeline">
       <div className="w-full flex justify-center items-center flex-col gap-4 text-main-white">
         <h2 className="lg:text-4xl sm:text-2xl font-patrizia font-normal uppercase">
           Project Timeline
         </h2>
-        <span className="lg:text-xl sm:text-xs font-helvetica font-normal opacity-80">
+        <span className="lg:text-xl sm:text-xs font-helvetica font-normal opacity-80 text-center">
           From mediaeval past to a premium wellness destination of the future.
         </span>
       </div>
       <div className="w-full flex justify-center items-center">
-        <div className="w-full mt-10 px-2 overflow-hidden">
+        <div className="w-full mt-10 px-2 overflow-hidden sm:pb-2 md:mb-0">
           <Swiper
             // install Swiper modules
             modules={[Scrollbar, A11y]}
@@ -148,7 +148,7 @@ const ProjectTimeline = () => {
           </Swiper>
 
 
-          <div className="w-full h-[1px] mt-1 mb-8" style={{background: "linear-gradient(to right, #FFF 0%, #FFF 70%, rgba(255, 255, 255, 0) 100%)"}}></div>
+          <div className="w-full h-[1px] lg:mt-1 lg:mb-8 sm:mb-0 sm:mt-32" style={{background: "linear-gradient(to right, #FFF 0%, #FFF 70%, rgba(255, 255, 255, 0) 100%)"}}></div>
         </div>
       </div>
 
@@ -167,59 +167,62 @@ const ProjectTimeline = () => {
             </div>
           </div>
           <div className="lg:mt-20 sm:mt-10 justify-center flex flex-wrap lg:gap-6 sm:gap-1 sm:flex-col lg:flex-row">
-            {/* {textItems.map((text, index) => (
-                <div key={index} className="min-w-[250px] max-w-[800px] sm:w-full lg:h-[80px] sm:h-auto flex gap-[26px]">
+            
+            <div className="lg:hidden flex-col gap-4 sm:flex">
+            {textItems.map((text, index) => (
+                <div key={index} className="flex flex-col gap-4">
                   <p className="text-main-white font-helvetica font-normal lg:text-lg sm:text-xs w-full">
                     {text}
                   </p>
                     {index < textItems.length - 1 && (
-                    <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
+                    <div className="h-[1px] w-[24px] bg-main-white opacity-30" />
                   )}
                 </div>
-            ))} */}
+            ))}
+            </div>
 
-                <div className="sm:w-full h-[81px] flex gap-[26px] lg:w-[450px]">
+                <div className="sm:w-full h-[81px] flex gap-[26px] lg:w-[450px] sm:hidden lg:flex">
                   <p className="text-main-white font-helvetica lg:w-[400px] lg:text-lg sm:text-xs w-full leading-[25px]">
                     {textItems[0]}
                   </p>
                     <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
                 </div>
 
-                <div className="sm:w-full h-[81px] flex gap-[26px] lg:w-[414px]">
+                <div className="sm:w-full h-[81px] flex gap-[26px] lg:w-[414px] sm:hidden lg:flex">
                   <p className="text-main-white font-helvetica lg:w-[354px] lg:text-lg sm:text-xs w-full leading-[25px]">
                     {textItems[1]}
                   </p>
                     <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
                 </div>
 
-                <div className="sm:w-full h-[81px] flex gap-[26px] lg:w-[414px]">
+                <div className="sm:w-full h-[81px] flex gap-[26px] lg:w-[414px] sm:hidden lg:flex">
                   <p className="text-main-white font-helvetica lg:w-[354px] lg:text-lg sm:text-xs w-full leading-[25px]">
                     {textItems[2]}
                   </p>
                     <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
                 </div>
 
-                <div className="sm:w-full h-[81px] flex lg:w-[354px]">
+                <div className="sm:w-full h-[81px] flex lg:w-[354px] sm:hidden lg:flex">
                   <p className="text-main-white font-helvetica lg:text-lg sm:text-xs w-full leading-[25px]">
                     {textItems[3]}
                   </p>
                 </div>
 
-                <div className="sm:w-full h-[81px] flex lg:w-[610px] gap-[26px]">
+                <div className="sm:w-full h-[81px] flex lg:w-[610px] gap-[26px] sm:hidden lg:flex">
                   <p className="text-main-white font-helvetica lg:w-[550px] lg:text-lg sm:text-xs w-full leading-[25px]">
                     {textItems[4]}
                   </p>
                   <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
                 </div>
 
-                <div className="sm:w-full h-[81px] flex lg:w-[829px] gap-[26px]">
+                <div className="sm:w-full h-[81px] flex lg:w-[829px] gap-[26px] sm:hidden lg:flex">
                   <p className="text-main-white font-helvetica lg:w-[779px] lg:text-lg sm:text-xs w-full leading-[25px]">
                     {textItems[5]}
                   </p>
                   <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
                 </div>
 
-                <div className="sm:w-full h-[81px] flex lg:w-[216px]">
+                <div className="sm:w-full h-[81px] flex lg:w-[216px] sm:hidden lg:flex">
                   <p className="text-main-white font-helvetica  lg:text-lg sm:text-xs w-full leading-[25px]">
                     {textItems[6]}
                   </p>

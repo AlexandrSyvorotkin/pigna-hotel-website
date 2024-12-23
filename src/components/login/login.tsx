@@ -69,7 +69,7 @@ const LoginForm = ({
           />
         </label>
         <div className="text-red-500">{errorMessage}</div>
-        <MainButton className="w-full bg-main-white uppercase text-main-black text-helvetica text-base">
+        <MainButton className="w-full bg-main-white uppercase text-main-black text-helvetica text-base py-[21px] px-[122px]">
           Enter
         </MainButton>
       </form>

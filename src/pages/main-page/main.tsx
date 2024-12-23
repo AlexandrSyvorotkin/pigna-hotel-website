@@ -71,8 +71,8 @@ const MainPage = () => {
       <WellnessSpa />
       <Cuisine />
       <InteriorDesign />
-      {/* <ProjectTimeline />
-      <InvestOpportunities /> */}
+      <ProjectTimeline />
+      <InvestOpportunities />
     </>
   );
 };

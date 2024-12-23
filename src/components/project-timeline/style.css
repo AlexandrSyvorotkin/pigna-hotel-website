@@ -9,6 +9,7 @@
   left: 0;
 }
 
+
 .slide-mark__date {
   font-size: 14px;
   font-weight: 400;
@@ -26,13 +27,13 @@
 
 .slide-mark__dashed {
   width: 1px;
-  height: 20px;
+  height: 16px;
   border-left: 1px dashed #FFF;
 }
 
 .slide-mark__line {
   width: 1px;
-  height: 6px;
+  height: 20px;
   background-color: #FFF;
 }
 
@@ -44,6 +45,11 @@
   .swiper-slider-element {
     height: 400px;
   }
+  .slide-mark {
+    top: calc(100% + 80px);
+    z-index: 10;
+  }
+
 }
 
 

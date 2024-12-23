@@ -2,6 +2,8 @@ import { useNavigate } from 'react-router-dom';
 import menu_img from '../../assets/bg/bg-menu.png'
 import { Image } from '../img/image'
 import close_icon from '../../assets/icon-close/icon-close.png'
+import menu_img_mobile from '../../assets/bg/bg-menu-res.png'
+import { useEffect } from 'react';
 
 const items = [
   {
@@ -77,12 +79,22 @@ const Menu = ({isMenuOpen, setIsMenuOpen}: {isMenuOpen: boolean, setIsMenuOpen: 
     }, 100);
   };
 
+  useEffect(() => {
+
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isMenuOpen]);
+
 
   return (
       <div className={`z-50 fixed top-20 left-0 w-full h-[calc(100vh-80px)] flex  sm:flex-col 2lg:flex-row sm:gap-10 2lg:gap-0 transform transition-transform duration-300 ease-in-out bg-loading-color ${
           isMenuOpen ? 'translate-y-0' : '-translate-y-[calc(100%+80px)]'
       }`}>
-        <Image src={menu_img} alt='menu' className='2lg:w-2/5 sm:w-full 2lg:h-full sm:h-1/5 md:h-2/5'/>
+        <Image src={menu_img} alt='menu' className='2lg:w-2/5 sm:w-full 2lg:h-full sm:h-1/5 md:block sm:hidden'/>
+        <Image src={menu_img_mobile} alt='menu' className='sm:block md:hidden'/>
         <div className='w-3/5 flex xl:pl-60 lg:pl-20 sm:pl-10 items-center relative'>
           <div className='2lg:flex justify-end items-end absolute top-10 right-20 sm:hidden'>
             <div className='cursor-pointer' onClick={() => setIsMenuOpen(false)}>

@@ -49,7 +49,7 @@ const InteriorDesign = () => {
         <p className='mt-4 text-black-main lg:text-lg sm:text-xs font-helvetica font-normal text-center lg:w-[45%] sm:w-full'>This transformation is further distinguished by accolades that include The Imperial Hotel Vienna, Intercontinental Porto, Radisson Hotel Antwerpen, Sheraton Oman, Hilton Muscat etc.</p>
       </div>
 
-      <div className='mt-[72px] flex justify-between gap-10 flex-wrap md:block sm:hidden'>
+      <div className='mt-[72px] flex justify-between gap-10 flex-wrap md:flex sm:hidden'>
         {images.map((img, index) => (
           <img src={img} alt='img' key={index} className='object-contain'/>
         ))}

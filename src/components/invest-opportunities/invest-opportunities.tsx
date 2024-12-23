@@ -4,7 +4,7 @@ import {MainButton} from '../../ui/button/main-button'
 
 const InvestOpportunities = () => {
   return (
-    <div className="lg:mt-40 sm:mt-20 flex justify-center items-center lg:mb-56 sm:mb-20 px-[18px]">
+    <div className="lg:mt-40 sm:mt-20 flex justify-center items-center lg:mb-56 sm:mb-6 px-[18px]">
       <div className="w-[1750px]">
         <div 
           className="w-full lg:h-[900px] sm:h-[400px] relative flex items-center justify-center"
@@ -15,15 +15,15 @@ const InvestOpportunities = () => {
           }}
         >
         {/* TODO: check responsiveness */}
-          <div className="flex flex-col items-center gap-4 text-main-white max-w-[930px] text-center">
+          <div className="flex flex-col items-center lg:gap-4 sm:gap-2 text-main-white max-w-[930px] text-center px-[18px]">
             <span className="text-main-white lg:text-4xl sm:text-2xl font-patrizia font-normal uppercase">
               Investment opportunities
             </span>
-            <p className="text-main-white lg:text-lg sm:text-xs font-helvetica font-normal w-full">
+            <p className="text-main-white lg:text-lg sm:text-xs font-helvetica font-normal w-full opacity-80">
             The project’s unique location, in the heart of the Italian Riviera, in close proximity to the French Riviera and Monaco, on a site with a thermal and mineral water concession, hospital licence and zero kilometre supply chain, makes this a destination within a destination. Various financial and ownership options to participate in this project are possible.
             </p>
-            <MainButton className="lg:text-base sm:text-xs">
-              INVEST IN PROJECT
+            <MainButton className="sm:py-[16px] sm:px-[30px] sm:text-xs lg:text-base lg:py-[22px] lg:px-[62px] ">
+              MORE ABOUT THE PROJECT
             </MainButton>
           </div>
         </div>

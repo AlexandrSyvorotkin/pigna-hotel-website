@@ -30,6 +30,8 @@ const Footer = () => {
 
   const textColor = isPrivacyPage ? "text-main-white" : "text-black-main";
 
+  const borderColor = isPrivacyPage ? "bg-main-white" : "bg-black-main";
+
 
   return (
     <footer
@@ -56,21 +58,21 @@ const Footer = () => {
             </>
           }
         />
-        <div className="w-full h-[1px] bg-black-main"></div>
+        <div className={`w-full h-[1px] ${borderColor}`}></div>
         <div className="w-full flex 2lg:flex-row sm:flex-col-reverse justify-between items-center">
           <div className="flex 2xl:gap-20 xl:gap-6 2lg:items-end sm:items-center 2lg:flex-row sm:flex-col-reverse sm:mt-6 2lg:mt-0">
             <div
-              className={`flex flex-col gap-6 2lg:w-[240px] sm:w-full sm:items-center 2lg:items-start ${
+              className={`flex flex-col 2xl:gap-6 xl:gap-2 2lg:w-[240px] sm:w-full sm:items-center 2lg:items-start ${
                 isPrivacyPage ? "text-main-white" : "text-black-main"
               }`}
             >
               <span
                 onClick={() => navigate("/privacy")}
-                className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
+                className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70 sm:mt-4 md:mt-0"
               >
                 Privacy Policy
               </span>
-              <p className="opacity-60 uppercase">
+              <p className="opacity-60 uppercase sm:text-center lg:text-left">
                 ©Otto Pigna S.R.L., Inc. 2024 All rights reserved.
               </p>
             </div>
@@ -83,7 +85,7 @@ const Footer = () => {
               <span className="uppercase">contacts@thermedipigna.com</span>
             </div>
           </div>
-          <div className="flex 2xl:gap-20 xl:gap-6 2lg:flex-row sm:flex-col sm:gap-6 2lg:gap-0">
+          <div className="flex 2xl:gap-10 xl:gap-2 2lg:flex-row sm:flex-col sm:gap-6 2lg:gap-0">
             <div
               className={`flex flex-col gap-4 sm:items-center 2lg:items-start justify-end ${
                 isPrivacyPage ? "text-main-white" : "text-black-main"
