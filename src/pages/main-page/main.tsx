@@ -18,7 +18,7 @@ const MainPage = () => {
     <>
       <Presentation
         button={
-          <MainButton onClick={() => navigate("/registration")}>
+          <MainButton onClick={() => navigate("/registration")} className="sm:py-[16px] sm:px-[30px] sm:text-xs lg:text-base lg:py-[22px] lg:px-[62px]">
             <span className="hover:opacity-70">INVEST THE PROJECT</span>
           </MainButton>
         }
@@ -49,7 +49,7 @@ const MainPage = () => {
         </div>
       </Banner>
       <Description /> 
-      <Banner className="h-[400px]">
+      {/* <Banner className="h-[400px]">
         <p className="text-main-white lg:text-4xl sm:text-xl font-patrizia text-center w-[100%] uppercase lg:leading-[60px]">
           The hotel was highlighted as a project of regional significance. <br />
           The renovation of the hotel gave local residents and municipal authorities <br />
@@ -64,7 +64,7 @@ const MainPage = () => {
       <Cuisine />
       <InteriorDesign />
       <ProjectTimeline />
-      <InvestOpportunities />
+      <InvestOpportunities /> */}
     </>
   );
 };

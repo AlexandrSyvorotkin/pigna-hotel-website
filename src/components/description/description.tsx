@@ -45,7 +45,8 @@ const Description = () => {
           <Image src={img2} alt="Essence of Pigna" className="w-1/2 sm:h-[220px] lg:h-full" />
           <Image src={img1} alt="Essence of Pigna" className="w-1/2 sm:h-[220px] lg:h-full" />
         </div>
-        <div className="mt-20 flex w-full 2lg:justify-between 2lg:flex-nowrap sm:flex-wrap sm:justify-center sm:gap-2 2lg:gap-0">
+
+        <div className="mt-20 flex w-full 2lg:justify-between 2lg:flex-nowrap sm:flex-wrap sm:justify-center sm:gap-4 2lg:gap-0 sm:hidden lg:flex">
           {descriptionEls.map((el, index) => (
             <div key={index} className="flex items-center">
               <div className="flex flex-col gap-2 justify-center items-center">
@@ -53,11 +54,40 @@ const Description = () => {
                 <span className="font-normal xl:text-lg sm:text-xs">{el.description}</span>
               </div>
               {index !== descriptionEls.length - 1 && (
-                <div className="h-full w-[1px] bg-gray-300 ml-16 sm:hidden lg:block"></div>
+                <div className="h-full w-[1px] bg-gray-300 lg:ml-16 sm:ml-[8px]"></div>
               )}
             </div>
           ))}
         </div>
+          {/* Responsive */}
+        <div className="mt-7 justify-between items-center w-full gap-4 sm:flex lg:hidden">
+          {descriptionEls.slice(0, 3).map((el, index) => (
+            <div key={index} className="flex items-center">
+              <div className="flex flex-col gap-2 justify-center items-center">
+                <span className="font-normal xl:text-xl sm:text-base">{el.title}</span>
+                <span className="font-normal xl:text-lg sm:text-xs">{el.description}</span>
+              </div>
+              {index !== descriptionEls.length - 4 && (
+                <div className="h-[24px] w-[1px] bg-gray-300 ml-[26px]"></div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-7 justify-between items-center w-full gap-4 sm:flex lg:hidden">
+          {descriptionEls.slice(3).map((el, index) => (
+            <div key={index} className="flex items-center">
+              <div className="flex flex-col gap-2 justify-center items-center">
+                <span className="font-normal xl:text-xl sm:text-base">{el.title}</span>
+                <span className="font-normal xl:text-lg sm:text-xs">{el.description}</span>
+              </div>
+              {index !== descriptionEls.length - 4 && (
+                <div className="h-[24px] w-[1px] bg-gray-300 ml-[40px]"></div>
+              )}
+            </div>
+          ))}
+        </div>
+
       </div>
     </div>
   )
