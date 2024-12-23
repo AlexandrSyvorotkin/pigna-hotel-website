@@ -44,11 +44,11 @@ const airportsImgs = [
 const Location = () => {
   return (
     <div className="lg:mt-60 sm:mt-20 w-full" id="location">
-      <div className="w-full flex justify-center items-center flex-col gap-2 mb-14">
+      <div className="w-full flex justify-center items-center flex-col gap-2 mb-14 px-[18px]">
         <span className="text-black-main lg:text-5xl sm:text-2xl font-patrizia font-normal uppercase">
           Location
         </span>
-        <p className="lg:text-lg text-center lg:w-1/2 sm:text-xs sm:w-3/4">
+        <p className="lg:text-lg text-center lg:w-1/2 sm:text-xs sm:w-full">
         The hotel is situated in a secluded area that offers excellent transportation links, including a helipad. Nearby cities such as Genoa, Nice, and Monaco are easily accessible.
         </p>
       </div>
@@ -58,19 +58,19 @@ const Location = () => {
         <span className="text-black-main lg:text-2xl sm:text- font-helvetica font-normal uppercase">
           the nearby airports:
         </span>
-        <div className="flex gap-10 xl:w-1/2 md:w-3/4 sm:w-11/12 justify-center items-center">
+        <div className="flex md:gap-10 sm:gap-4 xl:w-1/2 md:w-3/4 sm:w-full justify-center items-center sm:px-[18px] md:px-0">
           {airportEls.map((el, index) => (
             <div key={index} className="flex items-center">
-              <div className="flex flex-col gap-2 justify-center items-center flex-1 w-[100px]">
-                <span className="font-normal lg:text-xl sm:text-base">
+              <div className="flex flex-col gap-2 justify-center items-center md:w-[100px] sm:w-[80px]">
+                <span className="font-normal lg:text-xl sm:text-base text-center">
                   {el.title}
                 </span>
-                <span className="font-normal text-lg sm:text-xs">
+                <span className="font-normal text-lg sm:text-xs text-center">
                   {el.description}
                 </span>
               </div>
               {index !== airportEls.length - 1 && (
-                <div className="h-16 w-[1px] bg-gray-300 ml-10"></div>
+                <div className="md:h-16 sm:h-8 w-[1px] bg-gray-300 md:ml-10 sm:ml-4"></div>
               )}
             </div>
           ))}
@@ -96,15 +96,15 @@ const Location = () => {
             ))}
           </div>
         </div>
-
-        <div className="w-full mt-5 px-2 sm:block lg:hidden">
+            {/* Responsive */}
+        <div className="w-full mt-5 pl-[18px] sm:block lg:hidden">
           <Swiper
             // install Swiper modules
             modules={[Scrollbar, A11y]}
-            spaceBetween={24}
+            spaceBetween={12}
             breakpoints={{
               360: {
-                slidesPerView: 1.4, // 1 слайд на экранах меньше 640px
+                slidesPerView: 1.3, // 1 слайд на экранах меньше 640px
               },
             }}
             // navigation

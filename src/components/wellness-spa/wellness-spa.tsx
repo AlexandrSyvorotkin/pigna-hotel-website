@@ -74,13 +74,13 @@ const WellnessSpa = () => {
     <div className="2lg:pt-40 sm:pt-14 w-full bg-loading-color 2lg:pb-44 pb-24" id="wellness-spa">
       <div className="flex justify-center items-center px-[18px]">
         <div className="flex flex-col gap-4 justify-center items-center text-main-white 2lg:w-1/2 sm:w-full">
-          <span className="font-patrizia lg:text-5xl sm:2xl text-center uppercase">Wellness & Spa</span>
-          <p className="lg:text-lg sm:text-xs font-helvetica text-center">Grand Hotel Pigna is conceived as a thermal wellness retreat where every guest can enjoy a full range of spa treatments that restore inner harmony and revitalise. The retreat’s wellness & health concept is based on 4 pillars:</p>
+          <span className="font-patrizia lg:text-5xl sm:text-2xl text-center uppercase">Wellness & Spa</span>
+          <p className="lg:text-lg sm:text-xs font-helvetica text-center opacity-80">Grand Hotel Pigna is conceived as a thermal wellness retreat where every guest can enjoy a full range of spa treatments that restore inner harmony and revitalise. The retreat’s wellness & health concept is based on 4 pillars:</p>
         </div>
       </div>
       <div className='flex justify-center items-center w-full px-[18px]'>
         <div className='flex relative flex-col gap-4 w-[1750px] 2lg:mt-20 sm:mt-2'>
-          <div className='w-full h-[1px] bg-main-white sm:hidden 2lg:block' />
+          <div className='w-full h-[2px] bg-main-white sm:hidden 2lg:block opacity-50' />
           <div
             className='absolute top-0 h-[2px] bg-main-white transition-all duration-300 sm:hidden 2lg:block'
             style={{
@@ -135,15 +135,15 @@ const WellnessSpa = () => {
                   alt={tab.title}
                   className='w-full h-[324px]'
                 />
-                <span className='text-main-white text-base w-full'>{tab.title}</span>
+                <span className='text-main-white text-base w-full uppercase'>{tab.title}</span>
                 <p className='text-main-white text-xs w-full'>{tab.description}</p>
               </div>
             )}
           </div>
 
           <div className='w-full mt-24 sm:mt-10'>
-            <div className='flex 2lg:gap-16 sm:flex-col 2lg:flex-row sm:gap-4 lg:justify-center items-center w-3/5 text-main-white'>
-              <span className='font-patrizia lg:text-4xl sm:text-lg sm:text-left w-full uppercase'>Key objectives of the wellness programmes:</span>
+            <div className='flex 2lg:gap-16 sm:flex-col 2lg:flex-row sm:gap-4 lg:justify-center sm:items-start lg:items-center lg:w-3/5 sm:w-full text-main-white'>
+              <span className='font-patrizia lg:text-4xl sm:text-lg sm:text-left lg:w-full sm:w-[90%] uppercase'>Key objectives of the wellness programmes:</span>
               <p className='font-helvetica lg:text-lg sm:text-xs opacity-80'>The hotel holds hospital status, granting us complete freedom to implement a wide range of medical services in developing our spa facilities to the highest standards.</p>
             </div>
             <div className='flex justify-between items-center w-full mt-10 text-main-white flex-wrap sm:gap-1 lg:gap-0'>

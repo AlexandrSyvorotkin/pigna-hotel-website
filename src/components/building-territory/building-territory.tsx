@@ -47,18 +47,20 @@ const BuildingTerritory = () => {
         <h2 className="text-black-main sm:text-2xl lg:text-5xl font-patrizia font-normal sm:text-center lg:text-left uppercase">
           Building & Territory
         </h2>
-        <p className="text-black-main lg:text-lg sm:text-xs font-helvetica font-norma sm:text-center lg:text-left">
+        <p className="text-black-main lg:text-lg sm:text-xs font-helvetica font-norma sm:text-center lg:text-left sm:hidden md:block">
           Grand Hotel Pigna is being transformed into a luxury <br/> 5-star wellness
           retreat, embracing a new medical spa concept and abundant outdoor and
           indoor sport facilities.
         </p>
+        <p className="md:hidden sm:bloc text-xs text-center">Grand Hotel Pigna is being transformed into a luxury 
+        5-star wellness retreat, embracing a new medical spa concept and abundant outdoor and indoor sport facilities. As part of the renovation project, the hotel's building & facilities areas will be expanded. </p>
         <p className="text-black-main text-lg sm:hidden lg:block font-helvetica font-normal">
           As part of the renovation project, the hotel's building <br /> &
           facilities areas will be expanded.{" "}
         </p>
-        <div className="flex flex-col gap-6">
-          <div className="flex flex-col mt-[36px]">
-            <span className="lg:text-xl sm:text-xs">MAIN HOTEL BUILDING</span>
+        <div className="flex flex-col md:gap-6 sm:gap-3">
+          <div className="flex flex-col lg:mt-[36px] sm:mt-0">
+            <span className="lg:text-xl sm:text-base">MAIN HOTEL BUILDING</span>
             <p className="lg:text-lg sm:text-xs mt-3">
             10 000 sqm — before the renovation
             </p>
@@ -70,8 +72,8 @@ const BuildingTerritory = () => {
           <div className="w-1/12 h-[1px] bg-black-main lg:mt-5 sm:mt-0 opacity-30"></div>
 
           <div className="flex flex-col sm:mt-0">
-            <span className="mt-5 lg:text-xl sm:text-xs">SPA areas</span>
-            <p className="lg:text-lg sm:text-xs mt-3">
+            <span className="md:mt-5 lg:text-xl sm:text-base sm:mt-0">SPA areas</span>
+            <p className="lg:text-lg sm:text-xs mt-3 ">
               2 200 sqm — before the renovation
             </p>
             <p className="lg:text-lg sm:text-xs">
@@ -79,15 +81,15 @@ const BuildingTerritory = () => {
             </p>
           </div>
 
-          <div className="w-1/12 h-[1px] bg-black-main mt-5 opacity-30"></div>
+          <div className="w-1/12 h-[1px] bg-black-main md:mt-5 sm:mt-0 opacity-30"></div>
 
           <div className="flex flex-col sm:mt-0">
-            <span className="mt-5 lg:text-xl sm:text-xs">2 NEW BUILDINGS</span>
-            <p className="w-[70%] mt-3">
+            <span className="md:mt-5 sm:mt-0 lg:text-xl sm:text-base">2 NEW BUILDINGS</span>
+            <p className="w-[70%] mt-3 sm:text-xs md:text-lg">
               Are included in the resort territory as a part of the renovation
               plan:
             </p>
-            <p className="lg:text-lg sm:text-xs w-[74%] mt-6">
+            <p className="lg:text-lg sm:text-xs w-[74%] md:mt-6 sm:mt-2">
               Terme Restaurant with 878 sqm (increased to 1300 sqm in the new
               project) of the internal area and 3000 sqm of the territory;
             </p>
@@ -100,8 +102,8 @@ const BuildingTerritory = () => {
           <div className="w-1/12 h-[1px] bg-black-main lg:mt-5 sm:mt-0 opacity-30"></div>
 
           <div className="flex flex-col sm:mt-0 gap-3">
-            <span className="mt-5 lg:text-xl sm:text-xs">SUITES</span>
-            <p className="lg:text-lg sm:text-x w-[80%]">
+            <span className="md:mt-5 sm:mt-0 lg:text-xl sm:text-base">SUITES</span>
+            <p className="lg:text-lg sm:text-xs w-[80%]">
               15 suites with an area from 24 to 37 sqm before the renovation;
             </p>
             <p className="lg:text-lg sm:text-xs w-[80%]">
@@ -133,7 +135,7 @@ const BuildingTerritory = () => {
           spaceBetween={10}
           breakpoints={{
             360: {
-              slidesPerView: 1.6, // 1 слайд на экранах меньше 640px
+              slidesPerView: 1.3, // 1 слайд на экранах меньше 640px
             },
             600: {
               slidesPerView: 2,
@@ -146,7 +148,7 @@ const BuildingTerritory = () => {
                 <Image
                   src={slide.img}
                   alt={slide.text}
-                  className="w-full h-[240px]"
+                  className="w-[240px] h-[304px]"
                 />
                 <p className="text-black-main text-xs font-helvetica font-normal max-w-full">
                   {slide.text}

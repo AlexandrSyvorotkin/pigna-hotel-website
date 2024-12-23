@@ -35,14 +35,14 @@ const EssenceOfPigna = () => {
             <div className="flex justify-center items-center">
                 <span className="text-black-main font-patrizia font-normal lg:text-5xl sm:text-2xl text-center uppercase">ESSENCE OF PIGNA</span>
             </div>
-            <div className="w-full mt-10 px-2">
+            <div className="w-full mt-10 lg:px-2 sm:pl-[18px]">
                 <Swiper
                     // install Swiper modules
                     modules={[Scrollbar, A11y]}
-                    spaceBetween={24}
+                    spaceBetween={12}
                     breakpoints={{
                         360: {
-                            slidesPerView: 1.4, // 1 слайд на экранах меньше 640px
+                            slidesPerView: 1.3, // 1 слайд на экранах меньше 640px
                         },
                         768: {
                             slidesPerView: 2, // 2 слайда на экранах меньше 768px

@@ -25,7 +25,7 @@ const Resourses = () => {
     <div className="lg:mt-60 sm:mt-20 w-full lg:pb-52 sm:pb-4 flex justify-center px-[18px]" id="lands-and-natural-resources">
       <div className='w-[1750px]'>
         <div className="flex flex-col gap-4 justify-start items-center text-black-main">
-          <span className="text-[40px] font-patrizia text-left w-full uppercase leading-[56px]">Lands and Natural Resources</span>
+          <span className="ld:text-[40px] sm:text-[24px] font-patrizia text-left w-full uppercase lg:leading-[56px] sm:leading-[32px]">Lands and Natural Resources</span>
         </div>
         <div className="flex sm:flex-col lg:flex-row gap-6 lg:mt-5 sm:mt-4 justify-start">
           <div className="lg:w-4/6 sm:w-full flex flex-col gap-4">
@@ -39,7 +39,7 @@ const Resourses = () => {
                   <p className="lg:text-lg sm:text-base font-helvetica">- {item.description}</p>
                 </div>
                 <div className="lg:hidden sm:flex">
-                  <p className="lg:text-lg sm:text-base font-helvetica"><span className="lg:text-2xl sm:text-xl font-helvetica">{item.title}</span>- {item.description}</p>
+                  <p className="lg:text-lg sm:text-xs font-helvetica"><span className="lg:text-2xl sm:text-lg font-helvetica">{item.title}</span> - {item.description}</p>
                 </div>
                 </>
               ))}

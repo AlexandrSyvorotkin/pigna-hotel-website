@@ -18,12 +18,17 @@ const MainPage = () => {
     <>
       <Presentation
         button={
-          <MainButton onClick={() => navigate("/registration")} className="sm:py-[16px] sm:px-[30px] sm:text-xs lg:text-base lg:py-[22px] lg:px-[62px]">
+          <MainButton
+            onClick={() => navigate("/registration")}
+            className="sm:py-[16px] sm:px-[30px] sm:text-xs lg:text-base lg:py-[22px] lg:px-[62px]"
+          >
             <span className="hover:opacity-70">INVEST THE PROJECT</span>
           </MainButton>
         }
       >
-        <span className='font-normal lg:text-6xl sm:text-3xl text-main-white text-center font-patrizia uppercase opacity-80 lg:w-[800px] lg:leading-[87px]'>Every detail is crafted for a remarkable stay</span>
+        <span className="font-normal lg:text-6xl sm:text-3xl text-main-white text-center font-patrizia uppercase opacity-80 lg:w-[800px] lg:leading-[87px]">
+          Every detail is crafted for a remarkable stay
+        </span>
       </Presentation>
       <Banner className="h-[450px]">
         <div className="flex flex-col gap-4 xl:w-3/5 sm:w-full sm:px-[18px]">
@@ -48,14 +53,17 @@ const MainPage = () => {
           </p>
         </div>
       </Banner>
-      <Description /> 
-      {/* <Banner className="h-[400px]">
-        <p className="text-main-white lg:text-4xl sm:text-xl font-patrizia text-center w-[100%] uppercase lg:leading-[60px]">
-          The hotel was highlighted as a project of regional significance. <br />
-          The renovation of the hotel gave local residents and municipal authorities <br />
-          a hope for relaunch and rebirth for Pigna and for the whole Nervia
-          Valley.
-        </p>
+      <Description />
+      <Banner className="h-[400px]">
+        <div className="flex flex-col gap-4 xl:w-3/5 sm:w-full sm:px-[18px]">
+          <p className="text-main-white lg:text-4xl sm:text-xl font-patrizia text-center w-[100%] uppercase lg:leading-[60px]">
+            The hotel was highlighted as a project of regional significance.{" "}
+            <br />
+            The renovation of the hotel gave local residents and municipal
+            authorities <br />a hope for relaunch and rebirth for Pigna and for
+            the whole Nervia Valley.
+          </p>
+        </div>
       </Banner>
       <EssenceOfPigna />
       <Location />
@@ -63,7 +71,7 @@ const MainPage = () => {
       <WellnessSpa />
       <Cuisine />
       <InteriorDesign />
-      <ProjectTimeline />
+      {/* <ProjectTimeline />
       <InvestOpportunities /> */}
     </>
   );
