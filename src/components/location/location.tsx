@@ -53,7 +53,7 @@ const Location = () => {
         </p>
       </div>
       <Image src={map} alt="map" className="w-full h-[460px] sm:hidden md:block" />
-      <Image src={mapRes} alt="map" className="w-full sm:block md:hidden" />
+      <img src={mapRes} alt="map" className="w-full h-[228px] sm:block md:hidden object-cover" />
       <div className="mt-20 w-full flex justify-center items-center flex-col gap-10">
         <span className="text-black-main lg:text-2xl sm:text- font-helvetica font-normal uppercase">
           the nearby airports:
