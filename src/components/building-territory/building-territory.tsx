@@ -15,26 +15,32 @@ const imgArr = [
   {
     img: img_1,
     text: "Tennis courts (possibly operated in collaboration with the a famous regional tennis academy), gyms, yoga studios, outdoor fitness facilities, a swimming pool, and a thermal pool for rehabilitation will be among the resort's sports facilities.",
+    textIt: "Campi da tennis (possibilmente gestiti in collaborazione con una famosa accademia tennistica regionale), palestre, studi di yoga, strutture fitness all’aperto, una piscina e una piscina termale per la riabilitazione faranno parte delle strutture sportive del resort."
   },
   {
     img: img_2,
     text: "The hotel will offer a variety of accommodation options, including spacious suites and deluxe rooms. As part of the renovation, the room count will decrease from 96 to 68, ensuring larger and more luxurious suites: Junior Suite, Executive Suite, Diplomatic Suite, Presidential Suite.",
+    textIt: "L’hotel offrirà varie opzioni di alloggio, incluse spaziose suite e camere deluxe. Come parte della ristrutturazione, il numero di camere diminuirà da 96 a 68, garantendo suite più ampie e lussuose: Junior Suite, Executive Suite, Diplomatic Suite, Presidential Suite."
   },
   {
     img: img_3,
     text: "A long-term lease of 2 hectares adjacent to the hotel is planned, where a park, helipad, and tennis courts will be developed.",
+    textIt: "È previsto un contratto di affitto a lungo termine di 2 ettari adiacenti all’hotel, dove verranno sviluppati un parco, un’elisuperficie e campi da tennis."
   },
   {
     img: img_4,
     text: "The resort consists of three buildings: the main hotel & thermal spa building, the historic Terme building with a restaurant serving traditional Ligurian cuisine, and a historic mill.",
+    textIt: "Il resort si compone di tre edifici: l’edificio principale dell’hotel & spa termale, l’edificio storico delle Terme con un ristorante di cucina tradizionale ligure e un antico mulino."
   },
   {
     img: img_5,
     text: "The spa area will be expanded to 5,000 square metres, creating a vast space for wellness retreat. The space of the hotel buildings and restaurants will be expanded by 1,300 square metres.",
+    textIt: "L’area spa sarà ampliata fino a 5.000 metri quadrati, creando un vasto spazio dedicato al benessere. Lo spazio degli edifici dell’hotel e dei ristoranti sarà ampliato di 1.300 metri quadrati."
   },
   {
     img: img_6,
     text: "Although the hotel was built in 2000, its architecture and interiors reflect timeless elegance. The hotel structure complies with modern construction standards and regulations.",
+    textIt: "Sebbene l’hotel sia stato costruito nel 2000, la sua architettura e i suoi interni riflettono un’eleganza senza tempo. La struttura dell’hotel rispetta gli standard e le normative edilizie moderne."
   },
 ];
 
@@ -144,7 +150,7 @@ const BuildingTerritory = () => {
               key={index}
             />
             <p className="text-black-main lg:text-lg sm:text-xs font-helvetica font-normal w-full">
-              {item.text}
+              {locale === 'ENG' ? item.text : item.textIt}
             </p>
           </div>
         ))}
@@ -172,7 +178,7 @@ const BuildingTerritory = () => {
                   className="w-[240px] h-[304px]"
                 />
                 <p className="text-black-main text-xs font-helvetica font-normal max-w-full">
-                  {slide.text}
+                  {locale === 'ENG' ? slide.text : slide.textIt}
                 </p>
               </div>
             </SwiperSlide>
