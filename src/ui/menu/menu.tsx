@@ -4,6 +4,7 @@ import { Image } from '../img/image'
 import close_icon from '../../assets/icon-close/icon-close.png'
 import menu_img_mobile from '../../assets/bg/bg-menu-res.png'
 import { useEffect } from 'react';
+import { useLocalization } from '../../context/useLocalization';
 
 const items = [
   {
@@ -86,6 +87,7 @@ const Menu = ({isMenuOpen, setIsMenuOpen}: {isMenuOpen: boolean, setIsMenuOpen: 
       document.body.style.overflow = 'auto';
     }
   }, [isMenuOpen]);
+
 
   return (
       <div className={`z-50 overflow-scroll sm:pb-6 lg:pb-0 fixed top-20 left-0 w-full h-[calc(100vh-80px)] flex  sm:flex-col 2lg:flex-row sm:gap-10 2lg:gap-0 transform transition-transform duration-300 ease-in-out bg-loading-color ${

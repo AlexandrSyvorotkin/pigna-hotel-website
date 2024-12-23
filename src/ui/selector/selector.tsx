@@ -8,21 +8,21 @@ const Selector = ({
 }: {
   options: string[];
   startOption: string;
-  onSelect: () => void;
+  onSelect: (select: string) => void;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(startOption);
 
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
-    onSelect();
+    onSelect(option);
     setIsOpen(false);
   };
 
   return (
-    <div className="relative w-10">
-      <div onClick={() => setIsOpen(!isOpen)} style={{ cursor: "pointer" }} className=" flex justify-between">
-        <span>{selectedOption}</span>
+    <div className="relative w-14">
+      <div onClick={() => setIsOpen(!isOpen)} style={{ cursor: "pointer" }} className=" flex justify-between items-center">
+        <span className="text-base">{selectedOption}</span>
         <img src={arrow} alt="" style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s ease" }} />
       </div>
       <ul

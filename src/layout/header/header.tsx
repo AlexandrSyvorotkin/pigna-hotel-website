@@ -8,6 +8,7 @@ import icon_menu_black from "../../assets/icon-menu/IconMenuBlack.svg";
 import starBlack from "../../assets/star/star.svg";
 import starWhite from "../../assets/star/StarWB.svg";
 import Cookies from "js-cookie";
+import { useLocalization } from "../../context/useLocalization";
 
 
 const Header = ({
@@ -63,7 +64,10 @@ const Header = ({
   const cookie = Cookies.get("cookie");
 
 
-  const btnText = cookie && cookie?.length > 0 ? 'enter the docs' : 'invest the project';
+  const { locale } = useLocalization();
+  const enterText = locale === 'ENG' ? 'enter the docs' : 'Investi nel progetto';
+
+  const btnText = cookie && cookie?.length > 0 ? 'enter the docs' : enterText;
 
   const navigateHandler = () => {
     if (cookie && cookie?.length > 0) {
