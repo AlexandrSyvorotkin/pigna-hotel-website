@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Presentation } from "../../components/presentation/presentation";
 import { MainButton } from "../../ui/button/main-button";
+import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const textVariants = [
   "park",
@@ -25,6 +27,34 @@ interface IClosedContent {
 
 const Docs = () => {
   const [closedContent, setClosedContent] = useState<IClosedContent[]>([]);
+
+
+  const navigate = useNavigate();
+
+  // useEffect(() => {
+  //   const token = Cookies.get("cookie");
+
+  //   if (!token || token.length === 0) {
+  //     navigate("/main");
+  //   }
+
+  // }, [navigate]);
+
+  useEffect(() => {
+    const checkCookie = () => {
+      const token = Cookies.get("cookie");
+
+      if (!token || token.length === 0) {
+        navigate("/main");
+      }
+    };
+
+    checkCookie();
+
+    const intervalId = setInterval(checkCookie, 60000);
+
+    return () => clearInterval(intervalId);
+  }, [navigate]);
 
   useEffect(() => {
     fetch("https://termedipigna.com/content/", {})

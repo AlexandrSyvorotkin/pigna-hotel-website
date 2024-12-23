@@ -38,7 +38,7 @@ const LoginForm = ({
       console.log(result);
 
       if (result.refresh_token) {
-        Cookies.set("cookie", result.refresh_token, { expires: 1 });
+        Cookies.set("cookie", result.refresh_token, { expires: 1 / 24 });
         navigate("/docs");
       }
     } catch (error) {
