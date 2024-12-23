@@ -67,7 +67,7 @@ const BuildingTerritory = () => {
             </p>
           </div>
 
-          <div className="w-1/12 h-[1px] bg-black-main lg:mt-5 sm:mt-0"></div>
+          <div className="w-1/12 h-[1px] bg-black-main lg:mt-5 sm:mt-0 opacity-30"></div>
 
           <div className="flex flex-col sm:mt-0">
             <span className="mt-5 lg:text-xl sm:text-xs">SPA areas</span>
@@ -79,7 +79,7 @@ const BuildingTerritory = () => {
             </p>
           </div>
 
-          <div className="w-1/12 h-[1px] bg-black-main mt-5"></div>
+          <div className="w-1/12 h-[1px] bg-black-main mt-5 opacity-30"></div>
 
           <div className="flex flex-col sm:mt-0">
             <span className="mt-5 lg:text-xl sm:text-xs">2 NEW BUILDINGS</span>
@@ -97,7 +97,7 @@ const BuildingTerritory = () => {
             </p>
           </div>
 
-          <div className="w-1/12 h-[1px] bg-black-main lg:mt-5 sm:mt-0"></div>
+          <div className="w-1/12 h-[1px] bg-black-main lg:mt-5 sm:mt-0 opacity-30"></div>
 
           <div className="flex flex-col sm:mt-0 gap-3">
             <span className="mt-5 lg:text-xl sm:text-xs">SUITES</span>
