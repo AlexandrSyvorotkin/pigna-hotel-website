@@ -8,7 +8,6 @@ import mapRes3 from '../../assets/map-res.svg'
 
 import { Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useContext } from "react";
 import { useLocalization } from "../../context/useLocalization";
 
 const airportEls = [

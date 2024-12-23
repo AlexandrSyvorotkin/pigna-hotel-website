@@ -4,7 +4,6 @@ import { Image } from '../img/image'
 import close_icon from '../../assets/icon-close/icon-close.png'
 import menu_img_mobile from '../../assets/bg/bg-menu-res.png'
 import { useEffect } from 'react';
-import { useLocalization } from '../../context/useLocalization';
 
 const items = [
   {

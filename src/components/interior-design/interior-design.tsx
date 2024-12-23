@@ -16,11 +16,15 @@ import img3res from "../../assets/interior-design/res/img3res.svg";
 import img4res from "../../assets/interior-design/res/img4res.svg";
 import img5res from "../../assets/interior-design/res/img5res.svg";
 import img6res from "../../assets/interior-design/res/img6res.svg";
+import { useLocalization } from "../../context/useLocalization";
 
 const images = [img1, img2, img3, img4, img5, img6, img7];
 const imagesMobile = [img1res, img2res, img3res, img4res, img5res, img6res];
 
 const InteriorDesign = () => {
+
+const {locale} = useLocalization()
+
   return (
     <div
       className="lg:mt-60 sm:mt-10 w-full flex justify-center flex-col items-center lg:pb-60 sm:pb-10 px-[18px]"
@@ -29,7 +33,8 @@ const InteriorDesign = () => {
       <div className="max-w-[1750px]">
         <div className="flex justify-center items-center flex-col gap-4">
         <span className="text-black-main lg:text-5xl sm:text-2xl font-patrizia font-normal text-center uppercase lg:w-full sm:w-[80%]">
-          Interior Design and Architecture
+
+          {locale === 'ENG' ? "Interior Design and Architecture" :"Design degli Interni e Architettura" }
         </span>
         <div className="w-full flex justify-center items-center">
           <p className="text-black-main lg:text-lg sm:text-xs font-helvetica font-normal text-center lg:w-1/2 sm:w-full">
