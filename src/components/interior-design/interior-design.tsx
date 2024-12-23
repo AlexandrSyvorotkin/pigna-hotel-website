@@ -38,10 +38,8 @@ const {locale} = useLocalization()
         </span>
         <div className="w-full flex justify-center items-center">
           <p className="text-black-main lg:text-lg sm:text-xs font-helvetica font-normal text-center lg:w-1/2 sm:w-full">
-            The hotel project is conceived around the oriental principle of
-            layout, embodied in a modern design. Unique design solutions,
-            including the incorporation of natural precious stones, are utilised
-            in the interior finishes.
+            {locale !== "ENG" ? "Il progetto dell’hotel si ispira a un principio di disposizione orientale, interpretato con un design moderno. Soluzioni di design uniche, incluso l’impiego di pietre preziose naturali, saranno integrate nelle finiture interne." :
+            "The hotel project is conceived around the oriental principle of layout, embodied in a modern design. Unique design solutions, including the incorporation of natural precious stones, are utilised in the interior finishes."}
           </p>
         </div>
         <div className="w-full bg-black-main lg:mt-14 sm:mt-6">
@@ -50,8 +48,16 @@ const {locale} = useLocalization()
         </div>
         </div>
         <div className="w-full lg:mt-36 sm:mt-10 flex flex-col justify-center items-center">
-        <p className='text-black-main lg:text-2xl sm:text-base font-helvetica font-normal text-center uppercase lg:w-[65%] sm:w-full'>Designed by the renowned architect Alex Kravetz, the renovation project stands as a testament to innovative vision and artistry, set to redefine luxury and elegance within the hospitality landscape.</p>
-        <p className='mt-4 text-black-main lg:text-lg sm:text-xs font-helvetica font-normal text-center lg:w-[45%] sm:w-full'>This transformation is further distinguished by accolades that include The Imperial Hotel Vienna, Intercontinental Porto, Radisson Hotel Antwerpen, Sheraton Oman, Hilton Muscat etc.</p>
+        <p className='text-black-main lg:text-2xl sm:text-base font-helvetica font-normal text-center uppercase lg:w-[65%] sm:w-full'>
+          {locale === 'ENG' ?
+          "Designed by the renowned architect Alex Kravetz, the renovation project stands as a testament to innovative vision and artistry, set to redefine luxury and elegance within the hospitality landscape." :
+          "Progettato dal rinomato architetto Alex Kravetz, il progetto di rinnovamento è una testimonianza di visione innovativa e creatività, destinato a ridefinire il concetto di lusso ed eleganza nell’ospitalità." }
+        </p>
+        <p className='mt-4 text-black-main lg:text-lg sm:text-xs font-helvetica font-normal text-center lg:w-[45%] sm:w-full'>
+          {locale === 'ENG' ?
+          "This transformation is further distinguished by accolades that include The Imperial Hotel Vienna, Intercontinental Porto, Radisson Hotel Antwerpen, Sheraton Oman, Hilton Muscat etc." :
+          "Questa trasformazione è ulteriormente contraddistinta da riconoscimenti che includono The Imperial Hotel Vienna, Intercontinental Porto, Radisson Hotel Antwerpen, Sheraton Oman, Hilton Muscat, ecc."}
+        </p>
       </div>
 
       <div className='mt-[72px] flex justify-between gap-10 flex-wrap md:flex sm:hidden'>
