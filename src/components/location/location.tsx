@@ -4,7 +4,7 @@ import img3 from "../../assets/airports/img3.jpg";
 import { Image } from "../../ui/img/image";
 import map from "../../assets/mapSvg.svg";
 
-import mapRes3 from '../../assets/map-res.svg'
+import mapRes3 from '../../assets/test.png'
 
 import { Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
