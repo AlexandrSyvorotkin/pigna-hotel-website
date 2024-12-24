@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { Dispatch, SetStateAction, useState } from "react";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import { useLocalization } from "../../context/useLocalization";
 
 const LoginForm = ({
   setIsLogin,
@@ -17,6 +18,8 @@ const LoginForm = ({
   });
 
   const navigate = useNavigate();
+
+  const {locale} = useLocalization();
 
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -64,24 +67,24 @@ const LoginForm = ({
           <input
             {...register("password")}
             type="password"
-            placeholder="Пароль"
+            placeholder={locale === "ENG" ? "Password" : "Crea password"}
             className="mt-4 bg-transparent border-b border-gray-300 pb-[20px] focus:outline-none text-main-white"
           />
         </label>
         <div className="text-red-500">{errorMessage}</div>
         <MainButton className="w-full bg-main-white uppercase text-main-black text-helvetica text-base py-[21px] px-[122px]">
-          Enter
+          {locale === "ENG" ? "Enter" : "Accedi"}
         </MainButton>
       </form>
       <div className="w-full h-full mt-10 flex gap-1 justify-center">
         <span className="text-main-white font-base opacity-70 font-helvetica">
-          Do you already have a account?
+          {locale === 'ENG' ? 'Do you already have a account?' : 'Hai già un account?'}
         </span>
         <span
           className="text-main-white font-base font-helvetica cursor-pointer"
           onClick={() => setIsLogin(false)}
         >
-          Create account
+          {locale === 'ENG' ? 'Create account' : 'Crea account'}
         </span>
       </div>
     </div>
