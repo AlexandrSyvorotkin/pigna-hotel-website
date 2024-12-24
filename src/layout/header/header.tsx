@@ -88,9 +88,9 @@ const Header = ({
       <HeaderControls openMenu={openMenu} />
       <Logo size="sm" color="white" img={isScrolled && !isPrivacyPage &&!isMenuOpen ? starBlack : starWhite} content={
         <>
-        <span className="md:text-xl sm:text-sm font-patrizia">GRAND</span>
-        <span className="md:text-3xl sm:text-lg font-patrizia">PIGNA</span>
-        <span className="md:text-xl sm:text-sm font-patrizia">HOTEL</span>
+        <span className="md:text-xl sm:text-xs font-patrizia">GRAND</span>
+        <span className="md:text-3xl sm:text-base font-patrizia">PIGNA</span>
+        <span className="md:text-xl sm:text-xs font-patrizia">HOTEL</span>
         </>
       }/>
       <span
@@ -99,7 +99,7 @@ const Header = ({
     >
         {btnText}
       </span>
-      <div className="sm:block lg:hidden" onClick={openMenu}>
+      <div className="sm:block sm:w-10 lg:hidden" onClick={openMenu}>
         <Image src={isScrolled && !isPrivacyPage &&!isMenuOpen ? icon_menu_black : icon_menu} alt="logo" />
       </div>
     </header>

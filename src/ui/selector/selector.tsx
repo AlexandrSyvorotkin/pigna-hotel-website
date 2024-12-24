@@ -20,9 +20,9 @@ const Selector = ({
   };
 
   return (
-    <div className="relative w-14">
+    <div className="relative lg:w-14 sm:w-[47px]">
       <div onClick={() => setIsOpen(!isOpen)} style={{ cursor: "pointer" }} className=" flex justify-between items-center">
-        <span className="text-base">{selectedOption}</span>
+        <span className="sm:text-xs lg:text-base">{selectedOption}</span>
         <img src={arrow} alt="" style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s ease" }} />
       </div>
       <ul
@@ -39,7 +39,7 @@ const Selector = ({
             <li
               key={option}
               onClick={() => handleOptionClick(option)}
-              className="text-main-white w-full cursor-pointer z-50"
+              className="text-main-white w-full cursor-pointer z-50 sm:text-xs lg:text-base"
             >
               {option}
             </li>
