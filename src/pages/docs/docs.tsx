@@ -3,15 +3,37 @@ import { Presentation } from "../../components/presentation/presentation";
 import { MainButton } from "../../ui/button/main-button";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
+import { useLocalization } from "../../context/useLocalization";
 
 const textVariants = [
-  "park",
-  "playground",
-  "padel court",
-  "club house",
-  "helipad",
-  "bike rental",
-  "tennis court",
+  {
+    en: "park",
+    it: "parco",  
+  },
+  {
+    en: "playground",
+    it: "area giochi",
+  },
+  {
+    en: "padel court",
+    it: "PADEL COURT",
+  },
+  {
+    en: "club house",
+    it: "club house",
+  },
+  {
+    en: "helipad",
+    it: "elisuperficie",
+  },
+  {
+    en: "bike rental",
+    it: "noleggio biciclette",
+  },
+  {
+    en: "tennis court",
+    it: "CAMPO DA TENNIS",
+  },
 ];
 
 const address = "https://termedipigna.com";
@@ -39,6 +61,8 @@ const Docs = () => {
   //   }
 
   // }, [navigate]);
+
+  const {locale} = useLocalization();
 
   useEffect(() => {
     const checkCookie = () => {
@@ -72,8 +96,10 @@ const Docs = () => {
   return (
     <div className="w-full h-full">
       <Presentation>
-        <span className="font-normal 2lg:text-5xl sm:text-2xl text-main-white text-center font-patrizia uppercase opacity-80 2lg:w-[1200px] 2lg:leading-[87px]">Grand Hotel Pigna Renovation Project.
-        Project Details and Financial Overview</span>
+        <span className="font-normal 2lg:text-5xl sm:text-2xl text-main-white text-center font-patrizia uppercase opacity-80 2lg:w-[1200px] 2lg:leading-[87px]">
+          {locale === 'ENG' ? "Grand Hotel Pigna Renovation Project." : "Progetto di Ristrutturazione del Grand Hotel Pigna. "}
+          {locale === 'ENG' ? "Project Details and Financial Overview" : "Dettagli del Progetto e Panoramica Finanziaria"}
+        </span>
       </Presentation>
 
       <div className="w-full flex flex-col">
@@ -107,25 +133,29 @@ const Docs = () => {
       <div className="w-full bg-main-color flex justify-center items-center lg:mt-48 lg:mb-48 sm:mt-24 sm:mb-24 px-[18px]">
         <div className="w-3/4 h-full flex flex-col gap-4 justify-center items-center">
           <h2 className="text-black-main lg:text-5xl sm:text-2xl font-patrizia font-normal text-center w-full uppercase">
-            NEW OUTDOOR VENUES
+            {locale === "ENG" ? "NEW OUTDOOR VENUES" : "NUOVI ESPOSTI ESTERNI"}
+
           </h2>
           <span className="text-center lg:text-xl sm:text-xs">
-            will be built in accordance to the hotel’s renovation plan:
+            {locale === "ENG" ? "will be built in accordance to the hotel’s renovation plan:" : "Saranno realizzate in conformità con il piano di ristrutturazione dell’hotel:"}
           </span>
           <div className="flex gap-4 justify-center items-center flex-wrap lg:w-1/2 sm:w-full">
             {textVariants.map((text) => (
               <span className="text-black-main lg:text-xl sm:text-base font-helvetica font-normal text-center uppercase">
-                {text}
+                {locale === "ENG" ? text.en : text.it}
               </span>
             ))}
           </div>
+          {locale === "ENG" ? 
           <p className="text-black-main lg:text-xl sm:text-xs font-helvetica font-normal text-center w-full">
             The listed venues are planned to be built on the municipal area with
             a long-term lease. The sport facilities will be used either solely
             by the hotel guests or also available for visits of the area
             residents with an entrance fee. The tennis courts might be operated
             in a possible cooperation with a famous regional tennis academy.
-          </p>
+          </p> : <p className="text-black-main lg:text-xl sm:text-xs font-helvetica font-normal text-center w-full">
+          Le strutture elencate sono previste su area municipale con contratto di locazione a lungo termine. Le strutture sportive saranno utilizzate esclusivamente dagli ospiti dell’hotel o potranno essere aperte anche ai residenti locali dietro pagamento di un ticket d’ingresso. I campi da tennis potrebbero essere gestiti in collaborazione con una famosa accademia tennistica regionale.
+          </p> }
         </div>
       </div>
       

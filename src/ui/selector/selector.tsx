@@ -26,10 +26,11 @@ const Selector = ({
         <img src={arrow} alt="" style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s ease" }} />
       </div>
       <ul
-        className="w-full bg-main-white absolute left-0 mt-1 shadow-lg transition-all duration-300 ease-in-out transform scale-100 opacity-100"
+        className="w-full bg-loading-color p-2 border-[1px] rounded-lg  absolute left-0 mt-1 shadow-lg transition-all duration-300 ease-in-out transform scale-100 opacity-100"
         style={{
           transform: isOpen ? "translateY(0)" : "translateY(-10px)",
           opacity: isOpen ? 1 : 0,
+          pointerEvents: isOpen ? "auto" : "none",
         }}
       >
         {options
@@ -38,7 +39,7 @@ const Selector = ({
             <li
               key={option}
               onClick={() => handleOptionClick(option)}
-              className="text-black-main w-full cursor-pointer"
+              className="text-main-white w-full cursor-pointer z-50"
             >
               {option}
             </li>
