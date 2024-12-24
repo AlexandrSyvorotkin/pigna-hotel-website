@@ -2,6 +2,7 @@ import { Logo } from "../../components/logo/logo";
 import { useLocation, useNavigate } from "react-router-dom";
 import starBlack from "../../assets/star/star.svg";
 import starWhite from "../../assets/star/StarW.svg";
+import { useLocalization } from "../../context/useLocalization";
 
 const Footer = () => {
   
@@ -26,12 +27,15 @@ const Footer = () => {
   const validRoutes = ["/main", "/docs", "/privacy"];
   const isValidRoute = validRoutes.includes(location.pathname);
 
-  if (!isValidRoute) return null;
+  
 
   const textColor = isPrivacyPage ? "text-main-white" : "text-black-main";
 
   const borderColor = isPrivacyPage ? "bg-main-white" : "bg-black-main";
 
+  const { locale } = useLocalization();
+
+  if (!isValidRoute) return null;
 
   return (
     <footer
@@ -73,7 +77,9 @@ const Footer = () => {
                 Privacy Policy
               </span>
               <p className="opacity-60 uppercase sm:text-center lg:text-left">
-                ©Otto Pigna S.R.L., Inc. 2024 All rights reserved.
+                {locale === "ENG" ? 
+                "©Otto Pigna S.R.L., Inc. 2024 All rights reserved." 
+                : "© Otto Pigna S.R.L., Inc. 2024 Tutti i diritti riservati."}
               </p>
             </div>
             <div
@@ -81,7 +87,9 @@ const Footer = () => {
                 isPrivacyPage ? "text-main-white" : "text-black-main"
               }`}
             >
-              <span className="uppercase">Contacts for communication:</span>
+              <span className="uppercase">
+                {locale === "ENG" ? "Contacts for communication:" : "Contatti per comunicazioni:"}
+              </span>
               <span className="uppercase">contacts@thermedipigna.com</span>
             </div>
           </div>
@@ -95,13 +103,13 @@ const Footer = () => {
                 onClick={() => scrollToSection("features", -30)}
                 className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
               >
-                FEATURES
+                {locale === "ENG" ? "FEATURES" : "CARATTERISTICHE"}
               </span>
               <span
                 onClick={() => scrollToSection("essence-of-pigna", -120)}
                 className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
               >
-                ESSENCE OF PIGNA
+                {locale === "ENG" ? "ESSENCE OF PIGNA" : "L’ESSENZA DI PIGNA"}
               </span>
             </div>
             <div
@@ -113,7 +121,7 @@ const Footer = () => {
                 onClick={() => scrollToSection("location", -120)}
                 className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
               >
-                LOCATION
+                {locale === "ENG" ? "LOCATION" : "POSIZIONE"}
               </span>
               <span
                 onClick={() => scrollToSection("wellness-spa")}
@@ -131,13 +139,13 @@ const Footer = () => {
                 onClick={() => scrollToSection("cuisine", -120)}
                 className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
               >
-                CUISINE
+                {locale === "ENG" ? "CUISINE" : "CUCINA"}
               </span>
               <span
                 onClick={() => scrollToSection("building-territory", -120)}
                 className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
               >
-                BUILDING & TERRITORY
+                {locale === "ENG" ? "BUILDING & TERRITORY" : "EDIFICIO & TERRITORIO"}
               </span>
             </div>
             <div
@@ -149,19 +157,19 @@ const Footer = () => {
                 onClick={() => scrollToSection("architecture", -120)}
                 className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
               >
-                ARCHITECTURE
+                {locale === "ENG" ? "ARCHITECTURE" : "ARCHITETTURA"}
               </span>
               <span
                 onClick={() => scrollToSection("project-timeline")}
                 className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
               >
-                PROJECT TIMELINE
+                {locale === "ENG" ? "PROJECT TIMELINE" : "CRONOLOGIA DEL PROGETTO"}
               </span>
               <span
                 onClick={() => navigate("/registration")}
                 className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
               >
-                INVEST IN THE PROJECT
+                {locale === "ENG" ? "INVEST IN THE PROJECT" : "INVESTI NEL PROGETTO"}
               </span>
             </div>
           </div>

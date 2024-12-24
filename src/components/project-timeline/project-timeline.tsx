@@ -34,31 +34,31 @@ const slidesEls = [
     img: img3,
     text: "The chemical analysis of water was carried out, stating that it contains sulphur and probably hydrosulfite, carbonic acid, soda sulphate, soda carbonate, sodium chloride, traces of magnesium carbonate, and an organic nitrogenous substance.",
     date: 1839,
-    textIt: ""
+    textIt: "Fu eseguita un’analisi chimica delle acque, che rilevò la presenza di zolfo e probabilmente idrosolfiti, acido carbonico, solfato di soda, carbonato di soda, cloruro di sodio, tracce di carbonato di magnesio e una sostanza organica azotata."
   },
   {
     img: img4,
     text: "Commercial exploitation of the beneficial thermal waters began. Aroung this time, Claude Monet visited the neighborhood of Pigna - the small hamlet of Dolceacqua, he was so awed by this medieval bridge, he enthused that the structure was ‘a pearl of lightness’ and depicted the bridge in the painting “The Bridge at Dolceacqua”.",
     date: 1884,
-    textIt: ""
+    textIt: "Iniziò lo sfruttamento commerciale delle benefiche acque termali. In questo periodo Claude Monet visitò i dintorni di Pigna — il piccolo borgo di Dolceacqua. Così impressionato da questo ponte medievale, lo definì una “perla di leggerezza” e lo ritrasse nel dipinto “Il Ponte di Dolceacqua”."
   },
   {
     img: img5,
     text: "The very first real bathhouse was opened in Pigna. The water was taken from a well presumably with buckets which, tied to a rope, were lowered along a natural cavity reinforced inside by bricks and raised to a height of about twenty metres.",
     date: 1903,
-    textIt: ""
+    textIt: "Fu aperto il primo vero stabilimento balneare a Pigna. L’acqua veniva prelevata da un pozzo presumibilmente con secchi legati a una corda, calati lungo una cavità naturale rinforzata internamente con mattoni e issati per circa venti metri."
   },
   {
     img: img6,
     text: "After the Great War, the lower part of the mill complexes was almost entirely destroyed. Only after the Second World War, Giovanni Battista Manesero, owner of the spring, revived the idea of properly utilising the area’s sulphurous waters.",
     date: 1920,
-    textIt: ""
+    textIt: "Dopo la Grande Guerra, la parte inferiore dei complessi del mulino fu quasi interamente distrutta. Solo dopo la Seconda Guerra Mondiale, Giovanni Battista Manesero, proprietario della sorgente, rilanciò l’idea di utilizzare adeguatamente le acque sulfuree della zona."
   },
   {
     img: img7,
     text: "The first thermal spa in Pigna was built — the rooms with tubs, in which it was possible to bathe in the sulphurous water. There were about 3,000 Italian and foreign tourists, mostly French, visiting the spa complex at that time. Among the famous customers were the tenor Di Stefano and Princess Grace. The sulphurous water baths operated at full capacity until 1989.",
     date: 1954,
-    textIt: ""
+    textIt: "Fu costruita la prima spa termale a Pigna — stanze con vasche dove era possibile immergersi nell’acqua sulfurea. All’epoca erano circa 3.000 i turisti italiani e stranieri, per lo più francesi, che visitavano il complesso termale. Tra i clienti famosi vi erano il tenore Di Stefano e la Principessa Grace. I bagni di acqua solfurea operarono a pieno regime fino al 1989."
   },
   {
     img: img8,
@@ -70,31 +70,53 @@ const slidesEls = [
     img: img9,
     text: "After the change of the hotel ownership, a new concept of the luxury 5* thermal wellness retreat Grand Hotel Pigna was created.",
     date: 2020,
-    textIt: ""
+    textIt: "Fu costruito e gestito come hotel termale moderno a 4* — il Grand Hotel Antiche Terme di Pigna."
   },
   {
     img: img10,
     text: "An exquisite concept of hotel’s interior design and renovation of the Grand Hotel Pigna was created by Alex Kravetz",
     date: 2022,
-    textIt: ""
+    textIt: "Dopo il cambio di proprietà dell’hotel, fu creato un nuovo concetto di rifugio termale di lusso a 5* — il Grand Hotel Pigna.Un raffinato concept per il design degli interni e la ristrutturazione del Grand Hotel Pigna fu ideato da Alex Kravetz."
   },
   {
     img: img11,
     text: "The approval documentation, research and planning work have been completed. The project is at the stage of raising investment for the implementation of the renovation plans. ",
     date: 2024,
-    textIt: ""
+    textIt: "Sono stati completati i documenti di approvazione, le ricerche e i lavori di pianificazione. Il progetto è in fase di raccolta investimenti per l’attuazione dei piani di ristrutturazione."
   },
 ];
 
+
 const textItems = [
-  "Obtaining a principal agreement for the helicopter pad, the location of which has already been chosen and approved with the local authorities. ",
-  "The architectural project has been finalised. All necessary permissions at local and regional levels have been obtained.",
-  "The required structural, hydraulic and other research has been conducted. The thermal water concession has been obtained.",
-  "The process of obtaining a long-term lease from the municipality for the 2 hectares of land in front of the hotel is in progress.",
-  "The transaction of all real estate assets and land has been completely finalised. There are no financial debts or liabilities with the former personnel or the hotel and no outstanding responsibilities.",
-  'The project is considered to be of strategic importance for the region and has the personal, highly regarded support of the Ligurian Government with a scope of 20% state financial support in accordance with the national funding conditions for "Big Investments — Development Contracts".',
-  "An architectural replanning project for the restaurant building is in the works.",
-];
+  {
+    eng: "Obtaining a principal agreement for the helicopter pad, the location of which has already been chosen and approved with the local authorities.",
+    it: "Ottenimento di un accordo di massima per l’elisuperficie, la cui posizione è stata già scelta e approvata dalle autorità locali. "
+  },
+  {
+    eng: "The architectural project has been finalised. All necessary permissions at local and regional levels have been obtained.",
+    it: "Il progetto architettonico è stato finalizzato. Tutte le necessarie autorizzazioni a livello locale e regionale sono state ottenute."
+  },
+  {
+    eng: "The required structural, hydraulic and other research has been conducted. The thermal water concession has been obtained.",
+    it: " Sono state condotte le ricerche strutturali, idrauliche e di altro tipo. È stata ottenuta la concessione delle acque termali."
+  },
+  {
+    eng: "The process of obtaining a long-term lease from the municipality for the 2 hectares of land in front of the hotel is in progress.",
+    it: "È in corso il procedimento per ottenere un contratto di affitto a lungo termine dal comune per i 2 ettari di terreno di fronte all’hotel."
+  },
+  {
+    eng: "The transaction of all real estate assets and land has been completely finalised. There are no financial debts or liabilities with the former personnel or the hotel and no outstanding responsibilities.",
+    it: "La transazione di tutti gli asset immobiliari e terreni è stata completamente finalizzata. Non ci sono debiti finanziari o pendenze con il precedente personale o con l’hotel, né responsabilità in sospeso."
+  },
+  {
+    eng: 'The project is considered to be of strategic importance for the region and has the personal, highly regarded support of the Ligurian Government with a scope of 20% state financial support in accordance with the national funding conditions for "Big Investments — Development Contracts".',
+    it: "Il progetto è considerato di importanza strategica per la regione e gode del sostegno personale e molto apprezzato del Governo Ligure, con una quota di sostegno statale del 20% in base alle condizioni nazionali di finanziamento per i “Grandi Investimenti — Contratti di Sviluppo”."
+  },
+  {
+    eng: "An architectural replanning project for the restaurant building is in the works.",
+    it: "È in corso un progetto di riqualificazione architettonica per l’edificio ristorante."
+  },
+]
 
 
 
@@ -149,7 +171,7 @@ const ProjectTimeline = () => {
                   className="w-full md:h-[465px] sm:h-[300px] lg:h-[328px]"
                 />
                 <div className="text-main-white font-helvetica font-normal md:text-lg sm:text-xs text-left leading-5 mt-3">
-                  {slide.text}
+                  {locale === "ENG" ? slide.text : slide.textIt}
                 </div>
                 <div className='slide-mark'>
                   <div className='slide-mark__date'>{slide.date}</div>
@@ -171,13 +193,13 @@ const ProjectTimeline = () => {
         <div className="w-[1750px]">
           <div className="flex flex-col gap-4 w-full">
             <span className="text-main-white font-helvetica font-normal text-2xl text-center uppercase">
-              Project status. Documents and permits obtained
+              {locale === "ENG" ? "Project status. Documents and permits obtained" : "Stato del progetto. Documenti e permessi ottenuti"}
             </span>
             <div className="w-full flex justify-center items-center">
               <p className="text-main-white font-helvetica font-normal text-lg text-center mt-3 opacity-80 lg:w-[42%] sm:w-full">
-                The approval documentation, research and planning work have been
-                completed. The project is at the stage of raising investment for
-                the implementation of the renovation plans:
+                {locale === 'ENG' ? " The approval documentation, research and planning work have been completed. The project is at the stage of raising investment forthe implementation of the renovation plans:" 
+                : "Sono stati completati i documenti di approvazione, le ricerche e i lavori di pianificazione. Il progetto è in fase di raccolta investimenti per la realizzazione dei piani di ristrutturazione:"} 
+               
               </p>
             </div>
           </div>
@@ -187,7 +209,7 @@ const ProjectTimeline = () => {
             {textItems.map((text, index) => (
                 <div key={index} className="flex flex-col gap-4">
                   <p className="text-main-white font-helvetica font-normal lg:text-lg sm:text-xs w-full">
-                    {text}
+                    {locale === "ENG" ? text.eng : text.it}
                   </p>
                     {index < textItems.length - 1 && (
                     <div className="h-[1px] w-[24px] bg-main-white opacity-30" />
@@ -198,48 +220,48 @@ const ProjectTimeline = () => {
 
                 <div className="sm:w-full h-[81px] flex gap-[26px] lg:w-[450px] sm:hidden lg:flex">
                   <p className="text-main-white font-helvetica lg:w-[400px] lg:text-lg sm:text-xs w-full leading-[25px]">
-                    {textItems[0]}
+                    {locale === "ENG" ? textItems[0].eng : textItems[0].it}
                   </p>
                     <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
                 </div>
 
                 <div className="sm:w-full h-[81px] flex gap-[26px] lg:w-[414px] sm:hidden lg:flex">
                   <p className="text-main-white font-helvetica lg:w-[354px] lg:text-lg sm:text-xs w-full leading-[25px]">
-                    {textItems[1]}
+                    {locale === "ENG" ? textItems[1].eng : textItems[1].it}
                   </p>
                     <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
                 </div>
 
                 <div className="sm:w-full h-[81px] flex gap-[26px] lg:w-[414px] sm:hidden lg:flex">
                   <p className="text-main-white font-helvetica lg:w-[354px] lg:text-lg sm:text-xs w-full leading-[25px]">
-                    {textItems[2]}
+                    {locale === "ENG" ? textItems[2].eng : textItems[2].it}
                   </p>
                     <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
                 </div>
 
                 <div className="sm:w-full h-[81px] flex lg:w-[354px] sm:hidden lg:flex">
                   <p className="text-main-white font-helvetica lg:text-lg sm:text-xs w-full leading-[25px]">
-                    {textItems[3]}
+                    {locale === "ENG" ? textItems[3].eng : textItems[3].it}
                   </p>
                 </div>
 
                 <div className="sm:w-full h-[81px] flex lg:w-[610px] gap-[26px] sm:hidden lg:flex">
                   <p className="text-main-white font-helvetica lg:w-[550px] lg:text-lg sm:text-xs w-full leading-[25px]">
-                    {textItems[4]}
+                    {locale === "ENG" ? textItems[4].eng : textItems[4].it}
                   </p>
                   <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
                 </div>
 
                 <div className="sm:w-full h-[81px] flex lg:w-[829px] gap-[26px] sm:hidden lg:flex">
                   <p className="text-main-white font-helvetica lg:w-[779px] lg:text-lg sm:text-xs w-full leading-[25px]">
-                    {textItems[5]}
+                    {locale === "ENG" ? textItems[5].eng : textItems[5].it}
                   </p>
                   <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
                 </div>
 
                 <div className="sm:w-full h-[81px] flex lg:w-[216px] sm:hidden lg:flex">
                   <p className="text-main-white font-helvetica  lg:text-lg sm:text-xs w-full leading-[25px]">
-                    {textItems[6]}
+                    {locale === "ENG" ? textItems[6].eng : textItems[6].it}
                   </p>
                 </div>
 
