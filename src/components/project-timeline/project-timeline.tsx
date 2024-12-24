@@ -163,7 +163,7 @@ const ProjectTimeline = () => {
           </Swiper>
 
 
-          <div className="w-full h-[1px] lg:mt-1 lg:mb-8 sm:mb-0 sm:mt-32" style={{background: "linear-gradient(to right, #FFF 0%, #FFF 70%, rgba(255, 255, 255, 0) 100%)"}}></div>
+          <div className="w-full h-[1px] lg:mt-1 lg:mb-8 sm:mb-0 sm:mt-36" style={{background: "linear-gradient(to right, #FFF 0%, #FFF 70%, rgba(255, 255, 255, 0) 100%)"}}></div>
         </div>
       </div>
 
