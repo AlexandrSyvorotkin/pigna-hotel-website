@@ -3,8 +3,9 @@ import img2 from "../../assets/airports/img2.png";
 import img3 from "../../assets/airports/img3.jpg";
 import { Image } from "../../ui/img/image";
 import map from "../../assets/mapSvg.svg";
+import mapRes from '../../assets/mapres2.png'
 
-import mapRes3 from '../../assets/map-res.svg'
+// import mapRes3 from '../../assets/map-res.svg'
 
 import { Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -67,7 +68,7 @@ const {locale} = useLocalization()
       </div>
       <Image src={map} alt="map" className="w-full h-[460px] sm:hidden md:block" />
       {/* <div className="w-full h-[228px] sm:block md:hidden bg-cover bg-center" style={{ backgroundImage: `url(${mapRes})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center' }}></div> */}
-      <img src={mapRes3} alt="map" className="w-full h-[228px] sm:block md:hidden object-cover" />
+      <img src={mapRes} alt="map" className="w-full h-[228px] sm:block md:hidden object-cover" />
       <div className="mt-20 w-full flex justify-center items-center flex-col gap-10">
         <span className="text-black-main lg:text-2xl sm:text- font-helvetica font-normal uppercase">
           {locale === 'ENG' ? "Airports" : "Aeroporti vicini:"}
