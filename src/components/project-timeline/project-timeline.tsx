@@ -62,9 +62,9 @@ const slidesEls = [
   },
   {
     img: img8,
-    text: "The modern thermal spa hotel was built and operated as a 4* Grand Hotel Antiche Terme di Pigna. ",
+    text: "The modern thermal spa hotel was built and operated as a 4* Grand Hotel Antiche Terme di Pigna.",
     date: 2000,
-    textIt: ""
+    textIt: "Fu costruito e gestito come hotel termale moderno a 4* — il Grand Hotel Antiche Terme di Pigna."
   },
   {
     img: img9,
