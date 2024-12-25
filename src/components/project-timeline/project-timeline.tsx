@@ -70,7 +70,7 @@ const slidesEls = [
     img: img9,
     text: "After the change of the hotel ownership, a new concept of the luxury 5* thermal wellness retreat Grand Hotel Pigna was created.",
     date: 2020,
-    textIt: "Fu costruito e gestito come hotel termale moderno a 4* — il Grand Hotel Antiche Terme di Pigna."
+    textIt: "Dopo il cambio di proprietà dell’hotel, fu creato un nuovo concetto di rifugio termale di lusso a 5* — il Grand Hotel Pigna."
   },
   {
     img: img10,
