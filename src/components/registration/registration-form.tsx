@@ -79,7 +79,7 @@ const RegistrationForm = () => {
       </span>
       <div className="2lg:mt-20 sm:mt-10 xl:ml-24 lg:ml-2 md:w-96 sm:w-full">
         <h2 className="text-5xl font-patrizia text-main-white uppercase font-normal leading-[65px]">
-          {isLogin ? reg : log}
+          {isLogin ? log : reg}
         </h2>
         <span className="mt-10 text-base font-helvetica text-main-white opacity-70">
           {locale === "ENG" ? "To view the the investment plan" : "Per visualizzare il piano di investimento"}

@@ -65,17 +65,18 @@ const Header = ({
 
 
   const { locale } = useLocalization();
-  const enterText = locale === 'ENG' ? 'enter the docs' : 'Investi nel progetto';
+  const enterText = locale === 'ENG' ? 'invest the project' : 'Investi nel progetto';
 
-  const btnText = cookie && cookie?.length > 0 ? 'enter the docs' : enterText;
+
+  const btnText = cookie && cookie.trim().length > 0 ? 'enter the docs' : enterText;
 
   const navigateHandler = () => {
-    if (cookie && cookie?.length > 0) {
+    if (cookie && cookie.trim().length > 0) {
       navigate("/docs");
     } else {
-     navigate("/registration"); 
+      navigate("/registration");
     }
-  }
+  };
 
   if (location.pathname === "/") {
     return null;

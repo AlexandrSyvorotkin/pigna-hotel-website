@@ -50,6 +50,9 @@ interface IClosedContent {
 const Docs = () => {
   const [closedContent, setClosedContent] = useState<IClosedContent[]>([]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); 
 
   const navigate = useNavigate();
 

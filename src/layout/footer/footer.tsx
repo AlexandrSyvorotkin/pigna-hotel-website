@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import starBlack from "../../assets/star/star.svg";
 import starWhite from "../../assets/star/StarW.svg";
 import { useLocalization } from "../../context/useLocalization";
+import Cookies from 'js-cookie'
 
 const Footer = () => {
   
@@ -34,6 +35,20 @@ const Footer = () => {
   const borderColor = isPrivacyPage ? "bg-main-white" : "bg-black-main";
 
   const { locale } = useLocalization();
+
+
+  const enterText = locale === 'ENG' ? 'INVEST THE PROJECT' : 'INVESTI NEL PROGETTO';
+
+  const cookie = Cookies.get("cookie");
+  const btnText = cookie && cookie.trim().length > 0 ? 'ENTER THE DOCS' : enterText;
+
+  const navigateHandler = () => {
+    if (cookie && cookie.trim().length > 0) {
+      navigate("/docs");
+    } else {
+      navigate("/registration");
+    }
+  };
 
   if (!isValidRoute) return null;
 
@@ -166,10 +181,10 @@ const Footer = () => {
                 {locale === "ENG" ? "PROJECT TIMELINE" : "CRONOLOGIA DEL PROGETTO"}
               </span>
               <span
-                onClick={() => navigate("/registration")}
+                onClick={navigateHandler}
                 className="cursor-pointer transition duration-300 ease-in-out hover:opacity-70"
               >
-                {locale === "ENG" ? "INVEST IN THE PROJECT" : "INVESTI NEL PROGETTO"}
+                {btnText}
               </span>
             </div>
           </div>
