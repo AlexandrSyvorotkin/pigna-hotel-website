@@ -1,4 +1,4 @@
-import { Scrollbar, A11y } from "swiper/modules";
+import { Scrollbar, A11y, Navigation, Autoplay } from "swiper/modules";
 import './style.css'
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -135,10 +135,10 @@ const ProjectTimeline = () => {
         </span>
       </div>
       <div className="w-full flex justify-center items-center">
-        <div className="w-full mt-10 px-2 overflow-hidden sm:pb-2 md:mb-0">
+        <div className="w-full mt-10 px-2 overflow-hidden sm:pb-2 md:mb-0" id="project-timeline-swiper">
           <Swiper
             // install Swiper modules
-            modules={[Scrollbar, A11y]}
+            modules={[Scrollbar, A11y, Navigation, Autoplay]}
             // injectStyles={['overflow-x: hidden !important', 'overflow-y: visible !important']}
             style={{
               overflow: 'visible',
@@ -157,9 +157,12 @@ const ProjectTimeline = () => {
                 slidesPerView: 2.1, // 2.5 слайда на экранах меньше 1024px
               },
             }}
-            // navigation
-            // pagination={{ clickable: true }}
-            // scrollbar={{ draggable: true }}
+
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+            }}
+            navigation={true}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
           >
@@ -168,7 +171,7 @@ const ProjectTimeline = () => {
                 <Image
                   src={slide.img}
                   alt={slide.text}
-                  className="w-full md:h-[465px] sm:h-[300px] lg:h-[328px]"
+                  className="w-full md:h-[465px] sm:h-[300px] lg:h-[328px] hover:opacity-80"
                 />
                 <div className="text-main-white font-helvetica font-normal md:text-lg sm:text-xs text-left leading-5 mt-3">
                   {locale === "ENG" ? slide.text : slide.textIt}

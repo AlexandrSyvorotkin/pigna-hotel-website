@@ -42,7 +42,7 @@ const Header = ({
 
   const headerClasses = {
     default: "bg-transparent text-main-white border-b border-main-white",
-    scrolled: "bg-main-white text-black border-b border-[#1A1515]",
+    scrolled: "bg-main-white text-black-main border-b border-black-main",
     loading: "bg-loading-color text-main-white border-b border-main-white",
   };
 

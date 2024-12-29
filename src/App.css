@@ -19,3 +19,53 @@ body {
 }
 
 
+
+.swiper-button-prev, .swiper-button-next {
+  width: 40px !important;
+  height: 40px !important;
+  background-color: #3B443F;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-button-prev::after, 
+.swiper-button-next::after {
+  content: '' !important;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #EDF1EE;
+  border-right: 1px solid #EDF1EE;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.swiper-button-prev::after {
+  transform: translate(-25%, -50%) rotate(-135deg);
+}
+
+.swiper-button-next::after {
+  transform: translate(-75%, -50%) rotate(45deg);
+}
+
+/* Обращение к кнопкам при наведении на контейнер по ID */
+#essence-of-pigna:hover .swiper-button-prev,
+#essence-of-pigna:hover .swiper-button-next {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#project-timeline-swiper .swiper-button-prev,
+#project-timeline-swiper .swiper-button-next {
+  /* Уникальные стили для этих кнопок */
+  top: 35% !important;
+}
+
+#project-timeline-swiper:hover .swiper-button-prev,
+#project-timeline-swiper:hover .swiper-button-next {
+  opacity: 1;
+  pointer-events: auto;
+}

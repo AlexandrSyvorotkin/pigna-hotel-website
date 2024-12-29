@@ -32,7 +32,7 @@ const Resourses = () => {
 const {locale} = useLocalization()
 
   return (
-    <div className="lg:mt-60 sm:mt-20 w-full lg:pb-52 sm:pb-4 flex justify-center px-[18px]" id="lands-and-natural-resources">
+    <div className="lg:mt-60 sm:mt-20 w-full lg:pb-52 sm:pb-4 flex justify-center px-[18px] text-black-main" id="lands-and-natural-resources">
       <div className='w-[1750px]'>
         <div className="flex flex-col gap-4 justify-start items-center text-black-main">
           <span className="lg:text-[40px] sm:text-[24px] font-patrizia text-left w-full uppercase lg:leading-[56px] sm:leading-[32px]">
@@ -42,7 +42,7 @@ const {locale} = useLocalization()
         <div className="flex sm:flex-col lg:flex-row gap-6 lg:mt-5 sm:mt-4 justify-start">
           <div className="lg:w-4/6 sm:w-full flex flex-col gap-4">
             <Image src={img3} alt="resourses" className="w-full h-[568px]"/>
-            <p className="w-full lg:text-lg sm:text-xs font-helvetica">
+            <p className="w-full lg:text-lg sm:text-xs font-helvetica ">
               {locale === 'ENG' ?
               "The village of Pigna, a historic gateway to Gaul since Roman times, is renowned for its thermal waters. Discovered in the mediaeval period, the unique sulphurous baths feature mineral-rich water from the ancient Madonna Assunta spring, with temperatures between 28 and 32°C. There are 3 types of natural water available for all the hotel’s needs:"
               : "Il villaggio di Pigna, storico passaggio verso la Gallia fin dall’epoca romana, è rinomato per le sue acque termali. Scoperte in epoca medievale, le singolari acque solfuree sgorgano dalla antica sorgente della Madonna Assunta, con temperature tra i 28 e i 32°C. Sono disponibili 3 tipologie di acqua naturale per tutte le esigenze dell’hotel:"}

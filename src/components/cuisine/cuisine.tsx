@@ -99,7 +99,7 @@ const Cuisine = () => {
             {resSlider.map((slide, index) => (
               <SwiperSlide key={index} className='w-[240px]'>
                 <div className='flex flex-col gap-2'>
-                  <Image src={slide.img} alt={slide.text} className='w-full h-[240px]' />
+                  <Image src={slide.img} alt={slide.text} className='w-full h-[240px] hover:opacity-80' />
                   <p className='text-black-main text-xs font-helvetica font-normal max-w-full'>{locale === 'ENG' ? slide.text : slide.textIt}</p>
                 </div>
               </SwiperSlide>

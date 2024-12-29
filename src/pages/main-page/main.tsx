@@ -58,8 +58,8 @@ const MainPage = () => {
       </Banner>
       <Description />
       <Banner className="h-[400px]">
-        <div className="flex flex-col gap-4 xl:w-3/5 sm:w-full sm:px-[18px]">
-          <p className="text-main-white lg:text-4xl sm:text-xl font-patrizia text-center w-[100%] uppercase lg:leading-[60px]">
+        <div className="flex flex-col gap-4 xl:w-[85%] sm:w-full sm:px-[18px]">
+          <p className="text-main-white lg:text-[35px] sm:text-xl font-patrizia text-center w-[100%] uppercase lg:leading-[60px]">
             {locale === 'ENG'
             ? "The hotel was highlighted as a project of regional significance. The renovation of the hotel gave local residents and municipal authorities a hope for relaunch and rebirth for Pigna and for the whole Nervia Valley."
           : "L’hotel è stato evidenziato come un progetto di rilevanza regionale. La ristrutturazione dell’hotel ha restituito ai residenti locali e alle autorità municipali la speranza di un rilancio e di una rinascita per Pigna e per l’intera Valle del Nervia."

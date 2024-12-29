@@ -72,8 +72,8 @@ const Description = () => {
           {descriptionEls.map((el, index) => (
             <div key={index} className="flex items-center">
               <div className="flex flex-col gap-2 justify-center items-center">
-                <span className="font-normal xl:text-xl sm:text-base">{locale === 'ENG' ? el.title : el.titleIt}</span>
-                <span className="font-normal xl:text-lg sm:text-xs text-[#04180D99]">{locale === 'ENG' ? el.description : el.descriptionIt}</span>
+                <span className="font-normal xl:text-xl sm:text-base text-black-main">{locale === 'ENG' ? el.title : el.titleIt}</span>
+                <span className="font-normal xl:text-lg sm:text-xs text-black-main">{locale === 'ENG' ? el.description : el.descriptionIt}</span>
               </div>
               {index !== descriptionEls.length - 1 && (
                 <div className="h-full w-[1px] bg-gray-300 lg:ml-16 sm:ml-[8px]"></div>

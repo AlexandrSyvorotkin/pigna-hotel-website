@@ -49,7 +49,7 @@ const BuildingTerritory = () => {
 
   return (
     <div
-      className="lg:mt-64 sm:mt-10 w-full flex sm:flex-col lg:flex-row justify-between"
+      className="lg:mt-64 sm:mt-10 w-full flex sm:flex-col lg:flex-row justify-between text-black-main"
       id="building-territory"
     >
       <div className="flex flex-col gap-4 lg:w-[27%] sm:w-full">
@@ -146,7 +146,7 @@ const BuildingTerritory = () => {
             <Image
               src={item.img}
               alt="img"
-              className="w-full h-[320px]"
+              className="w-full h-[320px] hover:opacity-80"
               key={index}
             />
             <p className="text-black-main lg:text-lg sm:text-xs font-helvetica font-normal w-full">
@@ -175,7 +175,7 @@ const BuildingTerritory = () => {
                 <Image
                   src={slide.img}
                   alt={slide.text}
-                  className="w-[240px] h-[304px]"
+                  className="w-[240px] h-[304px] hover:opacity-80"
                 />
                 <p className="text-black-main text-xs font-helvetica font-normal max-w-full">
                   {locale === 'ENG' ? slide.text : slide.textIt}
