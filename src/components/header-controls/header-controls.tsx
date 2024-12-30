@@ -7,10 +7,9 @@ const lng = ["ENG", "IT",]
 const HeaderControls = ({openMenu}: {openMenu: () => void}) => {
 
 
-  const { locale, setLocale } = useLocalization();
+  const { setLocale } = useLocalization();
 
 
-  console.log(locale)
     return (
       <div className='flex items-center lg:gap-10 sm:gap-0'>
         <span className="text-base sm:hidden lg:block cursor-pointer transition duration-300 ease-in-out hover:opacity-70" onClick={openMenu}>Menu</span>

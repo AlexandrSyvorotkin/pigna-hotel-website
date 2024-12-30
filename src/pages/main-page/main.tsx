@@ -27,6 +27,7 @@ const MainPage = () => {
   return (
     <>
       <Presentation
+        isVideo={true}
         button={
           <MainButton
             onClick={() => navigate("/registration")}

@@ -59,7 +59,7 @@ const {locale} = useLocalization()
         <span className="text-black-main lg:text-5xl sm:text-2xl font-patrizia font-normal uppercase">
           {locale === 'ENG' ? "Location" : "Posizione"}
         </span>
-        <p className="lg:text-lg text-center lg:w-1/2 sm:text-xs sm:w-full text-black-main">
+        <p className="lg:text-lg text-center lg:w-1/2 sm:text-xs sm:w-full text-black-main font-helvetica">
         {locale === 'ENG' 
         ? "The hotel is situated in a secluded area that offers excellent transportation links, including a helipad. Nearby cities such as Genoa, Nice, and Monaco are easily accessible." 
         : "L’hotel è situato in una zona appartata con ottimi collegamenti di trasporto, inclusa un’elisuperficie. Città vicine come Genova, Nizza e Monaco sono facilmente raggiungibili."}
@@ -75,11 +75,11 @@ const {locale} = useLocalization()
         <div className="flex md:gap-10 sm:gap-4 xl:w-1/2 md:w-3/4 sm:w-full justify-center items-center sm:px-[18px] md:px-0 text-black-main">
           {airportEls.map((el, index) => (
             <div key={index} className="flex items-center">
-              <div className="flex flex-col gap-2 justify-center items-center md:w-[100px] sm:w-[80px]">
-                <span className="font-normal lg:text-xl sm:text-base text-center">
+              <div className="flex flex-col gap-2 justify-center items-center md:w-[110px] sm:w-[80px]">
+                <span className="font-normal lg:text-xl sm:text-base text-center font-helvetica">
                   {locale === 'ENG' ? el.title : el.textIt}
                 </span>
-                <span className="font-normal text-lg sm:text-xs text-center">
+                <span className="font-normal lg:text-lg sm:text-xs text-center font-helvetica">
                   {locale === 'ENG' ? el.description : el.textIt}
                 </span>
               </div>

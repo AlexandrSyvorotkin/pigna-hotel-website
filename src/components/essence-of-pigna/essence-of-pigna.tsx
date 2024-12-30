@@ -8,23 +8,24 @@ import "swiper/css";
 import "swiper/css/navigation";
 // import 'swiper/css/pagination';
 // import 'swiper/css/scrollbar';
-
+import img0 from "../../assets/essence-of-pigna/img1.webp";
+import img_1 from "../../assets/essence-of-pigna/img3.webp";
 import img1 from "../../assets/essence-of-pigna/slide1.png";
 import img2 from "../../assets/essence-of-pigna/slide2.png";
 import img3 from "../../assets/essence-of-pigna/slide3.png";
 import img4 from "../../assets/essence-of-pigna/slide4.png";
 import img5 from "../../assets/essence-of-pigna/slide5.png";
 import img6 from "../../assets/essence-of-pigna/slide6.png";
+
+
 import { useLocalization } from "../../context/useLocalization";
-
-
 
 const slidesEls = [
   {
-    img: img1,
-    text: "Italy is a home to the greatest array of UNESCO World Heritage sites in the world, including high art and monuments. Liguria has a number of parks, archaeological areas, and ancient buildings included in the World Heritage List.",
+    img: img0,
+    text: "The wellness retreat is set in Pigna, a picturesque village founded in the Middle Ages, located within the Ligurian mountains, 20 km from the coast, in the North West of Italy.",
     textIt:
-      "L’Italia è la patria della più grande varietà di siti Patrimonio dell’Umanità dell’UNESCO al mondo, inclusi capolavori artistici e monumenti storici. La Liguria vanta numerosi parchi, aree archeologiche e antichi edifici inclusi nella Lista del Patrimonio Mondiale.",
+      "Il centro benessere si trova a Pigna, un pittoresco borgo fondato nel Medioevo, situato tra i monti liguri, a 20 km dalla costa, nel nord-ovest dell'Italia.",
   },
   {
     img: img2,
@@ -38,6 +39,19 @@ const slidesEls = [
     textIt:
       "Il Grand Hotel Pigna si trova nel Parco Regionale delle Alpi Liguri, vicino a monumenti naturali come la montagna più alta della Liguria — il Monte Saccarello; la grotta più profonda — la Melosa; e il sentiero escursionistico a lunga percorrenza dell’Alta Via dei Monti Liguri.",
   },
+  {
+    img: img_1,
+    text: "The Grand Hotel Pigna is situated in the Regional Park of the Ligurian Alps, offering proximity to natural landmarks such as the highest mountain in Liguria — Mount Saccarello; the deepest cave — Melosa; and the spectacular long-distance hiking trail in Ligurian Mountains — Alta Via dei Monti Liguri.",
+    textIt:
+      "Il Grand Hotel Pigna è situato nel Parco Regionale delle Alpi Liguri, in prossimità di attrazioni naturali come la montagna più alta della Liguria, il Monte Saccarello; la grotta più profonda, la Melosa; e lo spettacolare percorso escursionistico di lunga percorrenza dei Monti Liguri, l'Alta Via dei Monti Liguri.",
+  },
+  {
+    img: img1,
+    text: "Italy is a home to the greatest array of UNESCO World Heritage sites in the world, including high art and monuments. Liguria has a number of parks, archaeological areas, and ancient buildings included in the World Heritage List.",
+    textIt:
+      "L’Italia è la patria della più grande varietà di siti Patrimonio dell’Umanità dell’UNESCO al mondo, inclusi capolavori artistici e monumenti storici. La Liguria vanta numerosi parchi, aree archeologiche e antichi edifici inclusi nella Lista del Patrimonio Mondiale.",
+  },
+
   {
     img: img4,
     text: 'The Grand Hotel Pigna is situated on the banks of the river Nervia, in the enchanting Val Nervia, close to the picturesque town of Dolceacqua — the inspiration for a series of paintings by Claude Monet, including the famous "Bridge of Dolceacqua".',
@@ -60,7 +74,6 @@ const slidesEls = [
 const EssenceOfPigna = () => {
   const { locale } = useLocalization();
 
-
   return (
     <section
       className="bg-main-white w-full h-1/2 lg:mt-44 sm:mt-20"
@@ -74,17 +87,16 @@ const EssenceOfPigna = () => {
       <div
         id="essence-of-pigna-swiper"
         className="w-full mt-10 lg:px-2 sm:pl-[18px]"
-
       >
         <Swiper
           // install Swiper modules
           modules={[Scrollbar, A11y, Navigation, Autoplay]}
           loop={true}
           spaceBetween={12}
-          autoplay={{
-            delay: 3500,
-            disableOnInteraction: false,
-          }}
+          //   autoplay={{
+          //     delay: 3500,
+          //     disableOnInteraction: false,
+          //   }}
           breakpoints={{
             360: {
               slidesPerView: 1.3, // 1 слайд на экранах меньше 640px
@@ -107,7 +119,7 @@ const EssenceOfPigna = () => {
                 alt={slide.text}
                 className="w-full md:h-[465px] sm:h-[300px] hover:opacity-80"
               />
-              <div className="text-black-main font-helvetica font-normal md:text-lg sm:text-xs text-left leading-5 mt-3">
+              <div className="text-black-main font-helvetica font-normal md:text-lg sm:text-xs text-left leading-[23px] mt-3">
                 {locale === "ENG" ? slide.text : slide.textIt}
               </div>
             </SwiperSlide>

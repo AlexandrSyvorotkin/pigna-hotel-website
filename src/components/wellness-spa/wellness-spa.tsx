@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import img1 from '../../assets/wellness-spa/img1.png'
 import img2 from '../../assets/wellness-spa/img2.png'
 import img3 from '../../assets/wellness-spa/img3.png'
@@ -121,6 +121,12 @@ const WellnessSpa = () => {
 
 
   const [activeTab, setActiveTab] = useState(0)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setActiveTab((prevTab) => (prevTab + 1) % tabs.length)
+    }, 3000)
+  }, [activeTab])
 
   const {locale} = useLocalization()
 

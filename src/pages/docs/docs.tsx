@@ -98,7 +98,7 @@ const Docs = () => {
 
   return (
     <div className="w-full h-full">
-      <Presentation>
+      <Presentation isVideo={false}>
         <span className="font-normal 2lg:text-5xl sm:text-2xl text-main-white text-center font-patrizia uppercase opacity-80 2lg:w-[1200px] 2lg:leading-[87px]">
           {locale === 'ENG' ? "Grand Hotel Pigna Renovation Project." : "Progetto di Ristrutturazione del Grand Hotel Pigna. "}
           {locale === 'ENG' ? "Project Details and Financial Overview" : "Dettagli del Progetto e Panoramica Finanziaria"}
