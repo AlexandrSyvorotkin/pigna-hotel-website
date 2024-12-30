@@ -76,7 +76,7 @@ const EssenceOfPigna = () => {
 
   return (
     <section
-      className="bg-main-white w-full h-1/2 lg:mt-44 sm:mt-20"
+      className="bg-main-white w-full h-1/2 lg:mt-44 sm:mt-20 z-30"
       id="essence-of-pigna"
     >
       <div className="flex justify-center items-center">

@@ -68,7 +68,7 @@ const Header = ({
   const enterText = locale === 'ENG' ? 'invest the project' : 'Investi nel progetto';
 
 
-  const btnText = cookie && cookie.trim().length > 0 ? 'enter the docs' : enterText;
+  const btnText = cookie && cookie.trim().length > 0 ? 'invest the project' : enterText;
 
   const navigateHandler = () => {
     if (cookie && cookie.trim().length > 0) {

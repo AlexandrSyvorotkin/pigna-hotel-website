@@ -70,7 +70,7 @@ const RegistrationForm = () => {
   const log = locale === "ENG" ? "Sing in" : "Accedi"
 
   return (
-    <div className="w-full h-full pt-10 2xl:pl-20 lg:pl-5">
+    <div className="w-full h-full pt-10 2xl:pl-20 lg:pl-5 overflow-scroll">
       <span
         className="text-base font-helvetica text-main-white opacity-70 cursor-pointer"
         onClick={() => navigate("/main")}
@@ -142,7 +142,7 @@ const RegistrationForm = () => {
               </label>
               <span className="text-red-500">{errorMessage}</span>
               <MainButton
-                className="w-full bg-main-white uppercase text-main-black text-helvetica text-base py-[21px] px-[100px] "
+                className="w-full bg-main-white uppercase text-main-black text-helvetica text-base py-[21px] px-[100px] hover:opacity-80"
                 onClick={() => handleSubmit(onSubmit)}
               >
                 {locale === "ENG" ? "Send a request" : "Invia richiesta"}

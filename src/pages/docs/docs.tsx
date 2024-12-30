@@ -120,7 +120,7 @@ const Docs = () => {
                 <p className={`${textColor} lg:text-lg sm:text-xs font-helvetica font-normal text-center lg:w-1/2 sm:w-full`}>
                   {item.text}
                 </p>
-                {item.button_text === null ? null : (
+                {item.button_text === "" ? null : (
                   <a href={`${address}${item.document_url}`} download target="_blank">
                     <MainButton className="text-main-white uppercase lg:text-base sm:text-xs sm:px-[22px] sm:py-[10px]">
                       {item.button_text}
@@ -185,7 +185,7 @@ const Docs = () => {
                 <p className={`${textColor} lg:text-lg sm:text-xs font-helvetica font-normal text-center lg:w-1/2 sm:w-full`}>
                   {item.text}
                 </p>
-                {item.button_text === null ? null : (
+                {item.button_text === "" ? null : (
                   <a href={`${address}${item.document_url}`} download target="_blank">
                     <MainButton className="text-main-white uppercase lg:text-base sm:text-xs sm:px-[22px] sm:py-[10px]">
                       {item.button_text}

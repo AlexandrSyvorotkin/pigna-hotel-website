@@ -40,7 +40,7 @@ const Footer = () => {
   const enterText = locale === 'ENG' ? 'INVEST THE PROJECT' : 'INVESTI NEL PROGETTO';
 
   const cookie = Cookies.get("cookie");
-  const btnText = cookie && cookie.trim().length > 0 ? 'ENTER THE DOCS' : enterText;
+  const btnText = cookie && cookie.trim().length > 0 ? 'INVEST THE PROJECT' : enterText;
 
   const navigateHandler = () => {
     if (cookie && cookie.trim().length > 0) {
