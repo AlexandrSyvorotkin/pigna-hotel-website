@@ -23,12 +23,10 @@ const Footer = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
-  const isPrivacyPage = location.pathname === "/privacy";
+  const isPrivacyPage = location.pathname === "/privacy" || location.pathname === "/main";
 
   const validRoutes = ["/main", "/docs", "/privacy"];
   const isValidRoute = validRoutes.includes(location.pathname);
-
-  
 
   const textColor = isPrivacyPage ? "text-main-white" : "text-black-main";
 

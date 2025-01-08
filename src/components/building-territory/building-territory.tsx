@@ -48,15 +48,16 @@ const BuildingTerritory = () => {
   const { locale } = useLocalization();
 
   return (
-    <div
-      className="lg:mt-64 sm:mt-10 w-full flex sm:flex-col lg:flex-row justify-between text-black-main"
+    <div className="w-full flex justify-center items-center bg-loading-color mt-40 pb-40">
+      <div
+      className="lg:pt-20 sm:pt-10 pb-20 sm:pb-10 w-[1750px] flex sm:flex-col lg:flex-row justify-between text-main-white bg-loading-color"
       id="building-territory"
     >
       <div className="flex flex-col gap-4 lg:w-[27%] sm:w-full">
-        <h2 className="text-black-main sm:text-2xl lg:text-5xl font-patrizia font-normal sm:text-center lg:text-left uppercase">
+        <h2 className="sm:text-2xl lg:text-5xl font-patrizia font-normal sm:text-center lg:text-left uppercase">
           {locale === "ENG" ? "Building & Territory" : "Edificio & Territorio"}
         </h2>
-        <p className="text-black-main lg:text-lg sm:text-xs font-helvetica font-norma sm:text-center lg:text-left sm:hidden md:block">
+        <p className="lg:text-lg sm:text-xs font-helvetica font-norma sm:text-center lg:text-left sm:hidden md:block">
           {locale === "ENG"
             ? <p>Grand Hotel Pigna is being transformed into a luxury <br/> 5-star wellness retreat, embracing a new medical spa concept and abundant outdoor and indoor sport facilities.</p>
             : "Il Grand Hotel Pigna si trasforma in un lussuoso rifugio benessere a 5 stelle, abbracciando un nuovo concetto di medical spa e abbondanti strutture sportive all’aperto e al coperto."}
@@ -67,12 +68,12 @@ const BuildingTerritory = () => {
             : "Il Grand Hotel Pigna si sta trasformando in un lussuoso rifugio benessere a 5 stelle, abbracciando un nuovo concetto di spa medica e abbondanti strutture sportive all'aperto e al coperto. Come parte del progetto di ristrutturazione, le aree dell'edificio e delle strutture dell'hotel saranno ampliate."}
         </p>
         {locale === "ENG" ? (
-          <p className="text-black-main text-lg sm:hidden lg:block font-helvetica font-normal">
+          <p className="text-lg sm:hidden lg:block font-helvetica font-normal">
             As part of the renovation project, the hotel's building <br /> &
             facilities areas will be expanded.
           </p>
         ) : (
-          <p className="text-black-main text-lg sm:hidden lg:block font-helvetica font-normal">
+          <p className="text-lg sm:hidden lg:block font-helvetica font-normal">
             Come parte del progetto di ristrutturazione, l’edificio dell’hotel e
             le relative strutture saranno ampliati.
           </p>
@@ -149,7 +150,7 @@ const BuildingTerritory = () => {
               className="w-full h-[320px] hover:opacity-80"
               key={index}
             />
-            <p className="text-black-main lg:text-lg sm:text-xs font-helvetica font-normal w-full">
+            <p className="lg:text-lg sm:text-xs font-helvetica font-normal w-full">
               {locale === 'ENG' ? item.text : item.textIt}
             </p>
           </div>
@@ -177,7 +178,7 @@ const BuildingTerritory = () => {
                   alt={slide.text}
                   className="w-[240px] h-[304px] hover:opacity-80"
                 />
-                <p className="text-black-main text-xs font-helvetica font-normal max-w-full">
+                <p className="text-xs font-helvetica font-normal max-w-full">
                   {locale === 'ENG' ? slide.text : slide.textIt}
                 </p>
               </div>
@@ -186,6 +187,8 @@ const BuildingTerritory = () => {
         </Swiper>
       </div>
     </div>
+    </div>
+    
   );
 };
 

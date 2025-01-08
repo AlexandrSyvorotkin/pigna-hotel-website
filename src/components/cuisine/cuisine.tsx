@@ -10,7 +10,6 @@ import { Scrollbar, A11y } from "swiper/modules";
 import { SwiperSlide, Swiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
-import { BuildingTerritory } from "../building-territory/building-territory";
 import { useLocalization } from "../../context/useLocalization";
 
 
@@ -107,9 +106,8 @@ const Cuisine = () => {
           </Swiper> 
         </div>
         
-        <BuildingTerritory/>
-        
       </div>
+      
     </div>
   );
 };

@@ -12,6 +12,7 @@ import { Location } from "../../components/location/location";
 import { MainButton } from "../../ui/button/main-button";
 import { useNavigate } from "react-router-dom";
 import { useLocalization } from "../../context/useLocalization";
+import { BuildingTerritory } from "../../components/building-territory/building-territory";
 
 
 
@@ -73,6 +74,7 @@ const MainPage = () => {
       <Resourses />
       <WellnessSpa />
       <Cuisine />
+      <BuildingTerritory/>
       <InteriorDesign />
       <ProjectTimeline />
       <InvestOpportunities />

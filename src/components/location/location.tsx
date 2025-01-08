@@ -1,4 +1,4 @@
-import img1 from "../../assets/airports/img1.png";
+import img1 from "../../assets/airports/33-jpg.jpg";
 import img2 from "../../assets/airports/img2.png";
 import img3 from "../../assets/airports/img3.jpg";
 import { Image } from "../../ui/img/image";
@@ -54,12 +54,12 @@ const Location = () => {
 const {locale} = useLocalization()
 
   return (
-    <div className="lg:mt-60 sm:mt-20 w-full" id="location">
+    <div className="lg:pt-40 sm:pt-20 lg:pb-60 sm:pb-20 w-full bg-loading-color text-main-white" id="location">
       <div className="w-full flex justify-center items-center flex-col gap-2 mb-14 px-[18px]">
-        <span className="text-black-main lg:text-5xl sm:text-2xl font-patrizia font-normal uppercase">
+        <span className=" lg:text-5xl sm:text-2xl font-patrizia font-normal uppercase">
           {locale === 'ENG' ? "Location" : "Posizione"}
         </span>
-        <p className="lg:text-lg text-center lg:w-1/2 sm:text-xs sm:w-full text-black-main font-helvetica">
+        <p className="lg:text-lg text-center lg:w-1/2 sm:text-xs sm:w-full  font-helvetica">
         {locale === 'ENG' 
         ? "The hotel is situated in a secluded area that offers excellent transportation links, including a helipad. Nearby cities such as Genoa, Nice, and Monaco are easily accessible." 
         : "L’hotel è situato in una zona appartata con ottimi collegamenti di trasporto, inclusa un’elisuperficie. Città vicine come Genova, Nizza e Monaco sono facilmente raggiungibili."}
@@ -68,10 +68,10 @@ const {locale} = useLocalization()
       <Image src={map} alt="map" className="w-full h-[460px] sm:hidden md:block" />
       <img src={mapRes3} alt="map" className="w-full h-[228px] sm:block md:hidden object-contain" />
       <div className="mt-20 w-full flex justify-center items-center flex-col gap-10">
-        <span className="text-black-main lg:text-2xl sm:text- font-helvetica font-normal uppercase">
+        <span className=" lg:text-2xl sm:text- font-helvetica font-normal uppercase">
           {locale === 'ENG' ? "Airports" : "Aeroporti vicini:"}
         </span>
-        <div className="flex md:gap-10 sm:gap-4 xl:w-1/2 md:w-3/4 sm:w-full justify-center items-center sm:px-[18px] md:px-0 text-black-main">
+        <div className="flex md:gap-10 sm:gap-4 xl:w-1/2 md:w-3/4 sm:w-full justify-center items-center sm:px-[18px] md:px-0 ">
           {airportEls.map((el, index) => (
             <div key={index} className="flex items-center">
               <div className="flex flex-col gap-2 justify-center items-center md:w-[110px] sm:w-[80px]">
@@ -89,7 +89,7 @@ const {locale} = useLocalization()
           ))}
         </div>
         <div className="xl:w-[53%] md:w-3/4 sm:w-11/12">
-          <p className="lg:text-lg sm:text-xs text-center font-helvetica text-black-main">
+          <p className="lg:text-lg sm:text-xs text-center font-helvetica ">
           {locale === 'ENG' ?
           "With convenient access to major motorways and railway stations in Ventimiglia and Sanremo, as well as to the third Monaco's port Cala del Forte, the hotel offers well-developed connectivity, making it easy for guests to arrive by car or train."  
           : "Grazie al facile accesso alle principali autostrade e alle stazioni ferroviarie di Ventimiglia e Sanremo, oltre che al terzo porto di Monaco, Cala del Forte, l’hotel gode di un’eccellente connettività, rendendo agevole l’arrivo degli ospiti in auto o in treno."
@@ -98,13 +98,13 @@ const {locale} = useLocalization()
         </div>
 
         <div className="lg:mt-20 sm:hidden lg:block px-20 w-11/12 justify-center">
-          <div className="flex gap-10 justify-between w-full text-black-main">
+          <div className="flex gap-10 justify-between w-full ">
             {airportsImgs.map((el, index) => (
               <div
                 key={index}
                 className="flex flex-col gap-3 justify-start items-center w-1/3"
               >
-                <Image src={el.img} alt={el.description} className="w-full" />
+                <Image src={el.img} alt={el.description} className="w-full h-[600px]" />
                 <p className="lg:text-lg sm:text-xs text-left font-helvetica ">
                   {locale === 'ENG' ? el.description : el.textIt}
                 </p>
