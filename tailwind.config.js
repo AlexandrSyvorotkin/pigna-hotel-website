@@ -22,10 +22,10 @@ export default {
   ],
   theme: {
     screens: {
-      'sm': "360px",
+      'sm': "360px", // ++
       'md': '600px',
-      'lg': '768px',
-      'xl': '1200px',
+      'lg': '800px', // ++
+      'xl': '1280px', // ++
       '2xl': '1400px',
     },
     
@@ -78,7 +78,11 @@ export default {
     },
   },
   plugins: [],
-  variants: {},
+  variants: {
+    extend: {
+      backgroundColor: ['autofill'],
+    },
+  },
   corePlugins: {
     // ... other core plugins
   },
