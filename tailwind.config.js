@@ -23,19 +23,16 @@ export default {
   theme: {
     screens: {
       'sm': "360px", // ++
-      'md': '600px',
-      'lg': '800px', // ++
-      'xl': '1280px', // ++
-      '2xl': '1400px',
+      'md': '800px',
+      'lg': '1280px', // ++
+      'xl': '1920px', // ++
     },
-    
     extend: {
       screens: {
-        '4xl': '1600px',
-        '2lg': '992px',
+
       },
       fontSize: {
-        'xs': '0.75rem',   // 12px
+        'xs': '13px',   // 12px
         'sm': '0.875rem',  // 14px
         'base': '1rem',    // 16px
         'lg': '1.125rem',  // 18px

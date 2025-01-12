@@ -13,6 +13,7 @@ import { MainButton } from "../../ui/button/main-button";
 import { useNavigate } from "react-router-dom";
 import { useLocalization } from "../../context/useLocalization";
 import { BuildingTerritory } from "../../components/building-territory/building-territory";
+import { ResponsiveContentContainer } from "../../components/responsive-content-container/responsive-content-container";
 
 
 
@@ -24,11 +25,12 @@ const MainPage = () => {
 
   const btnText = locale === 'ENG' ? 'INVEST THE PROJECT' : 'INVESTI NEL PROGETTO';
 
+  //TODO: разобраться с отступами.
 
   return (
     <>
       <Presentation
-        isVideo={true}
+        isVideo={false}
         button={
           <MainButton
             onClick={() => navigate("/registration")}
@@ -42,24 +44,26 @@ const MainPage = () => {
           {locale === 'ENG' ? 'Every detail is crafted for a remarkable stay' : 'Ogni dettaglio è progettato per un soggiorno eccezionale'}
         </span>
       </Presentation>
-      <Banner className="h-[450px]">
-        <div className="flex flex-col gap-4 xl:w-3/5 sm:w-full sm:px-[18px]">
-          <p className="lg:text-xl sm:text-base font-helvetica font-normal text-center uppercase text-main-white">
-            {locale === 'ENG' ? 'Grand Hotel Pigna is designed as a world-class medical spa, the only thermal wellness retreat in the region, and the largest spa on theLigurian Riviera' : 'IL GRAND HOTEL PIGNA È PROGETTATO COME UN CENTRO TERMALE DI CLASSE MONDIALE, L\'UNICO RITIRO BENESSERE TERMALE DELLA REGIONE E IL PIÙ GRANDE CENTRO TERMALE DELLA RIVIERA LIGURE'}
-          </p>
-          <p className="lg:text-lg sm:text-xs font-helvetica font-normal text-center opacity-80 text-main-white mt-2">
-            {locale === 'ENG' ? "Immerse yourself in thermal springs, lush valleys, and the mountainous landscapes of Liguria while staying in a luxury 5-star resort with a unique holistic medical spa concept that combines traditional medicine, modern therapies, and the latest medical developments." :
-            "Immergiti nelle sorgenti termali, nelle verdi valli e negli scenari montuosi della Liguria, soggiornando in un resort di lusso a 5 stelle con un esclusivo concetto di medical spa olistica che combina medicina tradizionale, terapie moderne e le più recenti innovazioni in campo medico."
-            }
-          </p>
-          <p className="lg:text-lg sm:text-xs font-helvetica font-normal text-center opacity-80 text-main-white">
-            {locale === 'ENG' ? "The project consists of the renovation of the thermal hotel building, the extension of the territory, spa and restaurant areas and the transformation of the hotel into a luxurious 5-star wellness retreat offering the most exclusive services and charm in the picturesque and tranquil part of Liguria." :
-            "Il progetto prevede la ristrutturazione dell’edificio dell’hotel termale, l’ampliamento del territorio, delle aree spa e ristorazione e la trasformazione dell’hotel in un lussuoso rifugio benessere a 5 stelle, capace di offrire i più esclusivi servizi e tutto il fascino di una delle zone più pittoresche e tranquille della Liguria."}
-          </p>
-        </div>
+      <Banner className="lg:pt-[100px] lg:pb-[100px] md:pt-[80px] md:pb-[80px] sm:pt-[50px] sm:pb-[50px]">
+        <ResponsiveContentContainer>
+          <div className="flex flex-col gap-4 xl:w-full">
+            <p className="lg:text-[21px] md:text-[18px] sm:text-base font-helvetica font-normal text-center uppercase text-main-white">
+              {locale === 'ENG' ? 'Grand Hotel Pigna is designed as a world-class medical spa, the only thermal wellness retreat in the region, and the largest spa on theLigurian Riviera' : 'IL GRAND HOTEL PIGNA È PROGETTATO COME UN CENTRO TERMALE DI CLASSE MONDIALE, L\'UNICO RITIRO BENESSERE TERMALE DELLA REGIONE E IL PIÙ GRANDE CENTRO TERMALE DELLA RIVIERA LIGURE'}
+            </p>
+            <p className="lg:text-lg md:text-[16px] sm:text-xs font-helvetica font-normal text-center opacity-80 text-main-white mt-2">
+              {locale === 'ENG' ? "Immerse yourself in thermal springs, lush valleys, and the mountainous landscapes of Liguria while staying in a luxury 5-star resort with a unique holistic medical spa concept that combines traditional medicine, modern therapies, and the latest medical developments." :
+              "Immergiti nelle sorgenti termali, nelle verdi valli e negli scenari montuosi della Liguria, soggiornando in un resort di lusso a 5 stelle con un esclusivo concetto di medical spa olistica che combina medicina tradizionale, terapie moderne e le più recenti innovazioni in campo medico."
+              }
+            </p>
+            <p className="lg:text-lg md:text-[16px] sm:text-xs font-helvetica font-normal text-center opacity-80 text-main-white">
+              {locale === 'ENG' ? "The project consists of the renovation of the thermal hotel building, the extension of the territory, spa and restaurant areas and the transformation of the hotel into a luxurious 5-star wellness retreat offering the most exclusive services and charm in the picturesque and tranquil part of Liguria." :
+              "Il progetto prevede la ristrutturazione dell’edificio dell’hotel termale, l’ampliamento del territorio, delle aree spa e ristorazione e la trasformazione dell’hotel in un lussuoso rifugio benessere a 5 stelle, capace di offrire i più esclusivi servizi e tutto il fascino di una delle zone più pittoresche e tranquille della Liguria."}
+            </p>
+          </div>
+        </ResponsiveContentContainer>
       </Banner>
       <Description />
-      <Banner className="h-[400px]">
+      {/* <Banner className="h-[400px]">
         <div className="flex flex-col gap-4 xl:w-[85%] sm:w-full sm:px-[18px]">
           <p className="text-main-white lg:text-[35px] sm:text-xl font-patrizia text-center w-[100%] uppercase lg:leading-[60px]">
             {locale === 'ENG'
@@ -68,8 +72,8 @@ const MainPage = () => {
           }
           </p>
         </div>
-      </Banner>
-      <EssenceOfPigna />
+      </Banner> */}
+      {/* <EssenceOfPigna />
       <Location />
       <Resourses />
       <WellnessSpa />
@@ -77,7 +81,7 @@ const MainPage = () => {
       <BuildingTerritory/>
       <InteriorDesign />
       <ProjectTimeline />
-      <InvestOpportunities />
+      <InvestOpportunities /> */}
     </>
   );
 };
