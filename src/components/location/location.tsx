@@ -9,6 +9,8 @@ import mapRes3 from '../../assets/new-map.png'
 import { Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useLocalization } from "../../context/useLocalization";
+import { Heading } from "../heading/heading";
+import { ResponsiveContentContainer } from "../responsive-content-container/responsive-content-container";
 
 const airportEls = [
   {
@@ -55,41 +57,44 @@ const {locale} = useLocalization()
 
   return (
     <div className="lg:pt-40 sm:pt-20 lg:pb-60 sm:pb-20 w-full bg-loading-color text-main-white" id="location">
-      <div className="w-full flex justify-center items-center flex-col gap-2 mb-14 px-[18px]">
-        <span className=" lg:text-5xl sm:text-2xl font-patrizia font-normal uppercase">
-          {locale === 'ENG' ? "Location" : "Posizione"}
-        </span>
-        <p className="lg:text-lg text-center lg:w-1/2 sm:text-xs sm:w-full  font-helvetica">
-        {locale === 'ENG' 
-        ? "The hotel is situated in a secluded area that offers excellent transportation links, including a helipad. Nearby cities such as Genoa, Nice, and Monaco are easily accessible." 
-        : "L’hotel è situato in una zona appartata con ottimi collegamenti di trasporto, inclusa un’elisuperficie. Città vicine come Genova, Nizza e Monaco sono facilmente raggiungibili."}
-        </p>
-      </div>
-      <Image src={map} alt="map" className="w-full h-[460px] sm:hidden md:block" />
-      <img src={mapRes3} alt="map" className="w-full h-[228px] sm:block md:hidden object-contain" />
+      <ResponsiveContentContainer>
+        <div className="w-full flex justify-center items-center flex-col gap-2 mb-14">
+          <Heading tag='h2' className=" font-patrizia font-normal uppercase">
+            {locale === 'ENG' ? "Location" : "Posizione"}
+          </Heading>
+          <p className="text-responsive text-center md:w-3/4 lg:1/2 sm:w-full  font-helvetica">
+          {locale === 'ENG' 
+          ? "The hotel is situated in a secluded area that offers excellent transportation links, including a helipad. Nearby cities such as Genoa, Nice, and Monaco are easily accessible." 
+          : "L’hotel è situato in una zona appartata con ottimi collegamenti di trasporto, inclusa un’elisuperficie. Città vicine come Genova, Nizza e Monaco sono facilmente raggiungibili."}
+          </p>
+        </div>
+      </ResponsiveContentContainer>
+      <Image src={map} alt="map" className="w-full xl:h-[520px] lg:h-[468px] md:h-[350px] sm:hidden md:block object-cover" />
+      <Image src={mapRes3} alt="map" className="w-full sm:block md:hidden object-cover" />
+      <ResponsiveContentContainer>
       <div className="mt-20 w-full flex justify-center items-center flex-col gap-10">
-        <span className=" lg:text-2xl sm:text- font-helvetica font-normal uppercase">
+        <span className="lg:text-[21px] md:text-[18px] sm:text-base font-normal uppercase">
           {locale === 'ENG' ? "Airports" : "Aeroporti vicini:"}
         </span>
-        <div className="flex md:gap-10 sm:gap-4 xl:w-1/2 md:w-3/4 sm:w-full justify-center items-center sm:px-[18px] md:px-0 ">
+        <div className="flex md:gap-10 sm:gap-4 xl:w-1/2 md:w-3/4 sm:w-full justify-center items-center md:px-0 ">
           {airportEls.map((el, index) => (
             <div key={index} className="flex items-center">
               <div className="flex flex-col gap-2 justify-center items-center md:w-[110px] sm:w-[80px]">
-                <span className="font-normal lg:text-xl sm:text-base text-center font-helvetica">
+                <span className="font-normal lg:text-[21px] md:text-[18px] sm:text-base text-center font-helvetica">
                   {locale === 'ENG' ? el.title : el.textIt}
                 </span>
-                <span className="font-normal lg:text-lg sm:text-xs text-center font-helvetica">
+                <span className="font-normal text-responsive text-center font-helvetica">
                   {locale === 'ENG' ? el.description : el.textIt}
                 </span>
               </div>
               {index !== airportEls.length - 1 && (
-                <div className="md:h-16 sm:h-8 w-[1px] bg-gray-300 md:ml-10 sm:ml-4"></div>
+                <div className="md:h-[51px] sm:h-8 w-[1px] bg-gray-300 md:ml-10 sm:ml-4"></div>
               )}
             </div>
           ))}
         </div>
         <div className="xl:w-[53%] md:w-3/4 sm:w-11/12">
-          <p className="lg:text-lg sm:text-xs text-center font-helvetica ">
+          <p className="text-responsive text-center font-helvetica ">
           {locale === 'ENG' ?
           "With convenient access to major motorways and railway stations in Ventimiglia and Sanremo, as well as to the third Monaco's port Cala del Forte, the hotel offers well-developed connectivity, making it easy for guests to arrive by car or train."  
           : "Grazie al facile accesso alle principali autostrade e alle stazioni ferroviarie di Ventimiglia e Sanremo, oltre che al terzo porto di Monaco, Cala del Forte, l’hotel gode di un’eccellente connettività, rendendo agevole l’arrivo degli ospiti in auto o in treno."
@@ -97,53 +102,56 @@ const {locale} = useLocalization()
           </p>
         </div>
 
-        <div className="lg:mt-20 sm:hidden lg:block px-20 w-11/12 justify-center">
-          <div className="flex gap-10 justify-between w-full ">
+        <div className="lg:mt-20 flex w-full justify-center sm:hidden md:block">
+          <div className="flex xl:gap-10 md:gap-4 justify-between w-full ">
             {airportsImgs.map((el, index) => (
               <div
                 key={index}
                 className="flex flex-col gap-3 justify-start items-center w-1/3"
               >
-                <Image src={el.img} alt={el.description} className="w-full h-[600px]" />
-                <p className="lg:text-lg sm:text-xs text-left font-helvetica ">
+                <Image src={el.img} alt={el.description} className="w-full lg:h-[600px] md:h-[365px]" />
+                <p className="text-responsive text-left font-helvetica ">
                   {locale === 'ENG' ? el.description : el.textIt}
                 </p>
               </div>
             ))}
           </div>
         </div>
-            {/* Responsive */}
-        <div className="w-full mt-5 pl-[18px] sm:block lg:hidden">
-          <Swiper
-            // install Swiper modules
-            modules={[Scrollbar, A11y]}
-            spaceBetween={12}
-            breakpoints={{
-              360: {
-                slidesPerView: 1.3, // 1 слайд на экранах меньше 640px
-              },
-            }}
-            // navigation
-            // pagination={{ clickable: true }}
-            // scrollbar={{ draggable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
-          >
-            {airportsImgs.map((slide, index) => (
-              <SwiperSlide key={index} className="w-5/12">
-                <Image
-                  src={slide.img}
-                  alt={slide.description}
-                  className="w-full md:h-[465px] sm:h-[300px] hover:opacity-80"
-                />
-                <div className="text-black-main font-helvetica font-normal text-xs text-left leading-5 mt-3 ">
-                  {locale === 'ENG' ? slide.description : slide.textIt}
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+        <div className="relative w-full mt-5 sm:block md:hidden bg-loading-color h-[400px]">
+          <div className="absolute left-[18px] right-0">
+            <Swiper
+              // install Swiper modules
+              modules={[Scrollbar, A11y]}
+              spaceBetween={12}
+              breakpoints={{
+                360: {
+                  slidesPerView: 1.3, // 1 слайд на экранах меньше 640px
+                },
+              }}
+              // navigation
+              // pagination={{ clickable: true }}
+              // scrollbar={{ draggable: true }}
+              onSwiper={(swiper) => console.log(swiper)}
+              onSlideChange={() => console.log("slide change")}
+              className="!w-full"
+            >
+              {airportsImgs.map((slide, index) => (
+                <SwiperSlide key={index} className="w-[100px]">
+                  <Image
+                    src={slide.img}
+                    alt={slide.description}
+                    className="w-full md:h-[465px] sm:h-[300px] hover:opacity-80"
+                  />
+                  <div className="text-main-white font-helvetica font-normal text-xs text-left leading-5 mt-3 ">
+                    {locale === 'ENG' ? slide.description : slide.textIt}
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </div>
+      </ResponsiveContentContainer>
     </div>
   );
 };

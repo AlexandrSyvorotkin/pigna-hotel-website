@@ -63,20 +63,22 @@ const MainPage = () => {
         </ResponsiveContentContainer>
       </Banner>
       <Description />
-      {/* <Banner className="h-[400px]">
-        <div className="flex flex-col gap-4 xl:w-[85%] sm:w-full sm:px-[18px]">
-          <p className="text-main-white lg:text-[35px] sm:text-xl font-patrizia text-center w-[100%] uppercase lg:leading-[60px]">
-            {locale === 'ENG'
-            ? "The hotel was highlighted as a project of regional significance. The renovation of the hotel gave local residents and municipal authorities a hope for relaunch and rebirth for Pigna and for the whole Nervia Valley."
-          : "L’hotel è stato evidenziato come un progetto di rilevanza regionale. La ristrutturazione dell’hotel ha restituito ai residenti locali e alle autorità municipali la speranza di un rilancio e di una rinascita per Pigna e per l’intera Valle del Nervia."
-          }
-          </p>
-        </div>
-      </Banner> */}
-      {/* <EssenceOfPigna />
+      <Banner>
+        <ResponsiveContentContainer>
+          <div className="flex flex-col gap-4 lg:mt-[100px] lg:mb-[100px] md:mt-[80px] md:mb-[80px] sm:mt-[50px] sm:mb-[50px]">
+            <p className="text-main-white lg:text-[35px] sm:text-xl md:text-[26px] font-patrizia text-center w-[100%] uppercase lg:leading-[60px]">
+              {locale === 'ENG'
+              ? "The hotel was highlighted as a project of regional significance. The renovation of the hotel gave local residents and municipal authorities a hope for relaunch and rebirth for Pigna and for the whole Nervia Valley."
+            : "L’hotel è stato evidenziato come un progetto di rilevanza regionale. La ristrutturazione dell’hotel ha restituito ai residenti locali e alle autorità municipali la speranza di un rilancio e di una rinascita per Pigna e per l’intera Valle del Nervia."
+            }
+            </p>
+          </div>
+        </ResponsiveContentContainer>
+      </Banner>
+      <EssenceOfPigna />
       <Location />
       <Resourses />
-      <WellnessSpa />
+      {/* <WellnessSpa />
       <Cuisine />
       <BuildingTerritory/>
       <InteriorDesign />

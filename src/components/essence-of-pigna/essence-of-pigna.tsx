@@ -19,6 +19,7 @@ import img6 from "../../assets/essence-of-pigna/slide6.png";
 
 
 import { useLocalization } from "../../context/useLocalization";
+import { Heading } from "../heading/heading";
 
 const slidesEls = [
   {
@@ -80,9 +81,9 @@ const EssenceOfPigna = () => {
       id="essence-of-pigna"
     >
       <div className="flex justify-center items-center">
-        <span className="text-black-main font-patrizia font-normal lg:text-5xl sm:text-2xl text-center uppercase">
+        <Heading tag="h2" className="text-black-main font-patrizia font-normal text-center uppercase">
           {locale === "ENG" ? "ESSENCE OF PIGNA" : "L’ESSENZA DI PIGNA"}
-        </span>
+        </Heading>
       </div>
       <div
         id="essence-of-pigna-swiper"
@@ -119,7 +120,7 @@ const EssenceOfPigna = () => {
                 alt={slide.text}
                 className="w-full md:h-[465px] sm:h-[300px] hover:opacity-80"
               />
-              <div className="text-black-main font-helvetica font-normal md:text-lg sm:text-xs text-left leading-[23px] mt-3">
+              <div className="text-black-main font-helvetica font-normal text-responsive text-left leading-[23px] mt-3">
                 {locale === "ENG" ? slide.text : slide.textIt}
               </div>
             </SwiperSlide>
