@@ -78,8 +78,8 @@ const MainPage = () => {
       <EssenceOfPigna />
       <Location />
       <Resourses />
-      {/* <WellnessSpa />
-      <Cuisine />
+      <WellnessSpa />
+      {/* <Cuisine />
       <BuildingTerritory/>
       <InteriorDesign />
       <ProjectTimeline />
