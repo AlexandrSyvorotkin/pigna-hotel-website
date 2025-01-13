@@ -7,52 +7,52 @@ import { Image } from "../../ui/img/image";
 
 //responsive
 
-import img1Res from "../../assets/wellness-spa/responsive/img1-res.png";
-import img2Res from "../../assets/wellness-spa/responsive/img2-res.png";
-import img3Res from "../../assets/wellness-spa/responsive/img3-res.png";
-import img4Res from "../../assets/wellness-spa/responsive/img4-res.png";
+// import img1Res from "../../assets/wellness-spa/responsive/img1-res.png";
+// import img2Res from "../../assets/wellness-spa/responsive/img2-res.png";
+// import img3Res from "../../assets/wellness-spa/responsive/img3-res.png";
+// import img4Res from "../../assets/wellness-spa/responsive/img4-res.png";
 import { useLocalization } from "../../context/useLocalization";
 import { Heading } from "../heading/heading";
 import { ResponsiveContentContainer } from "../responsive-content-container/responsive-content-container";
 
-const tabsResponsive = [
-  {
-    title: "Thermal medicine and balneology",
-    description:
-      "The therapeutic benefits of our thermal baths have been known since Roman times. Sulphurous thermal water treats: problems of the musculoskeletal system, cardiovascular system, respiratory system, dermatological and aesthetic problems, obesity; it reduces stress and removes toxins.",
-    img: img1Res,
-    titleIt: "Medicina termale e idroterapia.",
-    descriptionIt:
-      "I benefici terapeutici dei nostri bagni termali sono noti fin dall’epoca romana. L’acqua termale solfurea tratta problemi dell’apparato muscoloscheletrico, del sistema cardiovascolare, dell’apparato respiratorio, problemi dermatologici ed estetici, obesità; riduce lo stress e elimina le tossine.",
-  },
-  {
-    title: "Medical component",
-    description:
-      "Comprehensive diagnostics, a world-class team of doctors and state-of-the-art medical equipment ensure personalised care and tailored treatment plans.",
-    img: img2Res,
-    titleIt: "Componente medica.",
-    descriptionIt:
-      "Diagnostica completa, un team di medici di livello mondiale e attrezzature mediche all’avanguardia garantiscono cure personalizzate e piani di trattamento su misura.",
-  },
-  {
-    title: "Rehabilitation and sports",
-    description:
-      "Dedicated facilities are available for rehabilitation, specifically designed to address sports injuries and musculoskeletal disorders, supporting recovery and strength",
-    img: img3Res,
-    titleIt: "Riabilitazione e sport.",
-    descriptionIt:
-      "Strutture dedicate alla riabilitazione, progettate per affrontare infortuni sportivi e disturbi muscoloscheletrici, favorendo il recupero e il rafforzamento.",
-  },
-  {
-    title: "Holistic wellnesss",
-    description:
-      "Our wellness programmes are based on a blend of Eastern and Western practices, the newest technologies and the latest medical-proved research with a focus on a holistic approach that enhances mental, physical, emotional, and spiritual well-being",
-    img: img4Res,
-    titleIt: "Benessere olistico.",
-    descriptionIt:
-      "I nostri programmi di benessere si basano su una fusione di pratiche orientali e occidentali, sulle tecnologie più nuove e sulle ultime ricerche mediche certificate, con un approccio olistico che migliora il benessere mentale, fisico, emotivo e spirituale.",
-  },
-];
+// const tabsResponsive = [
+//   {
+//     title: "Thermal medicine and balneology",
+//     description:
+//       "The therapeutic benefits of our thermal baths have been known since Roman times. Sulphurous thermal water treats: problems of the musculoskeletal system, cardiovascular system, respiratory system, dermatological and aesthetic problems, obesity; it reduces stress and removes toxins.",
+//     img: img1Res,
+//     titleIt: "Medicina termale e idroterapia.",
+//     descriptionIt:
+//       "I benefici terapeutici dei nostri bagni termali sono noti fin dall’epoca romana. L’acqua termale solfurea tratta problemi dell’apparato muscoloscheletrico, del sistema cardiovascolare, dell’apparato respiratorio, problemi dermatologici ed estetici, obesità; riduce lo stress e elimina le tossine.",
+//   },
+//   {
+//     title: "Medical component",
+//     description:
+//       "Comprehensive diagnostics, a world-class team of doctors and state-of-the-art medical equipment ensure personalised care and tailored treatment plans.",
+//     img: img2Res,
+//     titleIt: "Componente medica.",
+//     descriptionIt:
+//       "Diagnostica completa, un team di medici di livello mondiale e attrezzature mediche all’avanguardia garantiscono cure personalizzate e piani di trattamento su misura.",
+//   },
+//   {
+//     title: "Rehabilitation and sports",
+//     description:
+//       "Dedicated facilities are available for rehabilitation, specifically designed to address sports injuries and musculoskeletal disorders, supporting recovery and strength",
+//     img: img3Res,
+//     titleIt: "Riabilitazione e sport.",
+//     descriptionIt:
+//       "Strutture dedicate alla riabilitazione, progettate per affrontare infortuni sportivi e disturbi muscoloscheletrici, favorendo il recupero e il rafforzamento.",
+//   },
+//   {
+//     title: "Holistic wellnesss",
+//     description:
+//       "Our wellness programmes are based on a blend of Eastern and Western practices, the newest technologies and the latest medical-proved research with a focus on a holistic approach that enhances mental, physical, emotional, and spiritual well-being",
+//     img: img4Res,
+//     titleIt: "Benessere olistico.",
+//     descriptionIt:
+//       "I nostri programmi di benessere si basano su una fusione di pratiche orientali e occidentali, sulle tecnologie più nuove e sulle ultime ricerche mediche certificate, con un approccio olistico che migliora il benessere mentale, fisico, emotivo e spirituale.",
+//   },
+// ];
 
 const tabs = [
   {
