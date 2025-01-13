@@ -5,6 +5,7 @@ import img3 from "../../assets/wellness-spa/img3.png";
 import img4 from "../../assets/wellness-spa/img4.png";
 import { Image } from "../../ui/img/image";
 
+
 //responsive
 
 // import img1Res from "../../assets/wellness-spa/responsive/img1-res.png";
@@ -132,7 +133,8 @@ const keyObjectives = [
 const WellnessSpa = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [autoplay, setAutoplay] = useState(true);
-  const timerRef = useRef<NodeJS.Timeout>();
+  
+  const timerRef = useRef<number>();
   
   useEffect(() => {
     if (autoplay) {

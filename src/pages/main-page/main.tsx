@@ -30,7 +30,7 @@ const MainPage = () => {
   return (
     <>
       <Presentation
-        isVideo={false}
+        isVideo={true}
         button={
           <MainButton
             onClick={() => navigate("/registration")}
