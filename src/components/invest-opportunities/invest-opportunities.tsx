@@ -31,7 +31,7 @@ const InvestOpportunities = () => {
             </p>
             <MainButton className="sm:py-[16px] sm:px-[30px] sm:text-xs lg:text-base lg:py-[22px] lg:px-[62px] ">
               {locale === "ENG"
-                ? "MORE ABOUT THE PROJECT"
+                ? "INVEST THE PROJECT"
                 : "INVESTI NEL PROGETTO"}
             </MainButton>
           </div>
