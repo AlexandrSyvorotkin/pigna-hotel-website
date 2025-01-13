@@ -41,12 +41,21 @@
   height: 550px;
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 1280px) {
+
+  .slide-mark {
+    top: calc(100% + 110px);
+    z-index: 10;
+  }
+}
+
+@media (max-width: 800px) {
   .swiper-slider-element {
     height: 400px;
   }
   .slide-mark {
-    top: calc(100% + 100px);
+    top: calc(100% + 120px);
     z-index: 10;
   }
 

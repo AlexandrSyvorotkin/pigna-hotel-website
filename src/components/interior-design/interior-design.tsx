@@ -17,6 +17,8 @@ import img4res from "../../assets/interior-design/res/img4res.svg";
 import img5res from "../../assets/interior-design/res/img5res.svg";
 import img6res from "../../assets/interior-design/res/img6res.svg";
 import { useLocalization } from "../../context/useLocalization";
+import { ResponsiveContentContainer } from "../responsive-content-container/responsive-content-container";
+import { Heading } from "../heading/heading";
 
 const images = [img1, img2, img3, img4, img5, img6, img7];
 const imagesMobile = [img1res, img2res, img3res, img4res, img5res, img6res];
@@ -27,17 +29,16 @@ const {locale} = useLocalization()
 
   return (
     <div
-      className="lg:mt-60 sm:mt-10 w-full flex justify-center flex-col items-center lg:pb-60 sm:pb-10 px-[18px]"
+      className="lg:mt-60 sm:mt-10 w-full flex justify-center flex-col items-center lg:pb-60 sm:pb-10"
       id="architecture"
     >
-      <div className="max-w-[1750px]">
+      <ResponsiveContentContainer>
         <div className="flex justify-center items-center flex-col gap-4">
-        <span className="text-black-main lg:text-5xl sm:text-2xl font-patrizia font-normal text-center uppercase lg:w-full sm:w-[80%]">
-
+        <Heading tag="h2" className="text-black-main font-patrizia font-normal text-center uppercase lg:w-full sm:w-[80%]">
           {locale === 'ENG' ? "Interior Design and Architecture" :"Design degli Interni e Architettura" }
-        </span>
+        </Heading>
         <div className="w-full flex justify-center items-center">
-          <p className="text-black-main lg:text-lg sm:text-xs font-helvetica font-normal text-center lg:w-1/2 sm:w-full">
+          <p className="text-black-main text-responsive font-helvetica font-normal text-center lg:w-1/2 sm:w-full">
             {locale !== "ENG" ? "Il progetto dell’hotel si ispira a un principio di disposizione orientale, interpretato con un design moderno. Soluzioni di design uniche, incluso l’impiego di pietre preziose naturali, saranno integrate nelle finiture interne." :
             "The hotel project is conceived around the oriental principle of layout, embodied in a modern design. Unique design solutions, including the incorporation of natural precious stones, are utilised in the interior finishes."}
           </p>
@@ -48,12 +49,12 @@ const {locale} = useLocalization()
         </div>
         </div>
         <div className="w-full lg:mt-36 sm:mt-10 flex flex-col justify-center items-center">
-        <p className='text-black-main lg:text-2xl sm:text-base font-helvetica font-normal text-center uppercase lg:w-[65%] sm:w-full'>
+        <p className='text-black-main lg:text-2xl md:text-[18px] sm:text-base font-helvetica font-normal text-center uppercase lg:w-[65%] sm:w-full'>
           {locale === 'ENG' ?
           "Designed by the renowned architect Alex Kravetz, the renovation project stands as a testament to innovative vision and artistry, set to redefine luxury and elegance within the hospitality landscape." :
           "Progettato dal rinomato architetto Alex Kravetz, il progetto di rinnovamento è una testimonianza di visione innovativa e creatività, destinato a ridefinire il concetto di lusso ed eleganza nell’ospitalità." }
         </p>
-        <p className='mt-4 text-black-main lg:text-lg sm:text-xs font-helvetica font-normal text-center lg:w-[45%] sm:w-full'>
+        <p className='mt-4 text-black-main text-responsive font-helvetica font-normal text-center lg:w-[45%] sm:w-full'>
           {locale === 'ENG' ?
           "This transformation is further distinguished by accolades that include The Imperial Hotel Vienna, Intercontinental Porto, Radisson Hotel Antwerpen, Sheraton Oman, Hilton Muscat etc." :
           "Questa trasformazione è ulteriormente contraddistinta da riconoscimenti che includono The Imperial Hotel Vienna, Intercontinental Porto, Radisson Hotel Antwerpen, Sheraton Oman, Hilton Muscat, ecc."}
@@ -66,13 +67,12 @@ const {locale} = useLocalization()
         ))}
       </div>
 
-      <div className='mt-[32px] justify-between gap-8 md:hidden sm:flex flex-wrap'>
+       <div className='mt-[32px] justify-between gap-8 md:hidden sm:flex flex-wrap'>
         {imagesMobile.map((img, index) => (
           <img src={img} alt='img' key={index} className='object-contain'/>
         ))}
       </div>
-
-      </div>
+      </ResponsiveContentContainer>
     </div>
   );
 };

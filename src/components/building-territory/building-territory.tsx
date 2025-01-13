@@ -10,6 +10,8 @@ import img_4 from "../../assets/building-territory/img-4.png";
 import img_5 from "../../assets/building-territory/img-5.png";
 import img_6 from "../../assets/building-territory/img-6.png";
 import { useLocalization } from "../../context/useLocalization";
+import { ResponsiveContentContainer } from "../responsive-content-container/responsive-content-container";
+import { Heading } from "../heading/heading";
 
 const imgArr = [
   {
@@ -49,14 +51,15 @@ const BuildingTerritory = () => {
 
   return (
     <div className="w-full flex justify-center items-center bg-loading-color mt-40 pb-40">
+      <ResponsiveContentContainer>
       <div
-      className="lg:pt-20 sm:pt-10 pb-20 sm:pb-10 w-[1750px] flex sm:flex-col lg:flex-row justify-between text-main-white bg-loading-color"
+      className="lg:pt-20 sm:pt-10 pb-20 sm:pb-10 w-full flex sm:flex-col lg:flex-row sm:gap-4 justify-between text-main-white bg-loading-color"
       id="building-territory"
     >
       <div className="flex flex-col gap-4 lg:w-[27%] sm:w-full">
-        <h2 className="sm:text-2xl lg:text-5xl font-patrizia font-normal sm:text-center lg:text-left uppercase">
+        <Heading tag="h2" className="font-normal sm:text-center lg:text-left uppercase">
           {locale === "ENG" ? "Building & Territory" : "Edificio & Territorio"}
-        </h2>
+        </Heading>
         <p className="lg:text-lg sm:text-xs font-helvetica font-norma sm:text-center lg:text-left sm:hidden md:block">
           {locale === "ENG"
             ? <p>Grand Hotel Pigna is being transformed into a luxury <br/> 5-star wellness retreat, embracing a new medical spa concept and abundant outdoor and indoor sport facilities.</p>
@@ -79,7 +82,7 @@ const BuildingTerritory = () => {
           </p>
         )}
 
-        <div className="flex flex-col md:gap-6 sm:gap-3">
+        <div className="flex flex-col lg:gap-6 md:gap-3">
           <div className="flex flex-col lg:mt-[36px] sm:mt-0">
             <span className="lg:text-xl sm:text-base">{locale === 'ENG' ? 'MAIN HOTEL BUILDING' : 'EDIFICIO PRINCIPALE DELL’HOTEL'}</span>
             <p className="lg:text-lg sm:text-xs mt-3">
@@ -93,7 +96,7 @@ const BuildingTerritory = () => {
           <div className="w-1/12 h-[1px] bg-black-main lg:mt-5 sm:mt-0 opacity-30"></div>
 
           <div className="flex flex-col sm:mt-0">
-            <span className="md:mt-5 lg:text-xl sm:text-base sm:mt-0">
+            <span className="lg:text-xl sm:text-base md:mt-0">
               {locale === 'ENG' ? 'SPA AREAS' : 'AREE SPA'}
             </span>
             <p className="lg:text-lg sm:text-xs mt-3 ">
@@ -107,7 +110,7 @@ const BuildingTerritory = () => {
           <div className="w-1/12 h-[1px] bg-black-main md:mt-5 sm:mt-0 opacity-30"></div>
 
           <div className="flex flex-col sm:mt-0">
-            <span className="md:mt-5 sm:mt-0 lg:text-xl sm:text-base">
+            <span className="md:mt-0 sm:mt-0 lg:text-xl sm:text-base">
               {locale === 'ENG' ? '2 NEW BUILDINGS' : '2 NUOVI EDIFICI'}
             </span>
             <p className="w-[70%] mt-3 sm:text-xs md:text-lg">
@@ -140,8 +143,7 @@ const BuildingTerritory = () => {
           </div>
         </div>
       </div>
-
-      <div className="lg:flex gap-6 w-[75%] flex-wrap justify-end sm:hidden">
+      <div className="md:flex sm:hidden gap-6 lg:w-[75%] md:w-full flex-wrap lg:justify-end md:justify-start">
         {imgArr.map((item, index) => (
           <div className="flex flex-col gap-2 w-[40%]">
             <Image
@@ -156,8 +158,10 @@ const BuildingTerritory = () => {
           </div>
         ))}
       </div>
-
-      <div className="lg:hidden sm:block sm:w-[320px] md:w-[500px] mt-10">
+      </div>
+      
+      <div className="relative md:hidden sm:block h-[400px] mt-10">
+      <div className='absolute left-0 w-full '>
         <Swiper
           modules={[Scrollbar, A11y]}
           spaceBetween={10}
@@ -171,14 +175,14 @@ const BuildingTerritory = () => {
           }}
         >
           {imgArr.map((slide, index) => (
-            <SwiperSlide key={index} className="w-[240px]">
+            <SwiperSlide key={index} className="w-1/2">
               <div className="flex flex-col gap-2">
                 <Image
                   src={slide.img}
                   alt={slide.text}
-                  className="w-[240px] h-[304px] hover:opacity-80"
+                  className="w-full h-[304px] hover:opacity-80"
                 />
-                <p className="text-xs font-helvetica font-normal max-w-full">
+                <p className="text-xs font-helvetica font-normal text-main-white max-w-full">
                   {locale === 'ENG' ? slide.text : slide.textIt}
                 </p>
               </div>
@@ -186,7 +190,10 @@ const BuildingTerritory = () => {
           ))}
         </Swiper>
       </div>
-    </div>
+      </div>
+
+
+      </ResponsiveContentContainer>
     </div>
     
   );

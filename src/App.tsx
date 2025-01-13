@@ -26,7 +26,7 @@ function App() {
         <Route path="/registration" element={<Registration />} />
         <Route path="/docs" element={<Docs />} />
         </Routes>
-      {/* <Footer/> */}
+      <Footer/>
       <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
     </div>
   )

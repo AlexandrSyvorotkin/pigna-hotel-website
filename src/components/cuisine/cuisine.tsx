@@ -85,8 +85,8 @@ const Cuisine = () => {
           </div>
         </div>
         {/* TODO: make it responsive */}
-        <div className="relative md:hidden sm:block">
-          <div className='absolute left-0 w-full mt-10'>
+        <div className="relative md:hidden sm:block h-[400px]">
+          <div className='absolute left-0 w-full mt-10 '>
             <Swiper
             modules={[Scrollbar, A11y]}
             spaceBetween={10}

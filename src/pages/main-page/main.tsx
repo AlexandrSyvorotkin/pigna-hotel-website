@@ -80,10 +80,10 @@ const MainPage = () => {
       <Resourses />
       <WellnessSpa />
       <Cuisine />
-      {/* <BuildingTerritory/>
+      <BuildingTerritory/>
       <InteriorDesign />
       <ProjectTimeline />
-      <InvestOpportunities /> */}
+      <InvestOpportunities />
     </>
   );
 };
