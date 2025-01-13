@@ -11,7 +11,7 @@ interface RegistrationData {
   email: string;
   country: string;
   phone: string;
-  company_role: string;
+  company: string;
   role: string;
   password: string;
 }
@@ -37,7 +37,7 @@ const RegistrationForm = () => {
       email: "",
       country: "",
       phone: "",
-      company_role: "",
+      company: "",
       role: "",
       password: "",
     },
@@ -183,7 +183,7 @@ const RegistrationForm = () => {
               </div>
               <label className="flex flex-col gap-5">
                 <input
-                  {...register("company_role")}
+                  {...register("company")}
                   placeholder={locale === "ENG" ? "Company" : "Azienda"}
                   className="mt-4 bg-transparent focus:outline-none text-main-white"
                 />
