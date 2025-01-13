@@ -1,13 +1,14 @@
 import bg_img from "../../assets/bg/bg-2.png";
 import { useLocalization } from "../../context/useLocalization";
 import { MainButton } from "../../ui/button/main-button";
+import { ResponsiveContentContainer } from "../responsive-content-container/responsive-content-container";
 
 const InvestOpportunities = () => {
   const { locale } = useLocalization();
 
   return (
     <div className="lg:mt-40 sm:mt-20 flex justify-center items-center flex-col">
-      <div className="w-[1750px] px-[18px]">
+      <ResponsiveContentContainer>
         <div
           className="w-full lg:h-[900px] sm:h-[400px] relative flex items-center justify-center"
           style={{
@@ -35,9 +36,11 @@ const InvestOpportunities = () => {
             </MainButton>
           </div>
         </div>
-      </div>
+      </ResponsiveContentContainer>
       <div className="w-full bg-loading-color flex justify-center items-center mt-20">
-        <div className="w-[1750px] lg:pt-28 lg:mt-28 sm:pt-20 lg:pb-56 sm:pb-6 flex justify-center bg-loading-color text-main-white">
+      <ResponsiveContentContainer>
+      
+        <div className="lg:pt-28 lg:mt-28 sm:pt-20 lg:pb-56 sm:pb-6 flex justify-center bg-loading-color text-main-white">
           <div className="flex flex-col gap-4 lg:w-3/4 sm:w-full">
             <h3 className="lg:text-4xl sm:text-2xl font-patrizia font-normal text-center uppercase">
               {locale === "ENG"
@@ -70,6 +73,7 @@ const InvestOpportunities = () => {
             )}
           </div>
         </div>
+      </ResponsiveContentContainer>
       </div>
     </div>
   );
