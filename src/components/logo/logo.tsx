@@ -6,13 +6,15 @@ interface LogoProps {
   size?: "sm" | "lg";
   img?: string;
   content: React.ReactNode;
+  isFooter?: boolean;
 }
 
-const Logo = ({ size, img, content }: LogoProps) => {
+const Logo = ({ size, img, content, isFooter }: LogoProps) => {
   const navigate = useNavigate();
 
 
   const mt = size === 'lg' ? 'mt-6' : 'mt-0'
+  const iconSize = isFooter ? 'w-[25px] h-[25px]' : 'w-auto h-auto'
   return (
     <div
       className="flex flex-col items-center gap-2 cursor-pointer"
@@ -20,7 +22,7 @@ const Logo = ({ size, img, content }: LogoProps) => {
     >
       <div className="flex gap-2">
         {Array.from({ length: 5 }).map((_, index) => (
-          <img src={img} alt="star" key={index} />
+          <img src={img} alt="star" key={index} className={iconSize}/>
         ))}
       </div>
       <div className={`flex items-center gap-2 ${mt}`}>

@@ -73,8 +73,8 @@ const {locale} = useLocalization()
       <Image src={mapRes3} alt="map" className="w-full sm:block md:hidden object-cover" />
       <ResponsiveContentContainer>
       <div className="mt-20 w-full flex justify-center items-center flex-col gap-10">
-        <span className="lg:text-[21px] md:text-[18px] sm:text-base font-normal uppercase">
-          {locale === 'ENG' ? "Airports" : "Aeroporti vicini:"}
+        <span className="lg:text-[21px] md:text-[18px] sm:text-base font-helvetica font-normal uppercase">
+          {locale === 'ENG' ? "The nearby airports:" : "Aeroporti vicini:"}
         </span>
         <div className="flex md:gap-10 sm:gap-4 xl:w-1/2 md:w-3/4 sm:w-full justify-center items-center md:px-0 ">
           {airportEls.map((el, index) => (

@@ -97,12 +97,12 @@ const Description = () => {
         
 
         {/* // Resposinve > 1280px и выше */}
-        <div className="mt-20 w-full flex-wrap justify-between gap-4 sm:hidden lg:flex">
+        <div className="mt-20 w-full flex-wrap justify-between gap-4 sm:hidden lg:flex font-helvetica">
           {descriptionEls.filter(el => el.title && el.title.length > 0).map((el, index) => (
             <div key={index} className="flex items-center">
               <div className="flex flex-col gap-2 justify-center items-center">
                 <span className="font-normal lg:text-[21px] md:text-[18px] text-black-main">{locale === 'ENG' ? el.title : el.titleIt}</span>
-                <span className="font-normal text-responsive text-black-main">{locale === 'ENG' ? el.description : el.descriptionIt}</span>
+                <span className="font-normal text-responsive text-black-main opacity-60">{locale === 'ENG' ? el.description : el.descriptionIt}</span>
               </div>
               {index !== descriptionEls.length - 1 && (
                 <div className="h-full w-[1px] bg-gray-300 xl:ml-[80px] lg:ml-[40px]"></div>

@@ -4,6 +4,7 @@ import starBlack from "../../assets/star/star.svg";
 import starWhite from "../../assets/star/StarW.svg";
 import { useLocalization } from "../../context/useLocalization";
 import Cookies from 'js-cookie'
+import { ResponsiveContentContainer } from "../../components/responsive-content-container/responsive-content-container";
 
 const Footer = () => {
   
@@ -52,15 +53,15 @@ const Footer = () => {
 
   return (
     <footer
-      className={`w-full flex justify-center items-center pb-20 pt-16 px-[18px] ${
+      className={`w-full flex flex-col justify-center items-center pb-20 pt-16 ${
         isPrivacyPage ? "bg-loading-color" : "bg-main-white"
       }`}
     >
-      <div className="w-[1750px] flex flex-col gap-12">
-        <Logo
+      <Logo
           size="lg"
           color={isPrivacyPage ? "white" : "black"}
           img={isPrivacyPage ? starWhite : starBlack}
+          isFooter={true}
           content={
             <>
               <span className={`${textColor} md:text-5xl sm:text-2xl font-patrizia`}>
@@ -75,11 +76,13 @@ const Footer = () => {
             </>
           }
         />
-        <div className={`w-full h-[1px] ${borderColor}`}></div>
-        <div className="w-full flex 2lg:flex-row sm:flex-col-reverse justify-between items-center">
-          <div className="flex 2xl:gap-20 xl:gap-6 2lg:items-end sm:items-center 2lg:flex-row sm:flex-col-reverse sm:mt-6 2lg:mt-0">
+      <ResponsiveContentContainer>
+      <div className="w-full flex flex-col items-center gap-12">
+        <div className={`xl:w-[1750px] lg:w-[1160px] md:w-[720px] sm:w-[360px] h-[1px] ${borderColor}`}></div>
+        <div className="w-full flex lg:flex-row sm:flex-col-reverse justify-between xl:gap-28 lg:gap-6 sm:gap-6 items-center">
+          <div className="flex xl:flex-row sm:flex-col lg:flex-col lg:gap-2 xl:gap-6  xl:h-[104px] lg:h-auto lg:items-start xl:items-end">
             <div
-              className={`flex flex-col 2xl:gap-6 xl:gap-2 2lg:w-[240px] sm:w-full sm:items-center 2lg:items-start ${
+              className={`flex flex-col lg:gap-2 2lg:w-[240px] sm:w-full sm:items-center lg:items-start sm:gap-4 ${
                 isPrivacyPage ? "text-main-white" : "text-black-main"
               }`}
             >
@@ -96,7 +99,7 @@ const Footer = () => {
               </p>
             </div>
             <div
-              className={`flex flex-col gap-2 ${
+              className={`flex flex-col gap-2 sm:items-center lg:items-start ${
                 isPrivacyPage ? "text-main-white" : "text-black-main"
               }`}
             >
@@ -106,9 +109,9 @@ const Footer = () => {
               <span className="uppercase">contacts@thermedipigna.com</span>
             </div>
           </div>
-          <div className="flex 2xl:gap-10 xl:gap-2 2lg:flex-row sm:flex-col sm:gap-6 2lg:gap-0">
+          <div className="flex xl:gap-24 lg:gap-6 lg:flex-row sm:flex-col">
             <div
-              className={`flex flex-col gap-4 sm:items-center 2lg:items-start justify-end ${
+              className={`flex flex-col gap-4 sm:items-center lg:items-start justify-end ${
                 isPrivacyPage ? "text-main-white" : "text-black-main"
               }`}
             >
@@ -126,7 +129,7 @@ const Footer = () => {
               </span>
             </div>
             <div
-              className={`flex flex-col gap-4 sm:items-center 2lg:items-start justify-end ${
+              className={`flex flex-col gap-4 sm:items-center lg:items-start justify-end ${
                 isPrivacyPage ? "text-main-white" : "text-black-main"
               }`}
             > 
@@ -144,7 +147,7 @@ const Footer = () => {
               </span>
             </div>
             <div
-              className={`flex flex-col gap-4 sm:items-center 2lg:items-start justify-end ${
+              className={`flex flex-col gap-4 sm:items-center lg:items-start justify-end ${
                 isPrivacyPage ? "text-main-white" : "text-black-main"
               }`}
             >
@@ -162,7 +165,7 @@ const Footer = () => {
               </span>
             </div>
             <div
-              className={`flex flex-col gap-4 sm:items-center 2lg:items-start ${
+              className={`flex flex-col gap-4 sm:items-center lg:items-start ${
                 isPrivacyPage ? "text-main-white" : "text-black-main"
               }`}
             >
@@ -188,6 +191,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      </ResponsiveContentContainer>
     </footer>
   );
 };

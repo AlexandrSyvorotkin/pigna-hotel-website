@@ -57,7 +57,7 @@ const BuildingTerritory = () => {
       id="building-territory"
     >
       <div className="flex flex-col gap-4 lg:w-[27%] sm:w-full">
-        <Heading tag="h2" className="font-normal sm:text-center lg:text-left uppercase">
+        <Heading tag="h2" className="font-normal sm:text-center lg:text-left uppercase font-patrizia">
           {locale === "ENG" ? "Building & Territory" : "Edificio & Territorio"}
         </Heading>
         <p className="lg:text-lg sm:text-xs font-helvetica font-norma sm:text-center lg:text-left sm:hidden md:block">
@@ -82,8 +82,8 @@ const BuildingTerritory = () => {
           </p>
         )}
 
-        <div className="flex flex-col lg:gap-6 md:gap-3">
-          <div className="flex flex-col lg:mt-[36px] sm:mt-0">
+        <div className="flex flex-col lg:gap-6 md:gap-3 font-helvetica">
+          <div className="flex flex-col lg:mt-[36px] sm:mt-0 font-helvetica">
             <span className="lg:text-xl sm:text-base">{locale === 'ENG' ? 'MAIN HOTEL BUILDING' : 'EDIFICIO PRINCIPALE DELL’HOTEL'}</span>
             <p className="lg:text-lg sm:text-xs mt-3">
               {locale === 'ENG' ? '10 000 sqm — before the renovation' : '10.000 mq — prima della ristrutturazione '}
