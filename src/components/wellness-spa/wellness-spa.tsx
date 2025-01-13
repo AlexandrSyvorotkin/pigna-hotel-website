@@ -131,11 +131,11 @@ const keyObjectives = [
 const WellnessSpa = () => {
   const [activeTab, setActiveTab] = useState(0);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setActiveTab((prevTab) => (prevTab + 1) % tabs.length)
-  //   }, 3000)
-  // }, [activeTab])
+  useEffect(() => {
+    setTimeout(() => {
+      setActiveTab((prevTab) => (prevTab + 1) % tabs.length)
+    }, 3000)
+  }, [activeTab])
 
   const { locale } = useLocalization();
 
