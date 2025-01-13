@@ -18,7 +18,7 @@ const InvestOpportunities = () => {
           }}
         >
           {/* TODO: check responsiveness */}
-          <div className="flex flex-col items-center lg:gap-4 sm:gap-2 text-main-white max-w-[930px] text-center px-[18px]">
+          <div className="flex flex-col items-center lg:gap-4 sm:gap-2 text-main-white text-center w-1/2">
             <span className="text-main-white lg:text-4xl sm:text-2xl font-patrizia font-normal uppercase">
               {locale === "ENG"
                 ? "Investment opportunities"

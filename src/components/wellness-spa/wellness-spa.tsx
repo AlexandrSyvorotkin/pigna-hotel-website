@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import img1 from "../../assets/wellness-spa/img1.png";
 import img2 from "../../assets/wellness-spa/img2.png";
 import img3 from "../../assets/wellness-spa/img3.png";
@@ -63,6 +63,7 @@ const tabs = [
     titleIt: "Medicina termale e idroterapia.",
     descriptionIt:
       "I benefici terapeutici dei nostri bagni termali sono noti fin dall’epoca romana. L’acqua termale solfurea tratta problemi dell’apparato muscoloscheletrico, del sistema cardiovascolare, dell’apparato respiratorio, problemi dermatologici ed estetici, obesità; riduce lo stress e elimina le tossine.",
+    isVideo: true
   },
   {
     title: "Medical component",
@@ -130,14 +131,31 @@ const keyObjectives = [
 
 const WellnessSpa = () => {
   const [activeTab, setActiveTab] = useState(0);
-
+  const [autoplay, setAutoplay] = useState(true);
+  const timerRef = useRef<NodeJS.Timeout>();
+  
   useEffect(() => {
-    setTimeout(() => {
-      setActiveTab((prevTab) => (prevTab + 1) % tabs.length)
-    }, 3000)
-  }, [activeTab])
+    if (autoplay) {
+
+      timerRef.current = setTimeout(() => {
+        setActiveTab((prevTab) => (prevTab + 1) % tabs.length);
+      }, 5000);
+    }
+
+    return () => {
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+      }
+    };
+  }, [activeTab, autoplay]);
+
+  const handleTabClick = (index: number) => {
+    setAutoplay(false); // Отключаем автопереключение при ручном клике
+    setActiveTab(index);
+  };
 
   const { locale } = useLocalization();
+
 
   return (
     <div
@@ -176,7 +194,7 @@ const WellnessSpa = () => {
                       ? "opacity-100"
                       : "opacity-50 hover:opacity-75"
                   }`}
-                  onClick={() => setActiveTab(index)}
+                  onClick={() => handleTabClick(index)}
                 >
                   <span className="text-xl lg:h-[60px] xl:h-auto uppercase font-helvetica">
                     {locale === "ENG" ? tab.title : tab.titleIt}
@@ -188,12 +206,14 @@ const WellnessSpa = () => {
               ))}
             </div>
             <div className="justify-center items-center w-full overflow-hidden lg:mt-12 xl:mt-0 sm:hidden lg:flex">
-              <Image
+              {activeTab === 0 ? <video width="100%" height="auto" autoPlay muted loop>
+                <source src='pool-desktop.mp4' type="video/mp4"/>
+              </video> : <Image
                 key={activeTab}
                 src={tabs[activeTab].img}
                 alt={tabs[activeTab].title}
                 className="w-full animate-fadeIn"
-              />
+              />}
             </div>
             {/* responsive */}
             <div className='flex flex-col gap-4 sm:flex lg:hidden'>
