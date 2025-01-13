@@ -173,10 +173,10 @@ const ProjectTimeline = () => {
                   slidesPerView: 2.1, // 2.5 слайда на экранах меньше 1024px
                 },
               }}
-              // autoplay={{
-              //   delay: 3500,
-              //   disableOnInteraction: false,
-              // }}
+              autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+              }}
               navigation={true}
               onSwiper={(swiper) => console.log(swiper)}
               onSlideChange={() => console.log("slide change")}
@@ -247,48 +247,48 @@ const ProjectTimeline = () => {
               ))}
             </div>
 
-            <div className="sm:w-full h-[81px] flex gap-[26px] xl:w-[450px] sm:hidden xl:flex">
+            <div className="sm:w-full h-[81px] flex gap-[26px] xl:w-[450px] sm:hidden xl:flex hover:opacity-80 cursor-pointer">
               <p className="text-main-white font-helvetica lg:w-[400px] lg:text-lg sm:text-xs w-full leading-[25px]">
                 {locale === "ENG" ? textItems[0].eng : textItems[0].it}
               </p>
               <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
             </div>
 
-            <div className="sm:w-full h-[81px] flex gap-[26px] xl:w-[414px] sm:hidden xl:flex">
+            <div className="sm:w-full h-[81px] flex gap-[26px] xl:w-[414px] sm:hidden xl:flex hover:opacity-80 cursor-pointer">
               <p className="text-main-white font-helvetica lg:w-[354px] lg:text-lg sm:text-xs w-full leading-[25px]">
                 {locale === "ENG" ? textItems[1].eng : textItems[1].it}
               </p>
               <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
             </div>
 
-            <div className="sm:w-full h-[81px] flex gap-[26px] xl:w-[414px] sm:hidden xl:flex">
+            <div className="sm:w-full h-[81px] flex gap-[26px] xl:w-[414px] sm:hidden xl:flex hover:opacity-80 cursor-pointer">
               <p className="text-main-white font-helvetica lg:w-[354px] lg:text-lg sm:text-xs w-full leading-[25px]">
                 {locale === "ENG" ? textItems[2].eng : textItems[2].it}
               </p>
               <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
             </div>
 
-            <div className="sm:w-full h-[81px] flex xl:w-[354px] sm:hidden xl:flex">
+            <div className="sm:w-full h-[81px] flex xl:w-[354px] sm:hidden xl:flex hover:opacity-80 cursor-pointer">
               <p className="text-main-white font-helvetica lg:text-lg sm:text-xs w-full leading-[25px]">
                 {locale === "ENG" ? textItems[3].eng : textItems[3].it}
               </p>
             </div>
 
-            <div className="sm:w-full h-[81px] flex xl:w-[610px] gap-[26px] sm:hidden xl:flex">
+            <div className="sm:w-full h-[81px] flex xl:w-[610px] gap-[26px] sm:hidden xl:flex hover:opacity-80 cursor-pointer">
               <p className="text-main-white font-helvetica lg:w-[550px] lg:text-lg sm:text-xs w-full leading-[25px]">
                 {locale === "ENG" ? textItems[4].eng : textItems[4].it}
               </p>
               <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
             </div>
 
-            <div className="sm:w-full h-[81px] flex xl:w-[829px] gap-[26px] sm:hidden xl:flex">
+            <div className="sm:w-full h-[81px] flex xl:w-[829px] gap-[26px] sm:hidden xl:flex hover:opacity-80 cursor-pointer">
               <p className="text-main-white font-helvetica lg:w-[779px] lg:text-lg sm:text-xs w-full leading-[25px]">
                 {locale === "ENG" ? textItems[5].eng : textItems[5].it}
               </p>
               <div className="lg:w-[1px] lg:h-[50px] sm:w-[50px] sm:h-[1px] bg-main-white my-4 opacity-80" />
             </div>
 
-            <div className="sm:w-full h-[81px] flex xl:w-[216px] sm:hidden xl:flex">
+            <div className="sm:w-full h-[81px] flex xl:w-[216px] sm:hidden xl:flex hover:opacity-80 cursor-pointer">
               <p className="text-main-white font-helvetica  lg:text-lg sm:text-xs w-full leading-[25px]">
                 {locale === "ENG" ? textItems[6].eng : textItems[6].it}
               </p>
