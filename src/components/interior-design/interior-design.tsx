@@ -29,7 +29,7 @@ const {locale} = useLocalization()
 
   return (
     <div
-      className="lg:mt-60 sm:mt-10 w-full flex justify-center flex-col items-center lg:pb-60 sm:pb-10"
+      className="lg:mt-60 sm:mt-20 w-full flex justify-center flex-col items-center lg:pb-60 sm:pb-20"
       id="architecture"
     >
       <ResponsiveContentContainer>

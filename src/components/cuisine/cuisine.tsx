@@ -46,7 +46,7 @@ const Cuisine = () => {
 
   return (
     <div
-      className="w-full lg:mt-44 sm:mt-10 flex justify-center items-center"
+      className="w-full lg:mt-44 sm:mt-20 flex justify-center items-center"
       id="cuisine"
     >
       <ResponsiveContentContainer>

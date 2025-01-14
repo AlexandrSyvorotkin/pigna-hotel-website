@@ -53,7 +53,7 @@ const BuildingTerritory = () => {
     <div className="w-full flex justify-center items-center bg-loading-color mt-40 pb-40">
       <ResponsiveContentContainer>
       <div
-      className="lg:pt-20 sm:pt-10 pb-20 sm:pb-10 w-full flex sm:flex-col lg:flex-row sm:gap-4 justify-between text-main-white bg-loading-color"
+      className="lg:pt-20 sm:pt-20 pb-20 sm:pb-10 w-full flex sm:flex-col lg:flex-row sm:gap-4 justify-between text-main-white bg-loading-color"
       id="building-territory"
     >
       <div className="flex flex-col gap-4 lg:w-[27%] sm:w-full">

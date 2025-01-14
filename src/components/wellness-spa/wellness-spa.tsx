@@ -154,23 +154,23 @@ const WellnessSpa = () => {
 
   return (
     <div
-      className="2lg:pt-40 sm:pt-14 w-full bg-loading-color 2lg:pb-44 pb-24"
+      className="lg:pt-40 sm:pt-20 w-full bg-loading-color lg:pb-44 pb-24"
       id="wellness-spa"
     >
       <ResponsiveContentContainer>
-        <div className="flex justify-center items-center px-[18px]">
-          <div className="flex flex-col gap-4 justify-center items-center text-main-white 2lg:w-1/2 sm:w-full">
+        <div className="flex justify-center items-center">
+          <div className="flex flex-col gap-4 justify-center items-center text-main-white lg:w-1/2 sm:w-full">
             <Heading tag="h2" className="font-patrizia text-center uppercase">
               Wellness & Spa
             </Heading>
-            <p className="text-responsive font-helvetica text-center opacity-80 w-3/4">
+            <p className="text-responsive font-helvetica text-center opacity-80 lg:w-3/4 sm:w-full">
               {locale === "ENG"
                 ? "Grand Hotel Pigna is conceived as a thermal wellness retreat where every guest can enjoy a full range of spa treatments that restore inner harmony and revitalise. The retreat’s wellness & health concept is based on 4 pillars:"
                 : "Il Grand Hotel Pigna è concepito come un rifugio termale benessere in cui ogni ospite può usufruire di una gamma completa di trattamenti spa per ristabilire l’armonia interiore e rivitalizzarsi. Il concetto di benessere e salute del resort si basa su 4 pilastri:"}
             </p>
           </div>
         </div>
-        <div className="justify-center items-center w-full mt-20">
+        <div className="justify-center items-center w-full lg:mt-20 sm:mt-10">
           <div className="flex relative flex-col gap-4 w-full 2lg:mt-20 sm:mt-2">
             <div className="w-full h-[2px] bg-main-white opacity-50 sm:hidden lg:flex" />
             <div
