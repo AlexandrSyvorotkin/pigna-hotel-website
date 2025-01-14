@@ -4,7 +4,7 @@ import { RegistrationForm } from "../../components/registration/registration-for
 
 const Registration = () => {
   return (
-    <div className=" bg-loading-color w-full 2lg:h-[calc(100vh-80px)] sm:h-[calc(100%-100px)] sm:pb-10 2lg:pb-0 flex justify-between 2lg:flex-row sm:flex-col sm:gap-16 2lg:gap-0 items-center mt-[80px] sm:px-[18px] 2lg:px-0 h-full">
+    <div className=" bg-loading-color w-full 2lg:h-[calc(100dvh-80px)] sm:h-[calc(100%-100px)] sm:pb-10 2lg:pb-0 flex justify-between 2lg:flex-row sm:flex-col sm:gap-16 2lg:gap-0 items-center mt-[80px] sm:px-[18px] 2lg:px-0 h-full">
       <div className="2lg:w-5/12 sm:w-full h-full">
         <RegistrationForm />
       </div>
