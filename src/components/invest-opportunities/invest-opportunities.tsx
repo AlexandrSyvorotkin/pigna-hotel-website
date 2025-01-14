@@ -10,7 +10,7 @@ const InvestOpportunities = () => {
     <div className="lg:mt-40 sm:mt-20 flex justify-center items-center flex-col">
       <ResponsiveContentContainer>
         <div
-          className="w-full lg:h-[900px] sm:h-[400px] relative flex items-center justify-center"
+          className="w-full lg:h-[900px] sm:h-[572px] relative flex items-center justify-center"
           style={{
             backgroundImage: `url(${bg_img})`,
             backgroundSize: "cover",
@@ -29,7 +29,7 @@ const InvestOpportunities = () => {
                 ? "The project’s unique location, in the heart of the Italian Riviera, in close proximity to the French Riviera and Monaco, on a site with a thermal and mineral water concession, hospital licence and zero kilometre supply chain, makes this a destination within a destination. Various financial and ownership options to participate in this project are possible."
                 : "La posizione unica del progetto, nel cuore della Riviera Italiana, in prossimità della Costa Azzurra e di Monaco, su un sito con concessione di acque termali e minerali, licenza ospedaliera e filiera a zero chilometri, rende questa una destinazione nella destinazione. Sono possibili diverse opzioni finanziarie e di proprietà per partecipare a questo progetto."}
             </p>
-            <MainButton className="sm:py-[16px] sm:px-[30px] sm:text-xs lg:text-base lg:py-[22px] lg:px-[62px] ">
+            <MainButton className="sm:py-[16px] sm:px-[25px] sm:text-xs lg:text-base lg:py-[22px] lg:px-[62px] ">
               {locale === "ENG"
                 ? "INVEST THE PROJECT"
                 : "INVESTI NEL PROGETTO"}
