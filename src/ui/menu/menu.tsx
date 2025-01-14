@@ -101,7 +101,7 @@ const Menu = ({isMenuOpen, setIsMenuOpen}: {isMenuOpen: boolean, setIsMenuOpen: 
 
 
   return (
-      <div className={`z-40 overflow-scroll sm:pb-6 lg:pb-0 fixed top-20 left-0 w-full h-[calc(100vh-80px)] flex  sm:flex-col 2lg:flex-row sm:gap-10 2lg:gap-0 transform transition-transform duration-300 ease-in-out bg-loading-color ${
+      <div className={`z-40 overflow-scroll sm:pb-6 lg:pb-0 fixed top-20 left-0 w-full h-[calc(100dvh-80px)] flex  sm:flex-col 2lg:flex-row sm:gap-10 2lg:gap-0 transform transition-transform duration-300 ease-in-out bg-loading-color ${
           isMenuOpen ? '-translate-y-0' : '-translate-y-[calc(100%+200px)]'
       }`}>
         <Image src={menu_img} alt='menu' className='2lg:w-2/5 sm:w-full 2lg:h-full sm:h-1/5 md:block sm:hidden'/>

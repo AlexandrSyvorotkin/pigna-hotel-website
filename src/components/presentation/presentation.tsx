@@ -10,8 +10,6 @@ const Presentation = ({button,children, isVideo}: {button?: ReactNode, children?
         'bg-cover bg-center flex justify-center items-center flex-col gap-16 px-[18px]': true
     }
 
-    // https://termedipigna.com/uploads/intro.mp4
-
     return (
         <div className={cn(styles)}>
           {isVideo && (
