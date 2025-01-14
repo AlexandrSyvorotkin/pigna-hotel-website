@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import img1 from "../../assets/wellness-spa/img1.png";
 import img2 from "../../assets/wellness-spa/img2.png";
 import img3 from "../../assets/wellness-spa/img3.png";
@@ -134,25 +134,18 @@ const WellnessSpa = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [autoplay, setAutoplay] = useState(true);
   
-  const timerRef = useRef<number | null>(null);
-  
   useEffect(() => {
     if (autoplay) {
-
-      timerRef.current = setTimeout(() => {
+      const timer = setTimeout(() => {
         setActiveTab((prevTab) => (prevTab + 1) % tabs.length);
       }, 5000);
+  
+      return () => clearTimeout(timer);
     }
-
-    return () => {
-      if (timerRef.current) {
-        clearTimeout(timerRef.current);
-      }
-    };
   }, [activeTab, autoplay]);
-
+  
   const handleTabClick = (index: number) => {
-    setAutoplay(false); // Отключаем автопереключение при ручном клике
+    setAutoplay(false);
     setActiveTab(index);
   };
 
