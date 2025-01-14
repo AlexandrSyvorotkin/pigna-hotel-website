@@ -203,6 +203,7 @@ const WellnessSpa = () => {
             <div className="justify-center items-center w-full overflow-hidden lg:mt-12 xl:mt-0 sm:hidden lg:flex">
               {activeTab === 0 ? <video width="100%" height="auto" autoPlay muted loop playsInline
                 controls={false}
+                webkit-playsinline="true"
                 disablePictureInPicture
                 controlsList="nodownload noplaybackrate">
                 <source src='pool-desktop.mp4' type="video/mp4"/>

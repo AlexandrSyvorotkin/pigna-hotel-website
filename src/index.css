@@ -77,3 +77,8 @@ video::-ms-media-controls-time-remaining-display,
 video::-ms-media-controls-fullscreen-button {
   display: none !important;
 }
+
+video {
+  -webkit-user-select: none !important;
+  -webkit-touch-callout: none !important;
+}
