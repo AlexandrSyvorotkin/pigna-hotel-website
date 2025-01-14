@@ -18,7 +18,11 @@ const Presentation = ({button,children, isVideo}: {button?: ReactNode, children?
             <video 
                 autoPlay 
                 muted 
-                loop 
+                loop
+                playsInline
+                controls={false}
+                disablePictureInPicture
+                controlsList="nodownload noplaybackrate" 
                 className="absolute top-0 left-0 w-full h-full object-cover -z-10"
             >
                 <source src="https://termedipigna.com/uploads/intro.mp4" type="video/mp4" />

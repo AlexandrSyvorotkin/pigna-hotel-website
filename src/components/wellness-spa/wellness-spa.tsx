@@ -208,12 +208,16 @@ const WellnessSpa = () => {
               ))}
             </div>
             <div className="justify-center items-center w-full overflow-hidden lg:mt-12 xl:mt-0 sm:hidden lg:flex">
-              {activeTab === 0 ? <video width="100%" height="auto" autoPlay muted loop>
+              {activeTab === 0 ? <video width="100%" height="auto" autoPlay muted loop playsInline
+                controls={false}
+                disablePictureInPicture
+                controlsList="nodownload noplaybackrate">
                 <source src='pool-desktop.mp4' type="video/mp4"/>
               </video> : <Image
                 key={activeTab}
                 src={tabs[activeTab].img}
                 alt={tabs[activeTab].title}
+                
                 className="w-full animate-fadeIn"
               />}
             </div>
