@@ -205,7 +205,14 @@ const WellnessSpa = () => {
                 controls={false}
                 webkit-playsinline="true"
                 disablePictureInPicture
-                controlsList="nodownload noplaybackrate">
+                controlsList="nodownload noplaybackrate"
+                style={{
+                  objectFit: 'cover',
+                  WebkitUserSelect: 'none',
+                  msUserSelect: 'none',
+                  userSelect: 'none',
+                }}
+                >
                 <source src='pool-desktop.mp4' type="video/mp4"/>
               </video> : <Image
                 key={activeTab}

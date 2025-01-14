@@ -82,3 +82,15 @@ video {
   -webkit-user-select: none !important;
   -webkit-touch-callout: none !important;
 }
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video::-webkit-media-controls {
+  display: none !important;
+  opacity: 0; 
+}
+video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+}
