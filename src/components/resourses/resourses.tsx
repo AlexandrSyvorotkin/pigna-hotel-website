@@ -43,7 +43,17 @@ const {locale} = useLocalization()
           </div>
           <div className="flex sm:flex-col lg:flex-row gap-6 lg:mt-5 sm:mt-4 justify-start">
             <div className="lg:w-4/6 sm:w-full flex flex-col gap-4">
-              <video width="100%" height="auto" autoPlay muted loop>
+              <video width="100%" height="auto" autoPlay muted loop playsInline
+                controls={false}
+                webkit-playsinline="true"
+                disablePictureInPicture
+                controlsList="nodownload noplaybackrate"
+                style={{
+                  objectFit: 'cover',
+                  WebkitUserSelect: 'none',
+                  msUserSelect: 'none',
+                  userSelect: 'none',
+                }}>
                 <source src='/waterfall-desktop.mp4' type="video/mp4"/>
               </video>
               <p className="w-full text-responsive font-helvetica ">
