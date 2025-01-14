@@ -35,3 +35,45 @@
   }
 }
 
+video::-webkit-media-controls,
+video::-webkit-media-controls-panel,
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display,
+video::-webkit-media-controls-fullscreen-button,
+video::-webkit-media-controls-timeline-container,
+video::-webkit-media-controls-volume-slider-container,
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-seek-back-button,
+video::-webkit-media-controls-seek-forward-button,
+video::-webkit-media-controls-toggle-closed-captions-button {
+  display: none !important;
+  -webkit-appearance: none !important;
+}
+
+video::-moz-media-controls,
+video::-moz-media-controls-panel,
+video::-moz-media-controls-play-button,
+video::-moz-media-controls-volume-slider,
+video::-moz-media-controls-mute-button,
+video::-moz-media-controls-timeline,
+video::-moz-media-controls-current-time-display,
+video::-moz-media-controls-time-remaining-display,
+video::-moz-media-controls-fullscreen-button {
+  display: none !important;
+}
+
+video::-ms-media-controls,
+video::-ms-media-controls-panel,
+video::-ms-media-controls-play-button,
+video::-ms-media-controls-volume-slider,
+video::-ms-media-controls-mute-button,
+video::-ms-media-controls-timeline,
+video::-ms-media-controls-current-time-display,
+video::-ms-media-controls-time-remaining-display,
+video::-ms-media-controls-fullscreen-button {
+  display: none !important;
+}

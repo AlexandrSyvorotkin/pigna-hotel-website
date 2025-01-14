@@ -47,7 +47,7 @@ import { ResponsiveContentContainer } from "../responsive-content-container/resp
 //   {
 //     title: "Holistic wellnesss",
 //     description:
-//       "Our wellness programmes are based on a blend of Eastern and Western practices, the newest technologies and the latest medical-proved research with a focus on a holistic approach that enhances mental, physical, emotional, and spiritual well-being",
+//       "Our wellness programmes are based on a blend of Eastern and Western practices, the newest technologies and the latest medical-proved research with a focus on a holistic approach that enhances mental, physical, emotional, and spiritual well-being",
 //     img: img4Res,
 //     titleIt: "Benessere olistico.",
 //     descriptionIt:
@@ -134,7 +134,7 @@ const WellnessSpa = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [autoplay, setAutoplay] = useState(true);
   
-  const timerRef = useRef<number>();
+  const timerRef = useRef<number | null>(null);
   
   useEffect(() => {
     if (autoplay) {
