@@ -232,7 +232,7 @@ const WellnessSpa = () => {
                   alt={tab.title}
                   className='w-full'
                 />
-                <span className='text-main-white text-base w-full'>{locale === 'ENG' ? tab.title : tab.titleIt}</span>
+                <span className='text-main-white text-base w-full uppercase font-helvetica'>{locale === 'ENG' ? tab.title : tab.titleIt}</span>
                 <p className='text-main-white text-xs w-full'>{locale === 'ENG' ? tab.description : tab.descriptionIt}</p>
               </div>
             )}

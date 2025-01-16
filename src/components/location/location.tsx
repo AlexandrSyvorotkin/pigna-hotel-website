@@ -76,7 +76,7 @@ const {locale} = useLocalization()
         <span className="lg:text-[21px] md:text-[18px] sm:text-base font-helvetica font-normal uppercase">
           {locale === 'ENG' ? "The nearby airports:" : "Aeroporti vicini:"}
         </span>
-        <div className="flex md:gap-10 sm:gap-4 xl:w-1/2 md:w-3/4 sm:w-full justify-center items-center md:px-0 ">
+        <div className="flex md:gap-10 sm:gap-4 xl:w-1/2 md:w-3/4 sm:w-full lg:justify-center sm:justify-between items-center md:px-0 ">
           {airportEls.map((el, index) => (
             <div key={index} className="flex items-center">
               <div className="flex flex-col gap-2 justify-center items-center md:w-[110px] sm:w-[80px]">
@@ -88,7 +88,7 @@ const {locale} = useLocalization()
                 </span>
               </div>
               {index !== airportEls.length - 1 && (
-                <div className="md:h-[51px] sm:h-8 w-[1px] bg-gray-300 md:ml-10 sm:ml-4"></div>
+                <div className="md:h-[51px] sm:h-8 w-[1px] bg-gray-300 md:ml-10 sm:ml-8"></div>
               )}
             </div>
           ))}

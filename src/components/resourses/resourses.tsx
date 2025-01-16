@@ -69,7 +69,7 @@ const {locale} = useLocalization()
                     <p className="text-responsive font-helvetica">{locale === 'ENG' ? item.description : item.descriptionIt}</p>
                   </div>
                   <div className="lg:hidden sm:flex">
-                    <p className="text-responsive font-helvetica"><span className="lg:text-2xl sm:text-[21px] font-helvetica">{item.title}</span> - {item.description}</p>
+                    <p className="text-responsive font-helvetica"><span className="lg:text-2xl sm:text-base font-helvetica uppercase">{item.title}</span> - {item.description}</p>
                   </div>
                   </>
                 ))}
