@@ -58,7 +58,7 @@ const Footer = () => {
       }`}
     >
       <Logo
-          size="lg"
+          size="sm"
           color={isPrivacyPage ? "white" : "black"}
           img={isPrivacyPage ? starWhite : starBlack}
           isFooter={true}
@@ -78,7 +78,7 @@ const Footer = () => {
         />
       <ResponsiveContentContainer>
       <div className="w-full flex flex-col items-center gap-12">
-        <div className={`xl:w-[1750px] lg:w-[1160px] md:w-[720px] sm:w-[324px] h-[1px] ${borderColor}`}></div>
+        <div className={`w-full h-[1px] ${borderColor}`}></div>
         <div className="w-full flex lg:flex-row sm:flex-col-reverse justify-between xl:gap-28 lg:gap-6 sm:gap-6 items-center">
           <div className="flex xl:flex-row sm:flex-col lg:flex-col lg:gap-2 xl:gap-6  xl:h-[104px] lg:h-auto lg:items-start xl:items-end">
             <div

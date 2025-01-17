@@ -14,7 +14,7 @@ const Logo = ({ size, img, content, isFooter }: LogoProps) => {
 
 
   const mt = size === 'lg' ? 'mt-6' : 'mt-0'
-  const iconSize = isFooter ? 'w-[25px] h-[25px]' : 'w-auto h-auto'
+  const iconSize = isFooter ? 'w-[15px] h-[15px]' : 'w-auto h-auto'
   return (
     <div
       className="flex flex-col items-center gap-2 cursor-pointer"

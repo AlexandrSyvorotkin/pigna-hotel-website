@@ -48,6 +48,7 @@ const {locale} = useLocalization()
                 webkit-playsinline="true"
                 disablePictureInPicture
                 controlsList="nodownload noplaybackrate"
+                className='w-full sm:h-[416px] md:h-auto'
                 style={{
                   objectFit: 'cover',
                   WebkitUserSelect: 'none',
@@ -76,7 +77,7 @@ const {locale} = useLocalization()
               </div>
             </div>
             <div className="lg:w-2/6 sm:w-full flex flex-col gap-4">
-              <Image src={img2} alt="resourses" className="w-full xl:h-[677px] md:h-[500px] sm:h-[300px]" />
+              <Image src={img2} alt="resourses" className="w-full xl:h-[677px] md:h-[500px] sm:h-[416px]" />
               <p className="w-full text-responsive font-helvetica">
                 {locale === 'ENG' ?
                 "Surrounded by stunning natural beauty, the hotel will be nestled among mountains, the banks of the River Nervia, a blue lake and waterfalls, olive and chestnut groves. Guests can engage in various outdoor activities, including hiking, mountain biking, and exploring the celebrated Cycling Riviera" :
