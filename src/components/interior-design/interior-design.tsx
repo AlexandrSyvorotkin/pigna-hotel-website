@@ -34,7 +34,7 @@ const {locale} = useLocalization()
     >
       <ResponsiveContentContainer>
         <div className="flex justify-center items-center flex-col gap-4">
-        <Heading tag="h2" className="text-black-main font-patrizia font-normal text-center uppercase lg:w-full sm:w-[80%]">
+        <Heading tag="h2" className="text-black-main font-patrizia font-normal text-center uppercase lg:w-full sm:w-[70%]">
           {locale === 'ENG' ? "Interior Design and Architecture" :"Design degli Interni e Architettura" }
         </Heading>
         <div className="w-full flex justify-center items-center">

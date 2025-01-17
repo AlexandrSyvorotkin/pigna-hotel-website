@@ -93,9 +93,9 @@ const BuildingTerritory = () => {
             </p>
           </div>
 
-          <div className="w-1/12 h-[1px] bg-black-main lg:mt-5 sm:mt-0 opacity-30"></div>
+          <div className="w-1/12 h-[1px] lg:mt-5 sm:mt-[12px] opacity-30 bg-main-white"></div>
 
-          <div className="flex flex-col sm:mt-0">
+          <div className="flex flex-col sm:mt-[12px]">
             <span className="lg:text-xl sm:text-base md:mt-0">
               {locale === 'ENG' ? 'SPA AREAS' : 'AREE SPA'}
             </span>
@@ -107,9 +107,9 @@ const BuildingTerritory = () => {
             </p>
           </div>
 
-          <div className="w-1/12 h-[1px] bg-black-main md:mt-5 sm:mt-0 opacity-30"></div>
+          <div className="w-1/12 h-[1px] md:mt-5 sm:mt-[12px] opacity-30 bg-main-white"></div>
 
-          <div className="flex flex-col sm:mt-0">
+          <div className="flex flex-col sm:mt-[12px]">
             <span className="md:mt-0 sm:mt-0 lg:text-xl sm:text-base">
               {locale === 'ENG' ? '2 NEW BUILDINGS' : '2 NUOVI EDIFICI'}
             </span>
@@ -128,9 +128,9 @@ const BuildingTerritory = () => {
             </p>
           </div>
 
-          <div className="w-1/12 h-[1px] bg-black-main lg:mt-5 sm:mt-0 opacity-30"></div>
+          <div className="w-1/12 h-[1px] lg:mt-5 sm:mt-[12px] opacity-30 bg-main-white"></div>
 
-          <div className="flex flex-col sm:mt-0 gap-3">
+          <div className="flex flex-col sm:mt-[12px] gap-3">
             <span className="md:mt-5 sm:mt-0 lg:text-xl sm:text-base">
               {locale === 'ENG' ? "SUITES" : "SUITE"}
             </span>
