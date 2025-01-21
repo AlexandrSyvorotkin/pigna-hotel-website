@@ -33,7 +33,7 @@ const Presentation = ({button,children, isVideo}: {button?: ReactNode, children?
             userSelect: 'none',
           }}
         >
-          <source src="https://termedipigna.com/uploads/intro.mp4" type="video/mp4" />
+          <source src="https://termedipigna.com/uploads/Video-no-logo.mp4" type="video/mp4" />
         </video>
       )}
           {children}
