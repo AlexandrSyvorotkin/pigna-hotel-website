@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react"
+import { ReactNode, useEffect, useState } from "react"
 import { cn } from "../../utils/utils"
 // import { cn } from '../../utils/utils'
 
@@ -8,9 +8,22 @@ const Presentation = ({button,children, isVideo}: {button?: ReactNode, children?
   const styles = {
     'w-full lg:h-screen sm:h-[800px]': true,
     'lg:bg-[url("./assets/bg/bg.png")] sm:bg-[url("./assets/bg/bg-responsive.png")]': !isVideo || isLoading, // Добавил isLoading
-    'bg-cover bg-center flex justify-center items-center flex-col gap-16 px-[18px]': true
+    'bg-cover bg-center flex justify-center items-center flex-col gap-16 px-[18px]': true,
   }
-  
+  useEffect(() => {
+    const bgLg = new Image();
+    const bgSm = new Image();
+    
+    bgLg.src = './assets/bg/bg.png';
+    bgSm.src = './assets/bg/bg-responsive.png';
+    
+    Promise.all([
+      new Promise(resolve => bgLg.onload = resolve),
+      new Promise(resolve => bgSm.onload = resolve)
+    ]).then(() => {
+      setIsLoading(false);
+    });
+  }, []);
  
   
   return (
