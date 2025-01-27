@@ -24,6 +24,7 @@ const Presentation = ({
   : "https://termedipigna.com/uploads/mobile_intro.mp4";
 
 
+
   const styles = {
     "w-full lg:h-screen sm:h-[800px]": true,
     'lg:bg-[url("./assets/bg/bg.png")] sm:bg-[url("./assets/bg/bg-responsive.png")]':
