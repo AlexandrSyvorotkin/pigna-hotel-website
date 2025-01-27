@@ -5,8 +5,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Image } from "../../ui/img/image";
 import icon_menu from "../../assets/icon-menu/IconMenu.svg";
 import icon_menu_black from "../../assets/icon-menu/IconMenuBlack.svg";
-import starBlack from "../../assets/star/star.svg";
-import starWhite from "../../assets/star/StarWB.svg";
 import Cookies from "js-cookie";
 import { useLocalization } from "../../context/useLocalization";
 import starWhiteHeader from "../../assets/starWhiteHEader.svg";
