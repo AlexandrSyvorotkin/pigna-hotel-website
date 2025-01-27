@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useState } from "react";
 import { cn } from "../../utils/utils";
 import { useMediaQuery } from "react-responsive";
 // import { cn } from '../../utils/utils'
@@ -23,22 +23,6 @@ const Presentation = ({
   ? "https://termedipigna.com/uploads/pc_intro.mp4"
   : "https://termedipigna.com/uploads/mobile_intro.mp4";
 
-useEffect(() => {
-  if (isVideo) {
-    const preloadVideo = document.createElement('video');
-    preloadVideo.src = videoUrl; // Используем ту же переменную
-    preloadVideo.load();
-
-    preloadVideo.addEventListener('canplaythrough', () => {
-      setIsVideoLoading(false);
-    });
-
-    return () => {
-      preloadVideo.remove();
-      setIsVideoLoading(true);
-    };
-  }
-}, [isVideo, isDesktop, videoUrl]);
 
   const styles = {
     "w-full lg:h-screen sm:h-[800px]": true,
