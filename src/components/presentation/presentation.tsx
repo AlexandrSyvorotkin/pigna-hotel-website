@@ -12,32 +12,41 @@ const Presentation = ({
   children?: ReactNode;
   isVideo?: boolean;
 }) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const styles = {
-    "w-full lg:h-screen sm:h-[800px]": true,
-    'lg:bg-[url("./assets/bg/bg.png")] sm:bg-[url("./assets/bg/bg-responsive.png")]':
-      !isVideo || isLoading, // Добавил isLoading
-    "bg-cover bg-center flex justify-center items-center flex-col gap-16 px-[18px]":
-      true,
-  };
-  useEffect(() => {
-    const bgLg = new Image();
-    const bgSm = new Image();
 
-    bgLg.src = "./assets/bg/bg.png";
-    bgSm.src = "./assets/bg/bg-responsive.png";
-
-    Promise.all([
-      new Promise((resolve) => (bgLg.onload = resolve)),
-      new Promise((resolve) => (bgSm.onload = resolve)),
-    ]).then(() => {
-      setIsLoading(false);
-    });
-  }, []);
-
+  const [isVideoLoading, setIsVideoLoading] = useState(true);
   const isDesktop = useMediaQuery({
     query: '(min-width: 600px)' // lg breakpoint
   });
+ 
+
+  const videoUrl = isDesktop 
+  ? "https://termedipigna.com/uploads/pc_intro.mp4"
+  : "https://termedipigna.com/uploads/mobile_intro.mp4";
+
+useEffect(() => {
+  if (isVideo) {
+    const preloadVideo = document.createElement('video');
+    preloadVideo.src = videoUrl; // Используем ту же переменную
+    preloadVideo.load();
+
+    preloadVideo.addEventListener('canplaythrough', () => {
+      setIsVideoLoading(false);
+    });
+
+    return () => {
+      preloadVideo.remove();
+      setIsVideoLoading(true);
+    };
+  }
+}, [isVideo, isDesktop, videoUrl]);
+
+  const styles = {
+    "w-full lg:h-screen sm:h-[800px]": true,
+    'lg:bg-[url("./assets/bg/bg.png")] sm:bg-[url("./assets/bg/bg-responsive.png")]':
+      !isVideo || isVideoLoading,
+    "bg-cover bg-center flex justify-center items-center flex-col gap-16 px-[18px]": true,
+  };
+
 
   return (
     <div className={cn(styles)}>
@@ -48,9 +57,11 @@ const Presentation = ({
           loop
           playsInline
           controls={false}
-          onLoadedData={() => setIsLoading(false)}
-          className={`absolute top-0 left-0 w-full lg:h-screen sm:h-[800px] object-cover transition-opacity duration-300 ${
-            isLoading ? "opacity-0" : "opacity-100"
+          onLoadedData={() => {
+            setIsVideoLoading(false);
+          }}
+          className={`absolute top-0 left-0 w-full lg:h-screen sm:h-[800px] object-cover transition-opacity duration-700 ${
+            isVideoLoading ? "opacity-0" : "opacity-100"
           } -z-10`}
           style={{
             objectFit: "cover",
@@ -60,10 +71,7 @@ const Presentation = ({
           }}
         >
           <source 
-            src={isDesktop 
-              ? "https://termedipigna.com/uploads/pc_intro.mp4"
-              : "https://termedipigna.com/uploads/mobile_intro.mp4"
-            } 
+            src={videoUrl} 
             type="video/mp4" 
           />
         </video>
