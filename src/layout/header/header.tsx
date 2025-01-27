@@ -9,6 +9,8 @@ import starBlack from "../../assets/star/star.svg";
 import starWhite from "../../assets/star/StarWB.svg";
 import Cookies from "js-cookie";
 import { useLocalization } from "../../context/useLocalization";
+import starWhiteHeader from "../../assets/starWhiteHEader.svg";
+import starBlackHeader from "../../assets/startBlackHeader.svg";
 
 
 const Header = ({
@@ -87,10 +89,10 @@ const Header = ({
       className={`font-helvetica fixed top-0 w-full h-20 lg:px-[84px] sm:px-[18px] mg:[42px] py-5 flex justify-between items-center transition-all duration-300 z-40 ${currentClass}`}
     >
       <HeaderControls openMenu={openMenu} />
-      <Logo size="sm" color="white" img={isScrolled && !isPrivacyPage &&!isMenuOpen ? starBlack : starWhite} content={
+      <Logo size="sm" color="white" img={isScrolled && !isPrivacyPage &&!isMenuOpen ? starBlackHeader : starWhiteHeader} content={
         <>
         <span className="md:text-xl sm:text-xs font-patrizia">GRAND</span>
-        <span className="md:text-3xl sm:text-base font-patrizia">PIGNA</span>
+        <span className="md:text-2xl sm:text-base font-patrizia">PIGNA</span>
         <span className="md:text-xl sm:text-xs font-patrizia">HOTEL</span>
         </>
       }/>
