@@ -55,12 +55,12 @@ const MainPage = () => {
           <div className="flex flex-col gap-4 xl:w-full">
             <p className="lg:text-[21px] md:text-[18px] sm:text-base font-helvetica font-normal text-center uppercase text-main-white">
               {locale === "ENG"
-                ? "Grand Hotel Pigna is designed as a world-class medical spa, the only thermal wellness retreat in the region, and the largest spa on theLigurian Riviera"
+                ? "Grand Hotel Pigna is designed as a world-class medical spa, the only thermal wellness retreat in the region, and the largest spa on the Ligurian Riviera"
                 : "IL GRAND HOTEL PIGNA È PROGETTATO COME UN CENTRO TERMALE DI CLASSE MONDIALE, L'UNICO RITIRO BENESSERE TERMALE DELLA REGIONE E IL PIÙ GRANDE CENTRO TERMALE DELLA RIVIERA LIGURE"}
             </p>
             <p className="lg:text-lg md:text-[16px] sm:text-xs font-helvetica font-normal text-center opacity-80 text-main-white mt-2">
               {locale === "ENG"
-                ? "Immerse yourself in thermal springs, lush valleys, and the mountainous landscapes of Liguria while staying in a luxury 5-star resort with a unique holistic medical spa concept that combines traditional medicine, modern therapies, and the latest medical developments."
+                ? "Immerse yourself in thermal springs, lush valleys, and mountainous landscapes of Liguria while staying in a luxury 5-star resort with a unique holistic medical spa concept that combines traditional medicine, modern therapies, and the latest medical developments."
                 : "Immergiti nelle sorgenti termali, nelle verdi valli e negli scenari montuosi della Liguria, soggiornando in un resort di lusso a 5 stelle con un esclusivo concetto di medical spa olistica che combina medicina tradizionale, terapie moderne e le più recenti innovazioni in campo medico."}
             </p>
             <p className="lg:text-lg md:text-[16px] sm:text-xs font-helvetica font-normal text-center opacity-80 text-main-white">

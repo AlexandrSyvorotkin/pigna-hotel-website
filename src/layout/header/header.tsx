@@ -42,7 +42,7 @@ const Header = ({
 
   const headerClasses = {
     default: "bg-transparent text-main-white border-b border-main-white",
-    scrolled: "bg-main-white text-black-main border-b border-black-main",
+    scrolled: "bg-loading-color text-main-white border-b border-main-white",
     loading: "bg-loading-color text-main-white border-b border-main-white",
   };
 
@@ -87,7 +87,7 @@ const Header = ({
       className={`font-helvetica fixed top-0 w-full h-20 lg:px-[84px] sm:px-[18px] mg:[42px] py-5 flex justify-between items-center transition-all duration-300 z-40 ${currentClass}`}
     >
       <HeaderControls openMenu={openMenu} />
-      <Logo size="sm" color="white" img={isScrolled && !isPrivacyPage &&!isMenuOpen ? starBlackHeader : starWhiteHeader} content={
+      <Logo size="sm" color="white" img={isScrolled && !isPrivacyPage &&!isMenuOpen ? starWhiteHeader : starWhiteHeader} content={
         <>
         <span className="md:text-xl sm:text-xs font-patrizia">GRAND</span>
         <span className="md:text-2xl sm:text-base font-patrizia">PIGNA</span>

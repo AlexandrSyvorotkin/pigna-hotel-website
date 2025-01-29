@@ -16,7 +16,7 @@ import { Heading } from "../heading/heading";
 const imgArr = [
   {
     img: img_1,
-    text: "Tennis courts (possibly operated in collaboration with the a famous regional tennis academy), gyms, yoga studios, outdoor fitness facilities, a swimming pool, and a thermal pool for rehabilitation will be among the resort's sports facilities.",
+    text: "Tennis courts (possibly operated in collaboration with a famous regional tennis academy), gyms, yoga studios, outdoor fitness facilities, a swimming pool, and a thermal pool for rehabilitation will be among the resort's sports facilities.",
     textIt: "Campi da tennis (possibilmente gestiti in collaborazione con una famosa accademia tennistica regionale), palestre, studi di yoga, strutture fitness all’aperto, una piscina e una piscina termale per la riabilitazione faranno parte delle strutture sportive del resort."
   },
   {
@@ -57,7 +57,7 @@ const BuildingTerritory = () => {
       id="building-territory"
     >
       <div className="flex flex-col gap-4 lg:w-[27%] sm:w-full">
-        <Heading tag="h2" className="font-normal sm:text-center lg:text-left uppercase font-patrizia">
+        <Heading tag="h2" className="font-normal sm:text-center lg:text-left uppercase font-patrizia leading-[56px]">
           {locale === "ENG" ? "Building & Territory" : "Edificio & Territorio"}
         </Heading>
         <p className="lg:text-lg sm:text-xs font-helvetica font-norma sm:text-center lg:text-left sm:hidden md:block">

@@ -53,7 +53,7 @@ const Footer = () => {
 
   return (
     <footer
-      className={`w-full flex flex-col justify-center items-center pb-20 pt-16 ${
+      className={`w-full flex flex-col justify-center items-center pb-20 pt-16 font-helvetica ${
         isPrivacyPage ? "bg-loading-color" : "bg-main-white"
       }`}
     >
@@ -106,7 +106,7 @@ const Footer = () => {
               <span className="uppercase">
                 {locale === "ENG" ? "Contacts for communication:" : "Contatti per comunicazioni:"}
               </span>
-              <span className="uppercase">contacts@thermedipigna.com</span>
+              <a className="uppercase hover:underline hover:opacity-70" href="mailto:contacts@termedipigna.com">contacts@termedipigna.com</a>
             </div>
           </div>
           <div className="flex xl:gap-24 lg:gap-6 lg:flex-row sm:flex-col">

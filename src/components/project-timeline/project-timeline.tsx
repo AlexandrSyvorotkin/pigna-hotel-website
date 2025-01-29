@@ -18,6 +18,8 @@ import img11 from "../../assets/project-timeline/img11.png";
 import { useLocalization } from "../../context/useLocalization";
 import { Heading } from "../heading/heading";
 import { ResponsiveContentContainer } from "../responsive-content-container/responsive-content-container";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const slidesEls = [
   {
@@ -132,6 +134,54 @@ const textItems = [
 
 const ProjectTimeline = () => {
   const { locale } = useLocalization();
+
+  const [autoplayEnabled, setAutoplayEnabled] = useState(false);
+
+  console.log(autoplayEnabled);
+
+  useEffect(() => {
+    // Создаем наблюдатель за видимостью элемента
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // Когда элемент входит в поле зрения
+          if (entry.isIntersecting) {
+            setAutoplayEnabled(true);
+          } else {
+            // Когда элемент выходит из поля зрения
+            setAutoplayEnabled(false);
+          }
+        });
+      },
+      { threshold: 0.1 } // Срабатывает когда хотя бы 10% элемента видно
+    );
+
+    // Находим наш элемент и начинаем за ним наблюдать
+    const timelineElement = document.getElementById('project-timeline');
+    if (timelineElement) {
+      observer.observe(timelineElement);
+    }
+
+    // Очищаем наблюдатель при размонтировании компонента
+    return () => {
+      if (timelineElement) {
+        observer.unobserve(timelineElement);
+      }
+    };
+  }, []);
+
+  const [swiperInstance, setSwiperInstance] = useState(null);
+
+useEffect(() => {
+  if (swiperInstance) {
+    if (autoplayEnabled) {
+      swiperInstance.autoplay.start();
+    } else {
+      swiperInstance.autoplay.stop();
+    }
+  }
+}, [autoplayEnabled, swiperInstance]);
+
   return (
     <div
       className="w-full lg:pt-44 sm:pt-20 bg-loading-color lg:pb-48 sm:pb-20"
@@ -173,12 +223,13 @@ const ProjectTimeline = () => {
                   slidesPerView: 2.1, // 2.5 слайда на экранах меньше 1024px
                 },
               }}
-              autoplay={{
-                delay: 3500,
-                disableOnInteraction: false,
-              }}
+              // autoplay={autoplayEnabled && {
+              //   delay: 3500,
+              //   disableOnInteraction: false,
+              //   pauseOnMouseEnter: true,
+              // }}
+              onSwiper={(swiper) => setSwiperInstance(swiper)}
               navigation={true}
-              onSwiper={(swiper) => console.log(swiper)}
               onSlideChange={() => console.log("slide change")}
             >
               {slidesEls.map((slide, index) => (
