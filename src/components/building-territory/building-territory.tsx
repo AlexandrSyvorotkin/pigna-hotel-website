@@ -160,8 +160,23 @@ const BuildingTerritory = () => {
       </div>
       </div>
       
-      <div className="relative md:hidden sm:block h-[400px] mt-10">
-      <div className='absolute left-0 w-full '>
+      <div className="relative md:hidden sm:flex flex-col gap-9 mt-10">
+        {imgArr.map((item, index) => (
+          <div className="flex flex-col gap-2 w-full">
+            <Image
+              src={item.img}
+              alt="img"
+              className="w-full h-[320px] hover:opacity-80"
+              key={index}
+            />
+            <p className="lg:text-lg sm:text-xs font-helvetica font-normal w-full text-main-white">
+              {locale === 'ENG' ? item.text : item.textIt}
+            </p>
+          </div>
+        ))}
+
+
+      {/* <div className='absolute left-0 w-full '>
         <Swiper
           modules={[Scrollbar, A11y]}
           spaceBetween={10}
@@ -189,7 +204,7 @@ const BuildingTerritory = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </div> */}
       </div>
 
 
