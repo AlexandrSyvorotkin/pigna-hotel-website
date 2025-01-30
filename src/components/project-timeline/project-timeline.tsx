@@ -13,7 +13,7 @@ import img6 from "../../assets/project-timeline/img6.png";
 import img7 from "../../assets/project-timeline/img7.png";
 import img8 from "../../assets/project-timeline/img8.png";
 import img9 from "../../assets/project-timeline/img9_new.jpg";
-import img10 from "../../assets/project-timeline/img10.png";
+import img10 from "../../assets/project-timeline/newmanimg.png";
 import img11 from "../../assets/project-timeline/img11.png";
 import { useLocalization } from "../../context/useLocalization";
 import { Heading } from "../heading/heading";

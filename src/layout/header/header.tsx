@@ -101,7 +101,7 @@ const Header = ({
         {btnText}
       </span>
       <div className="sm:block sm:w-10 lg:hidden" onClick={openMenu}>
-        <Image src={isScrolled && !isPrivacyPage &&!isMenuOpen ? icon_menu_black : icon_menu} alt="logo" />
+        <Image src={icon_menu} alt="logo" />
       </div>
     </header>
   );

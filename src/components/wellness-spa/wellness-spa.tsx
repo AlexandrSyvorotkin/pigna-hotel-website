@@ -85,7 +85,7 @@ const tabs = [
       "Strutture dedicate alla riabilitazione, progettate per affrontare infortuni sportivi e disturbi muscoloscheletrici, favorendo il recupero e il rafforzamento.",
   },
   {
-    title: "Holistic wellnesss",
+    title: "Holistic wellness",
     description:
       "Our wellness programmes are based on a blend of Eastern and Western practices, the newest technologies and the latest medical-proved research with a focus on a holistic approach that enhances mental, physical, emotional, and spiritual well-being",
     img: img4,
@@ -223,16 +223,16 @@ const WellnessSpa = () => {
               />}
             </div>
             {/* responsive */}
-            <div className='flex flex-col gap-4 sm:flex lg:hidden'>
+            <div className='flex flex-col gap-[32px] sm:flex lg:hidden'>
             {tabs.map(tab =>
-              <div className='flex flex-col gap-4 font-helvetica w-full justify-start cursor-pointer transition-all duration-300 text-main-white'>
+              <div className='flex flex-col gap-2 font-helvetica w-full justify-start cursor-pointer transition-all duration-300 text-main-white'>
                 <Image
                   key={tab.title}
                   src={tab.img}
                   alt={tab.title}
                   className='w-full'
                 />
-                <span className='text-main-white text-base w-full uppercase font-helvetica'>{locale === 'ENG' ? tab.title : tab.titleIt}</span>
+                <span className='text-main-white text-base w-full uppercase font-helvetica mt-2'>{locale === 'ENG' ? tab.title : tab.titleIt}</span>
                 <p className='text-main-white text-xs w-full'>{locale === 'ENG' ? tab.description : tab.descriptionIt}</p>
               </div>
             )}
