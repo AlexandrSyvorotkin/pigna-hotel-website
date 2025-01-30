@@ -98,7 +98,7 @@ const Description = () => {
               </p>
             </div>
           </div>
-          <div className="mt-14 flex justify-between items-center w-full gap-6">
+          <div className="mt-14 flex justify-between items-center w-full md:gap-6 gap-2">
             <Image src={img2} alt="Essence of Pigna" className="w-1/2 h-full" />
             <Image src={img1} alt="Essence of Pigna" className="w-1/2 h-full" />
           </div>
