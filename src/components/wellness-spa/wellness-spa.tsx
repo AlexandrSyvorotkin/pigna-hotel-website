@@ -132,7 +132,7 @@ const keyObjectives = [
 
 const WellnessSpa = () => {
   const [activeTab, setActiveTab] = useState(0);
-  const [autoplay, setAutoplay] = useState(true);
+  const [autoplay, setAutoplay] = useState(false);
   
   useEffect(() => {
     if (autoplay) {
@@ -239,8 +239,8 @@ const WellnessSpa = () => {
             </div>
 
 
-            <div className='w-full mt-24 sm:mt-10'>
-            <div className='flex 2lg:gap-16 sm:flex-col 2lg:flex-row sm:gap-4 lg:justify-center sm:items-start lg:items-center lg:w-3/5 sm:w-full text-main-white'>
+            <div className='w-full lg:mt-24 sm:mt-10'>
+            <div className='flex 2lg:gap-16 sm:flex-col 2lg:flex-row sm:gap-4 lg:justify-center sm:items-start lg:items-center lg:w-4/5 sm:w-full text-main-white'>
               <span className='font-patrizia lg:text-4xl sm:text-lg sm:text-left lg:w-full sm:w-[90%] uppercase'>{locale === 'ENG' ? 'Key objectives of the wellness programmes:' : 'Obiettivi chiave dei programmi di benessere:'}</span>
               <p className='font-helvetica lg:text-lg sm:text-xs opacity-80'>{locale === 'ENG' ? "The hotel holds hospital status, granting us complete freedom to implement a wide range of medical services in developing our spa facilities to the highest standards." : "L’hotel possiede lo status di struttura ospedaliera, che ci concede la piena libertà di implementare una vasta gamma di servizi medici per sviluppare le nostre strutture spa ai più alti standard."}</p>
             </div>
