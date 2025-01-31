@@ -9,7 +9,7 @@ const Presentation = ({
   isVideo,
 }: {
   button?: ReactNode;
-  children?: ReactNode;
+children?: ReactNode;
   isVideo?: boolean;
 }) => {
 

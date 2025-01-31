@@ -132,7 +132,7 @@ const keyObjectives = [
 
 const WellnessSpa = () => {
   const [activeTab, setActiveTab] = useState(0);
-  const [autoplay, setAutoplay] = useState(false);
+  const [autoplay, setAutoplay] = useState(true);
   
   useEffect(() => {
     if (autoplay) {

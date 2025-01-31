@@ -74,10 +74,10 @@ const EssenceOfPigna = () => {
           modules={[Scrollbar, A11y, Navigation, Autoplay]}
           loop={true}
           spaceBetween={12}
-          //   autoplay={{
-          //     delay: 3500,
-          //     disableOnInteraction: false,
-          //   }}
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+            }}
           breakpoints={{
             360: {
               slidesPerView: 1.3, // 1 слайд на экранах меньше 640px
