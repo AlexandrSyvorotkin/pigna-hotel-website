@@ -170,7 +170,7 @@ const ProjectTimeline = () => {
     };
   }, []);
 
-  const [swiperInstance, setSwiperInstance] = useState(null);
+  const [swiperInstance, setSwiperInstance] = useState<any>(null);
 
 useEffect(() => {
   if (swiperInstance) {
@@ -228,6 +228,7 @@ useEffect(() => {
               //   disableOnInteraction: false,
               //   pauseOnMouseEnter: true,
               // }}
+
               onSwiper={(swiper) => setSwiperInstance(swiper)}
               navigation={true}
               onSlideChange={() => console.log("slide change")}

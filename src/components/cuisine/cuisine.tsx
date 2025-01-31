@@ -4,38 +4,38 @@ import img3 from "../../assets/cuisine/img3.png";
 import img4 from "../../assets/cuisine/img4.png";
 import { Image } from "../../ui/img/image";
 
-import { Scrollbar, A11y } from "swiper/modules";
-import { SwiperSlide, Swiper } from "swiper/react";
+// import { Scrollbar, A11y } from "swiper/modules";
+// import { SwiperSlide, Swiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import { useLocalization } from "../../context/useLocalization";
 import { ResponsiveContentContainer } from "../responsive-content-container/responsive-content-container";
 import { Heading } from "../heading/heading";
 
-const resSlider = [
-  {
-    img: img1,
-    text: "The hotel’s own kitchen and restaurant feature only the finest, nutrient-rich products, carefully sourced from local farmers who share our passion for quality. The region boasts over 250 welcoming farmhouses, each offering immersive tours.",
-    textIt:
-      "La cucina e il ristorante dell’hotel utilizzano solo i migliori prodotti ricchi di nutrienti, accuratamente selezionati da contadini locali che condividono la nostra passione per la qualità. La regione vanta oltre 250 agriturismi accoglienti, ognuno dei quali offre visite coinvolgenti.",
-  },
-  {
-    img: img2,
-    text: "",
-    textIt: "",
-  },
-  {
-    img: img3,
-    text: "",
-    textIt: "",
-  },
-  {
-    img: img4,
-    text: "Under the guidance of our chef, every dish is a perfect balance of wholesome ingredients, health benefits, and culinary artistry",
-    textIt:
-      "Sotto la guida del nostro chef, ogni piatto raggiunge il perfetto equilibrio tra ingredienti genuini, benefici per la salute e arte culinaria.",
-  },
-];
+// const resSlider = [
+//   {
+//     img: img1,
+//     text: "The hotel’s own kitchen and restaurant feature only the finest, nutrient-rich products, carefully sourced from local farmers who share our passion for quality. The region boasts over 250 welcoming farmhouses, each offering immersive tours.",
+//     textIt:
+//       "La cucina e il ristorante dell’hotel utilizzano solo i migliori prodotti ricchi di nutrienti, accuratamente selezionati da contadini locali che condividono la nostra passione per la qualità. La regione vanta oltre 250 agriturismi accoglienti, ognuno dei quali offre visite coinvolgenti.",
+//   },
+//   {
+//     img: img2,
+//     text: "",
+//     textIt: "",
+//   },
+//   {
+//     img: img3,
+//     text: "",
+//     textIt: "",
+//   },
+//   {
+//     img: img4,
+//     text: "Under the guidance of our chef, every dish is a perfect balance of wholesome ingredients, health benefits, and culinary artistry",
+//     textIt:
+//       "Sotto la guida del nostro chef, ogni piatto raggiunge il perfetto equilibrio tra ingredienti genuini, benefici per la salute e arte culinaria.",
+//   },
+// ];
 
 const Cuisine = () => {
   const { locale } = useLocalization();

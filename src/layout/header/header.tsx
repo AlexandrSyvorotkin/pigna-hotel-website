@@ -4,11 +4,11 @@ import { Logo } from "../../components/logo/logo";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Image } from "../../ui/img/image";
 import icon_menu from "../../assets/icon-menu/IconMenu.svg";
-import icon_menu_black from "../../assets/icon-menu/IconMenuBlack.svg";
+// import icon_menu_black from "../../assets/icon-menu/IconMenuBlack.svg";
 import Cookies from "js-cookie";
 import { useLocalization } from "../../context/useLocalization";
 import starWhiteHeader from "../../assets/starWhiteHEader.svg";
-import starBlackHeader from "../../assets/startBlackHeader.svg";
+// import starBlackHeader from "../../assets/startBlackHeader.svg";
 
 
 const Header = ({
