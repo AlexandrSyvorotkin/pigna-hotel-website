@@ -9,20 +9,16 @@ import { EssenceOfPigna } from "../../components/essence-of-pigna/essence-of-pig
 import { Resourses } from "../../components/resourses/resourses";
 import { WellnessSpa } from "../../components/wellness-spa/wellness-spa";
 import { Location } from "../../components/location/location";
-import { MainButton } from "../../ui/button/main-button";
-import { useNavigate } from "react-router-dom";
 import { useLocalization } from "../../context/useLocalization";
 import { BuildingTerritory } from "../../components/building-territory/building-territory";
 import { ResponsiveContentContainer } from "../../components/responsive-content-container/responsive-content-container";
 import FadeInSection from "../../components/fade-in-section/fade-in-section";
 
 const MainPage = () => {
-  const navigate = useNavigate();
+
 
   const { locale } = useLocalization();
 
-  const btnText =
-    locale === "ENG" ? "INVEST THE PROJECT" : "INVESTI NEL PROGETTO";
 
   //TODO: разобраться с отступами.
 
@@ -30,14 +26,7 @@ const MainPage = () => {
     <>
       <Presentation
         isVideo={true}
-        button={
-          <MainButton
-            onClick={() => navigate("/registration")}
-            className="sm:py-[16px] sm:px-[30px] sm:text-xs lg:text-base lg:py-[22px] lg:px-[62px]"
-          >
-            <span className="hover:opacity-70">{btnText}</span>
-          </MainButton>
-        }
+        
       >
         <span className="font-normal lg:text-6xl sm:text-3xl text-main-white text-center font-patrizia uppercase opacity-80 lg:w-[800px] lg:leading-[87px]">
           {locale === "ENG"
