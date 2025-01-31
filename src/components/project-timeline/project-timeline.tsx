@@ -220,7 +220,7 @@ useEffect(() => {
                   slidesPerView: 2, // 2 слайда на экранах меньше 768px
                 },
                 1024: {
-                  slidesPerView: 2.1, // 2.5 слайда на экранах меньше 1024px
+                  slidesPerView: 2.6, // 2.5 слайда на экранах меньше 1024px
                 },
               }}
               // autoplay={autoplayEnabled && {
