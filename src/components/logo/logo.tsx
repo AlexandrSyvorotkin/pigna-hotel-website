@@ -17,7 +17,7 @@ const Logo = ({ size, img, content, isFooter }: LogoProps) => {
   const iconSize = isFooter ? 'w-[15px] h-[15px]' : 'w-auto h-auto'
   return (
     <div
-      className="flex flex-col items-center gap-2 cursor-pointer"
+      className="flex flex-col items-center gap-1 cursor-pointer"
       onClick={() => navigate("/main")}
     >
       <div className="flex gap-2">
